@@ -1,0 +1,31 @@
+/ This config file is for the TMP117 Adafruit Feather 32u4 Adalogger
+/ This file requires UNIX line ends (LF). 
+/ The first character of this line ('/') specifies a line as a comment.
+/ A comment does not influence the logger.
+/
+/
+/ logging interval in seconds, a multiple of this must be 3600 , 300 seconds is the default of the software. 
+/
+interval=300
+/
+/
+/
+/interval=6
+/ use 6 seconds for test purposes, e.g. for a new sensors and setups
+/ 
+/ TMP117 sensor configuration
+/ --------------------------------------
+/ up to four TMP117 can be used on the I2C-bus
+/ each sensor must be configured (wired) for its own individual I2C bus address
+/ four different addresses are availabe: 0x48, 0x49, 0x4A, and 0x4B
+/ these generate column names TMP1, TMP2, TMP3, TMP4
+/
+/ charging
+/----------
+/ charge logger using a Mico-USB cable with  switch in ON position. 
+/ Remove microSD card, if you do not want to log data during charging.
+/ the yellow LED indicates charging activity. It goes dark when charging finished.
+/ charge current is 400 mA, max. charge time is 7 hours
+/ charge current is programmed on the Feather Logger with a resistor, 500 mA is NOT the native charge current
+/ you have to change R0 to 2k2 (resistor package SMD 0805)
+
