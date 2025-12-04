@@ -12,7 +12,7 @@
 # pylint: disable=import-outside-toplevel
 # pylint: disable=unspecified-encoding
 
-# flake8 --ignore=F541,E501 "plotly_time_series.py"
+# flake8 --ignore=F541,E501 "plots_and_statistics_of_time_series.py"
 
 r'''
 
