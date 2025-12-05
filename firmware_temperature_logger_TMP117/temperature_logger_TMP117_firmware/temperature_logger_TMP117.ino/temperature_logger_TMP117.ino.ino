@@ -427,9 +427,9 @@ void setup() {
 
   SdFile::dateTimeCallback(dateTime); // for right time stamp on file
 
-  String headerstr="Logger-id"+Separator;
-    headerstr+="Vbatt"+Separator;
-    headerstr+="Date_time"+Separator;
+  String headerstr="Logger-id";
+    headerstr+=Separator+"Vbatt";
+    headerstr+=Separator+"Date_time";
 
   RTC.begin();
   RTC.armAlarm(1, false);                       //clear any pending alarms
@@ -452,7 +452,7 @@ Wire.beginTransmission(0x48+i); // 0x48 is first adress of sensor
   if (Wire.endTransmission() == 0) {
     I2Cwrite(0x48+i, Config_Reg,0b00000110, 0b01100000);  // MOD=0b01 ; Conv = 0b100 ;  AVG0 = 0b11      This  means: shutdown; 1 second conversion,  64 averaged conversions      
     TMP117_present[i]= true;
-    headerstr+="TMP"+ String (i+1)+Separator; sensorcount++;
+    headerstr+=Separator+"TMP"+ String (i+1); sensorcount++;
     // Serial.println("TMP117 found at 0x48");
   }
 }
@@ -520,10 +520,10 @@ void collect_data_and_write_to_SD_card() {
     String monthString = "";    
     
 
-    String dataString = LoggerName + Separator;          // Write logger name to identify the data record
+    String dataString = LoggerName;                      // Write logger name to identify the data record
     DateTime now = RTC.now();                            // Read current time and format data string
 
-    dataString += String(VBat()) + Separator;    //  Battery voltage
+    dataString += Separator + String(VBat());    //  Battery voltage
 
     if (now.month() < 10) { // left pad with leading zero
       monthString = "0" + String(now.month());
@@ -556,8 +556,8 @@ void collect_data_and_write_to_SD_card() {
     }
     
     // we use iso Date_time format e.g.  2025-12-01T11:34:51  https://en.wikipedia.org/wiki/ISO_8601
-    dataString += String(now.year()) + "-"+ monthString + "-" + dayString + "T"+ \
-    hourString + ":" + minString + ":" + secString + Separator; 
+    dataString += Separator + String(now.year()) + "-"+ monthString + "-" + dayString + "T"+ \
+    hourString + ":" + minString + ":" + secString; 
    
 // read up to 4 TMP117 sensors and put sensors to sleep again
 for(int i = 0; i<4; i++)
@@ -572,8 +572,7 @@ for(int i = 0; i<4; i++)
     {
     if (TMP117_present[i]) { 
           StartReadTempSensorTMP117(0x48+i);
-          dataString += String(ReadTempSensorTMP117(0x48+i));
-          dataString += Separator;
+          dataString += Separator + String(ReadTempSensorTMP117(0x48+i));
           I2Cwrite(0x48+i, Config_Reg,0b00000110, 0b01100000);  // MOD=0b01 ; Conv = 0b100 ;  AVG0 = 0b11      This  means: shutdown; 1 second conversion,  64 averaged conversions
        }
     }

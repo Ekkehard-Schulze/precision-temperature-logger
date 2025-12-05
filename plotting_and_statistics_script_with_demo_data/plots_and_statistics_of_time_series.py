@@ -67,6 +67,8 @@ default_separator = "\t"
 
 ISO_DATE_TIME_format = "%Y-%m-%dT%H:%M:%S"
 
+ISO_DATE_TIME_format_re = r'\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d'
+
 default_title = "TSV log data"
 
 # -----------------end of  content definitions ------------------------
@@ -80,9 +82,9 @@ if SAVE_interactive_html_plot:
 def add_prefix_to_file_stem(ppath, stem_prefixl):
     '''inserts a prefix into a path at the beginning of the file name'''
     return(
-        str(pathlib.Path(ppath).parent)
-        + os.sep
-        + stem_prefixl
+        #str(pathlib.Path(ppath).parent)
+        #+ os.sep
+        stem_prefixl
         + str(pathlib.Path(ppath).stem)
         + str(pathlib.Path(ppath).suffix)
     )
@@ -91,65 +93,17 @@ def add_prefix_to_file_stem(ppath, stem_prefixl):
 def add_prefix_to_file_stem_and_swap_extension(ppath, stem_prefixl, new_extension):
     '''inserts a prefix into a path at the beginning of the file name'''
     return(
-        str(pathlib.Path(ppath).parent)
-        + os.sep
-        + stem_prefixl
+        #str(pathlib.Path(ppath).parent)
+        #+ os.sep
+        stem_prefixl
         + str(pathlib.Path(ppath).stem)
         + new_extension
     )
 
 
-def write_statistics_file(dfl, sfile_namel, accepted_sensorsl, skip_frames=0):
-    '''write statistics file'''
-    n_txt = "{number:.2f}"
-    stat_header_line = ("Sensor" + STATS_file_separator
-        + "Mean [°C]" + STATS_file_separator
-        + "Min [°C]" + STATS_file_separator
-        + "Max [°C]" + STATS_file_separator
-        + "Stdev [°C]" + STATS_file_separator
-        + "duration" + STATS_file_separator
-        #  + "2 hrs equilibration omitted"
-        + "\n"
-    )
-
-    starttime = dfl[Date_time_field_name].iloc[0]
-    endtime = dfl[Date_time_field_name].iloc[-1]
-    timeDelta = endtime - starttime
-
-    stat_data_lines = []
-    for sensor in accepted_sensorsl:  # find and plot first track
-        try:
-            if sensor in dfl.columns:
-                stat_line = (
-                    sensor                                                  + STATS_file_separator
-                    + n_txt.format(number=dfl[sensor][skip_frames:].mean()) + STATS_file_separator
-                    + n_txt.format(number=dfl[sensor][skip_frames:].min())  + STATS_file_separator
-                    + n_txt.format(number=dfl[sensor][skip_frames:].max())  + STATS_file_separator
-                    + n_txt.format(number=dfl[sensor][skip_frames:].std())  + STATS_file_separator
-                    # + str(datetime.timedelta(seconds = int(timeDelta))) + STATS_file_separator
-                    + str(timeDelta) + STATS_file_separator
-                )
-                # if skip_frames >0:
-                # stat_line += 'yes'
-                # else:
-                # stat_line += 'no'
-                stat_data_lines.append(stat_line + '\n')
-        except:
-            print('...statistics for sensor ' + sensor + ' failed')
-
-    if stat_data_lines:
-        try:
-            with open(sfile_namel, "w") as log_file:
-                log_file.write('\n ' + stat_header_line + ' ' + ' '.join(stat_data_lines) + '\n')
-        except PermissionError:
-            print('Failed to open statistics file.\nClose other application (e.g. Excel) blocking ' + logger_tsv_filel + '\n')
-            input('Press Enter to quit.')
-            sys.exit()
-
-
 def bad_date_and_repeated_header_masker(linesl):
     '''masks badlyformatted iso dates. Used for my circuit-python logger'''
-    date_pattern_c = re.compile(r'\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d')
+    date_pattern_c = re.compile(ISO_DATE_TIME_format_re)
     skiplinesl = []
     toplines = True
     check_datetime = Date_time_field_name in linesl[0]  # bool
@@ -193,7 +147,8 @@ def main():
         else:
             logger_tsv_file = sys.argv[1]
 
-    # -------------------- read data and convert unix date   ----------------------------
+    # -------------------- read data  ----------------------------
+
     # ----------------- find bad line numbers, such as repeated headers from logger re-starts
     print("loading...")
     skiplines = []
@@ -213,32 +168,58 @@ def main():
         sys.exit()
 
     df[Date_time_field_name] = pd.to_datetime(df[Date_time_field_name])
-    
-    output_dir_with_sep = ""
-    if OUTPUT_DIR_for_script and not os.path.exists(OUTPUT_DIR_for_script):
-        os.makedirs(OUTPUT_DIR_for_script)
-    if OUTPUT_DIR_for_script:
-        output_dir_with_sep = os.sep + OUTPUT_DIR_for_script
 
-    my_title = df[LOGGER_ID_field_name][1] if LOGGER_ID_field_name in df.columns else default_title
+    # ------- generate output dir ----------------------
+    output_dir_path = str(pathlib.Path(logger_tsv_file).parent)
+    if output_dir_path:
+        output_dir_path += os.sep
+    output_dir_with_path = output_dir_path + OUTPUT_DIR_for_script
+    if output_dir_with_path and not os.path.exists(output_dir_with_path):
+        os.makedirs(output_dir_with_path)    
+    if output_dir_with_path:
+        output_dir_with_path = output_dir_with_path + os.sep        
 
+    # --------- data we need later --------------------
     last_datetime_str = str(df[Date_time_field_name].iloc[-1]).replace(":", "_")
- 
+    starttime = df[Date_time_field_name].iloc[0]
+    endtime = df[Date_time_field_name].iloc[-1]
+    log_duration = endtime - starttime
+    my_title = df['logger-id'][1] if 'logger-id' in df.columns else default_title        
+    
+    # --------------- working on data -----------------------------------
+
     if WRITE_LOG_data_as_EXCEL_file:
         print("Writing log data to EXCEL file...")        
-        efile_name = output_dir_with_sep + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".xlsx")        
+        efile_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".xlsx")        
         df.to_excel(efile_name, index=False)
    
     if WRITE_LOG_data_as_open_doc_ods_file:
         print("Writing log data to open document file...")        
-        efile_name = output_dir_with_sep + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".ods")        
+        efile_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".ods")        
         df.to_excel(efile_name, index=False)
 
     if SAVE_statistics_file:
         print("Writing statistics file...")
         prefix = last_datetime_str + "_statistics_"
-        sfile_name = output_dir_with_sep + add_prefix_to_file_stem(logger_tsv_file, prefix)
-        write_statistics_file(df, sfile_name, accepted_sensors)
+        sfile_name_xlsx = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, prefix, ".xlsx") 
+        sfile_name_tsv = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, prefix, ".tsv")                
+        df_stats = df.describe()
+        df_stats = df_stats.drop(Date_time_field_name, axis=1)
+        df_stats['duration'] = log_duration
+        try:
+            df_stats.to_excel(sfile_name_xlsx, index=True)
+        except PermissionError:
+            print('Failed to open statistics file.\nClose other application (e.g. Excel) blocking ' + sfile_name_xlsx + '\n')
+            input('Press Enter to quit.')
+            sys.exit()        
+        try:
+            df_stats.to_csv(sfile_name_tsv, index=True, sep=STATS_file_separator)
+        except PermissionError:
+            print('Failed to open statistics file.\nClose other application (e.g. Excel) blocking ' + sfile_name_tsv + '\n')
+            input('Press Enter to quit.')
+            sys.exit()         
+        
+        #write_statistics_file(df, sfile_name, accepted_sensors)
 
     if DO_interactive_browser_plot or SAVE_interactive_html_plot or WRITE_timeline_png:
 
@@ -305,13 +286,13 @@ def main():
 
         fig_time.update_layout(title=my_title, plot_bgcolor='rgb(230, 230,230)', showlegend=True)
 
-        # all fig calculated, now generate output
+        # ----------- all fig calculated, now generate output ----------------
         if SAVE_interactive_html_plot:
             print("Writing timeline plot to interactive html...")
             last_datetime = str(df[Date_time_field_name].iloc[-1]).replace(":", "_")
             stem_prefix = last_datetime + "_interactive_plot_"
             #f_html_name = str(pathlib.Path(logger_tsv_file).parent) + os.sep + stem_prefix + str(pathlib.Path(logger_tsv_file).stem) + ".html"
-            f_html_name = output_dir_with_sep + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".html")                    
+            f_html_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, stem_prefix, ".html")                    
             plotly.offline.plot(fig_time, filename=f_html_name, auto_open=False)
 
         if DO_interactive_browser_plot:
@@ -324,7 +305,7 @@ def main():
             last_datetime = str(df[Date_time_field_name].iloc[-1]).replace(":", "_")
             #stem_prefix = last_datetime + "_"
             #png_name = str(pathlib.Path(logger_tsv_file).parent) + os.sep + stem_prefix + str(pathlib.Path(logger_tsv_file).stem) + ".png"
-            png_name = output_dir_with_sep + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".png")                    
+            png_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".png")                    
             width_l=2880
             height_l=1620
             my_ytick_font_size = 33                                  # my default is 20 for sparse plots, use 16 for very many plots
