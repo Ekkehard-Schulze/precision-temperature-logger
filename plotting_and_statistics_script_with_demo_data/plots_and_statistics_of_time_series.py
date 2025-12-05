@@ -40,11 +40,15 @@ DO_interactive_browser_plot = True
 SAVE_interactive_html_plot = True
 SAVE_statistics_file = True
 WRITE_timeline_png = False
+WRITE_LOG_data_as_EXCEL_file = True
+WRITE_LOG_data_as_open_doc_ods_file = True
 
 CHAR_CODING = "utf8"
 
 
 # ----------------- content definitions ------------------------
+
+OUTPUT_DIR_for_script = "output_files_of_py_script"  # you may set this to ""
 
 STATS_file_separator = "\t"
 
@@ -84,7 +88,18 @@ def add_prefix_to_file_stem(ppath, stem_prefixl):
     )
 
 
-def write_statistics_file(dfl, logger_tsv_filel, accepted_sensorsl, skip_frames=0):
+def add_prefix_to_file_stem_and_swap_extension(ppath, stem_prefixl, new_extension):
+    '''inserts a prefix into a path at the beginning of the file name'''
+    return(
+        str(pathlib.Path(ppath).parent)
+        + os.sep
+        + stem_prefixl
+        + str(pathlib.Path(ppath).stem)
+        + new_extension
+    )
+
+
+def write_statistics_file(dfl, sfile_namel, accepted_sensorsl, skip_frames=0):
     '''write statistics file'''
     n_txt = "{number:.2f}"
     stat_header_line = ("Sensor" + STATS_file_separator
@@ -97,8 +112,8 @@ def write_statistics_file(dfl, logger_tsv_filel, accepted_sensorsl, skip_frames=
         + "\n"
     )
 
-    starttime = datetime.datetime.strptime(dfl[Date_time_field_name].iloc[0], ISO_DATE_TIME_format)
-    endtime = datetime.datetime.strptime(dfl[Date_time_field_name].iloc[-1], ISO_DATE_TIME_format)
+    starttime = dfl[Date_time_field_name].iloc[0]
+    endtime = dfl[Date_time_field_name].iloc[-1]
     timeDelta = endtime - starttime
 
     stat_data_lines = []
@@ -122,13 +137,9 @@ def write_statistics_file(dfl, logger_tsv_filel, accepted_sensorsl, skip_frames=
         except:
             print('...statistics for sensor ' + sensor + ' failed')
 
-    last_datetime = str(dfl[Date_time_field_name].iloc[-1]).replace(":", "_")
-    prefix = last_datetime + "_statistics_"
-    sfile_name = add_prefix_to_file_stem(logger_tsv_filel, prefix)
-
     if stat_data_lines:
         try:
-            with open(sfile_name, "w") as log_file:
+            with open(sfile_namel, "w") as log_file:
                 log_file.write('\n ' + stat_header_line + ' ' + ' '.join(stat_data_lines) + '\n')
         except PermissionError:
             print('Failed to open statistics file.\nClose other application (e.g. Excel) blocking ' + logger_tsv_filel + '\n')
@@ -201,11 +212,33 @@ def main():
         print(df)
         sys.exit()
 
+    df[Date_time_field_name] = pd.to_datetime(df[Date_time_field_name])
+    
+    output_dir_with_sep = ""
+    if OUTPUT_DIR_for_script and not os.path.exists(OUTPUT_DIR_for_script):
+        os.makedirs(OUTPUT_DIR_for_script)
+    if OUTPUT_DIR_for_script:
+        output_dir_with_sep = os.sep + OUTPUT_DIR_for_script
+
     my_title = df[LOGGER_ID_field_name][1] if LOGGER_ID_field_name in df.columns else default_title
+
+    last_datetime_str = str(df[Date_time_field_name].iloc[-1]).replace(":", "_")
+ 
+    if WRITE_LOG_data_as_EXCEL_file:
+        print("Writing log data to EXCEL file...")        
+        efile_name = output_dir_with_sep + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".xlsx")        
+        df.to_excel(efile_name, index=False)
+   
+    if WRITE_LOG_data_as_open_doc_ods_file:
+        print("Writing log data to open document file...")        
+        efile_name = output_dir_with_sep + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".ods")        
+        df.to_excel(efile_name, index=False)
 
     if SAVE_statistics_file:
         print("Writing statistics file...")
-        write_statistics_file(df, logger_tsv_file, accepted_sensors)
+        prefix = last_datetime_str + "_statistics_"
+        sfile_name = output_dir_with_sep + add_prefix_to_file_stem(logger_tsv_file, prefix)
+        write_statistics_file(df, sfile_name, accepted_sensors)
 
     if DO_interactive_browser_plot or SAVE_interactive_html_plot or WRITE_timeline_png:
 
@@ -274,10 +307,11 @@ def main():
 
         # all fig calculated, now generate output
         if SAVE_interactive_html_plot:
-            print("Writing html...")
+            print("Writing timeline plot to interactive html...")
             last_datetime = str(df[Date_time_field_name].iloc[-1]).replace(":", "_")
             stem_prefix = last_datetime + "_interactive_plot_"
-            f_html_name = str(pathlib.Path(logger_tsv_file).parent) + os.sep + stem_prefix + str(pathlib.Path(logger_tsv_file).stem) + ".html"
+            #f_html_name = str(pathlib.Path(logger_tsv_file).parent) + os.sep + stem_prefix + str(pathlib.Path(logger_tsv_file).stem) + ".html"
+            f_html_name = output_dir_with_sep + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".html")                    
             plotly.offline.plot(fig_time, filename=f_html_name, auto_open=False)
 
         if DO_interactive_browser_plot:
@@ -288,8 +322,9 @@ def main():
         if WRITE_timeline_png:
             print("Writing png...")
             last_datetime = str(df[Date_time_field_name].iloc[-1]).replace(":", "_")
-            stem_prefix = last_datetime + "_"
-            png_name = str(pathlib.Path(logger_tsv_file).parent) + os.sep + stem_prefix + str(pathlib.Path(logger_tsv_file).stem) + ".png"
+            #stem_prefix = last_datetime + "_"
+            #png_name = str(pathlib.Path(logger_tsv_file).parent) + os.sep + stem_prefix + str(pathlib.Path(logger_tsv_file).stem) + ".png"
+            png_name = output_dir_with_sep + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, last_datetime_str + "_", ".png")                    
             width_l=2880
             height_l=1620
             my_ytick_font_size = 33                                  # my default is 20 for sparse plots, use 16 for very many plots
@@ -303,6 +338,7 @@ def main():
             fig_time.update_layout(legend_font_size=33)
             fig_time.update_yaxes(automargin=True, title_standoff = 33)            
             fig_time.write_image(png_name)             
+
 
 if __name__ == '__main__':
     main()
