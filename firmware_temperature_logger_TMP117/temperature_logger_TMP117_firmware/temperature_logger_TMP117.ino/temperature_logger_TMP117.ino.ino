@@ -92,13 +92,9 @@
   ---------
   At every program start or reset, the software version, gain, and resolution are written to the SD card.
   When logging, a table is generated:
-  LoggerName, DateTime, Ubat, TMP1, TMP2, TMP3, TMP4
-  Unixtime represents the number of seconds elapsed since January 1, 1970.
-  Conversion for Open/LibreOffice: https://forum.openoffice.org/en/forum/viewtopic.php?f=13&t=606
-  Ubat is the LiPo voltage in mV.
-  Temp is the RTC temperature in degrees Celsius.
-  CH1 to CH12 are specified in µV and correspond to the sensor voltage.
-  The table separator can be changed in the `collect_data_and_write_to_SD_card` routine using the `Separator` variable.
+  logger-id, Vbatt, date_time, TMP1, TMP2, TMP3, TMP4
+  Vbatt is the LiIon battery voltage in mV.
+  The table separator can be changed in user settings as the "Separator" variable.
   The logger does not delete data. New data is always appended to the end of the data file (FILENAME).
 
 
@@ -432,7 +428,7 @@ void setup() {
   SdFile::dateTimeCallback(dateTime); // for right time stamp on file
 
   String headerstr="logger-id"+Separator;
-    headerstr+="ubat"+Separator;
+    headerstr+="Vbatt"+Separator;
     headerstr+="date_time"+Separator;
 
   RTC.begin();

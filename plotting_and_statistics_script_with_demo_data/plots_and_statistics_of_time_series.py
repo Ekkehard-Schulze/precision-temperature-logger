@@ -53,7 +53,7 @@ parse_for_bad_datelines = True
 
 allsensor_options = ['TMP1', 'TMP2', 'TMP3', 'TMP4']
 
-BAT_voltage_field = 'ubat'
+BAT_voltage_field_name = 'Vbatt'
 
 Date_time_field_name = "date_time"
 
@@ -209,13 +209,13 @@ def main():
 
         # ---------------------- plot battery voltage -----------------------------------------
 
-        if BAT_voltage_field in df.columns and ('unix-time' in df.columns or Date_time_field_name in df.columns):
+        if BAT_voltage_field_name in df.columns and ('unix-time' in df.columns or Date_time_field_name in df.columns):
 
             timefield = Date_time_field_name if Date_time_field_name in df.columns else 'unix-time'
 
-            print("plotting ubat...")
+            print(f"plotting {BAT_voltage_field_name}...")
 
-            fig_bat = go.Figure(go.Scatter(x=df[timefield], y=df['ubat'], name=BAT_voltage_field))
+            fig_bat = go.Figure(go.Scatter(x=df[timefield], y=df[BAT_voltage_field_name], name=BAT_voltage_field_name))
 
             fig_bat.update_layout(title=my_title + ": Battery Voltage [mV]    (full: 4200, empty: 3600)", plot_bgcolor='rgb(230, 230,230)', showlegend=True)
 
