@@ -92,7 +92,7 @@
   ---------
   At every program start or reset, the software version, gain, and resolution are written to the SD card.
   When logging, a table is generated:
-  logger-id, Vbatt, date_time, TMP1, TMP2, TMP3, TMP4
+  Logger-id, Vbatt, Date_time, TMP1, TMP2, TMP3, TMP4
   Vbatt is the LiIon battery voltage in mV.
   The table separator can be changed in user settings as the "Separator" variable.
   The logger does not delete data. New data is always appended to the end of the data file (FILENAME).
@@ -427,9 +427,9 @@ void setup() {
 
   SdFile::dateTimeCallback(dateTime); // for right time stamp on file
 
-  String headerstr="logger-id"+Separator;
+  String headerstr="Logger-id"+Separator;
     headerstr+="Vbatt"+Separator;
-    headerstr+="date_time"+Separator;
+    headerstr+="Date_time"+Separator;
 
   RTC.begin();
   RTC.armAlarm(1, false);                       //clear any pending alarms
@@ -555,7 +555,7 @@ void collect_data_and_write_to_SD_card() {
       hourString = String(now.hour());
     }
     
-    // we use iso date_time format e.g.  2025-12-01T11:34:51  https://en.wikipedia.org/wiki/ISO_8601
+    // we use iso Date_time format e.g.  2025-12-01T11:34:51  https://en.wikipedia.org/wiki/ISO_8601
     dataString += String(now.year()) + "-"+ monthString + "-" + dayString + "T"+ \
     hourString + ":" + minString + ":" + secString + Separator; 
    

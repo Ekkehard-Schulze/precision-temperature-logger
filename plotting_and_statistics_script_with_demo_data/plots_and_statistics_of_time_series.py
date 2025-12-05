@@ -55,7 +55,9 @@ allsensor_options = ['TMP1', 'TMP2', 'TMP3', 'TMP4']
 
 BAT_voltage_field_name = 'Vbatt'
 
-Date_time_field_name = "date_time"
+Date_time_field_name = "Date_time"
+
+LOGGER_ID_field_name = "Logger-id"
 
 default_separator = "\t"
 
@@ -143,7 +145,7 @@ def bad_date_and_repeated_header_masker(linesl):
     for ln, l in enumerate(linesl):
         if l.startswith('#'):  # comment found, redundant with pandas df load comment =
             skiplinesl.append(ln)
-        elif "logger-id" in l:
+        elif LOGGER_ID_field_name in l:
             if toplines:
                 if ln > 0:
                     skiplinesl.append(ln - 1)  # leave last of multiple top header lines. This is required for re-starts in case the restart was done due to an observed sensor count failure (LED blinks)
@@ -199,7 +201,7 @@ def main():
         print(df)
         sys.exit()
 
-    my_title = df['logger-id'][1] if 'logger-id' in df.columns else default_title
+    my_title = df[LOGGER_ID_field_name][1] if LOGGER_ID_field_name in df.columns else default_title
 
     if SAVE_statistics_file:
         print("Writing statistics file...")
@@ -248,7 +250,7 @@ def main():
                     )  # plot second to last trace
 
             # fig_violine.update_layout(title='temperature logged',plot_bgcolor='rgb(230, 230,230)', showlegend=True)
-            # fig_violine.update_layout(title=df['logger-id'][1],plot_bgcolor='rgb(230, 230,230)', showlegend=True)
+            # fig_violine.update_layout(title=df[LOGGER_ID_field_name][1],plot_bgcolor='rgb(230, 230,230)', showlegend=True)
 
             # fig_violine.show()
 
