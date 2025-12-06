@@ -78,7 +78,11 @@ commercially available pluggable LiPo or LiIon battery. Some TMP117 breakout
 
 boards are commercially available (e. g. Adafruit #4821 or Sparkfun #15805), 
 
-but these have a larger size than our laboratory optimizes sensor boards.
+but these have a much larger size than our sensor boards, which are optimized
+
+for watertight sealing and laboratory usage, e. g. inside the agar of
+
+a Petri dish.
 
 
 3.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712' board, but the 
