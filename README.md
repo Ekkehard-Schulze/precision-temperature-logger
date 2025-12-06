@@ -1,4 +1,5 @@
-Precision temperature SD-card logger for laboratory usage.
+Precision temperature SD-card logger for laboratory usage
+---------------------------------------------------------
 
 We provide hardware design files, firmware, and a script
 
@@ -53,7 +54,8 @@ the TMP117 sensors for laboratory usage e. g. in agar plates or
 liquids.
 
 
-Notes:
+Notes
+-----
 
 1.) You may like to try the improved, but software compatible sensor type TMP119.
 
@@ -75,6 +77,9 @@ user will have to breakout the I2C bus, provide pull-up resistors for the I2C bu
 
 a voltage devider for battery voltage sensing, a DS3231 clock, and TMP117 sensors.
 
+
+Contributions
+-------------
 
 This device was developed by the department of Bioinformatics and Molecular Genetics, 
 
