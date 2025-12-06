@@ -15,7 +15,7 @@ various laboratory applications for years.
 
 Up to four TMP117 sensors provide NIST-traceable 
 
-accuracy not worse than ±0.1°C from –20 °C to 50°C.
+accuracy not worse than ±0.1°C from –20°C to 50°C.
 
 Logging intervals can be set in a settings.txt file on the 
 
@@ -47,31 +47,39 @@ We proved a PCB to integrate a 18650 lithium ion battery and a
 
 DS3231 real time clock with the 'Adafruit feather logger' and 
 
-morevoer, also miniature 7 x 5 mm sized breakout boards for 
+morevoer, also miniature 7 x 5 mm sized breakout boards for wire-
 
-the TMP117 sensors for laboratory usage e. g. in agar plates or 
+attached TMP117 sensors for laboratory usage e. g. in agar plates or 
 
-liquids.
+liquids. The main board has two optional places for on-board TMP117
+
+sensors.
 
 
 Notes
 -----
 
-1.) You may like to try the improved, but software compatible sensor type TMP119.
+1.) For work in wet, salty or corrosive environments you
 
-2.) For a qick start instead of using our project's custom printed circuit 
+must cover all sensor board conductive surfaces with a high 
+
+quality polyepoxide (cured epoxy resin).
+
+2.) You may like to try the improved, but software compatible sensor type TMP119.
+
+3.) For a qick start instead of using our project's custom printed circuit 
 
 board the 'Adafruit Feather 32u4 Adalogger #2795' can be combined with an 
 
 'Adafruit DS3231 Precision RTC FeatherWing #3028' and powered with a 
 
-commercially available pluggable LiPo or LiIon battery. A few TMP117 breakout 
+commercially available pluggable LiPo or LiIon battery. Some TMP117 breakout 
 
-boards are commercially available, but have a larger size than
+boards are commercially available (e. g. Adafruit #4821 or Sparkfun #15805), 
 
-our laboratory optimizes sensor boards.
+but these have a larger size than our laboratory optimizes sensor boards.
 
-3.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712' board, but the 
+4.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712' board, but the 
 
 user will have to breakout the I2C bus, provide pull-up resistors for the I2C bus, 
 
