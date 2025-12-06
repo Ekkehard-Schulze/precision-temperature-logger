@@ -49,15 +49,13 @@ DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger' and
 
 morevoer, four miniature 7 x 5 mm sized breakout boards for wire-
 
-attached TMP117 sensors. These serve as probes for laboratory usage, 
+attached TMP117 sensors. These serve as probes for laboratory usage 
 
 and can be inserted into agar plates or liquids. The main board has 
 
-two optional places for on-board TMP117
+two optional places for on-board TMP117 sensors to log the environmental 
 
-sensors to log the environmental temperature, for example for usage 
-
-in incubators.
+temperature, for example for usage in incubators.
 
 
 Notes
