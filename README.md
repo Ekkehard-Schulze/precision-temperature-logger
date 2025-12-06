@@ -6,7 +6,7 @@ for interactive data plotting and statistics.
 
 The logger is low power and intended for battery usage.
 
-It runs for month from a single LiIon 18650 cell
+It runs for month from a single 18650 LiIon cell
 
 without re-charging. Multiple devices have served
 
@@ -42,13 +42,15 @@ The target board is 'Adafruit Feather 32u4 Adalogger #2795'
 
 in combination with a precision real time clock DS3231.
 
-We proved a PCB to integrate a lithium ion battery and a DS3231 real time clock
+We proved a PCB to integrate a 18650 lithium ion battery and a 
 
-with the 'Adafruit feather logger' and morevoer, also miniature 7 x 5 mm 
+DS3231 real time clock with the 'Adafruit feather logger' and 
 
-sized breakout boards for the TMP117 sensors for laboratory
+morevoer, also miniature 7 x 5 mm sized breakout boards for 
 
-usage e. g. in agar plates or liquids.
+the TMP117 sensors for laboratory usage e. g. in agar plates or 
+
+liquids.
 
 
 Notes:
