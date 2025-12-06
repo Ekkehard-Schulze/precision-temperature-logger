@@ -61,15 +61,15 @@ Notes:
 
 board the 'Adafruit Feather 32u4 Adalogger #2795' can be combined with an 
 
-'Adafruit DS3231 Precision RTC FeatherWing #3028'and powered with a 
+'Adafruit DS3231 Precision RTC FeatherWing #3028' and powered with a 
 
-commercially available pluggable LiPo or LiIon battery. Alternative TMP117 breakout 
+commercially available pluggable LiPo or LiIon battery. A few TMP117 breakout 
 
-boards are commercially available, but typically have a larger size than
+boards are commercially available, but have a larger size than
 
 our laboratory optimizes sensor boards.
 
-3.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712'  board, but the 
+3.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712' board, but the 
 
 user will have to breakout the I2C bus, provide pull-up resistors for the I2C bus, 
 
