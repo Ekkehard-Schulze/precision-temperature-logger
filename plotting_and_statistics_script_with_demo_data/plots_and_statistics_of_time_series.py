@@ -207,17 +207,18 @@ def main():
         df_stats = df_stats.drop(Date_time_field_name, axis=1)
         df_stats['duration'] = log_duration
         try:
-            df_stats.to_excel(sfile_name_xlsx, index=True)
-        except PermissionError:
-            print('Failed to open statistics file.\nClose other application (e.g. Excel) blocking ' + sfile_name_xlsx + '\n')
-            input('Press Enter to quit.')
-            sys.exit()        
-        try:
             df_stats.to_csv(sfile_name_tsv, index=True, sep=STATS_file_separator)
         except PermissionError:
             print('Failed to open statistics file.\nClose other application (e.g. Excel) blocking ' + sfile_name_tsv + '\n')
             input('Press Enter to quit.')
             sys.exit()         
+        try:
+            df_stats.rename(columns={'duration': 'duration [d]'}, inplace=True)
+            df_stats.to_excel(sfile_name_xlsx, index=True)
+        except PermissionError:
+            print('Failed to open statistics file.\nClose other application (e.g. Excel) blocking ' + sfile_name_xlsx + '\n')
+            input('Press Enter to quit.')
+            sys.exit()        
         
         #write_statistics_file(df, sfile_name, accepted_sensors)
 
