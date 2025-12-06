@@ -98,7 +98,7 @@ TMP119 has higher a accuracy (±0.03°C (typical) from 0°C to 45°C
 
 and ±0.08°C (maximum) from 0°C to 45°C), but is only avaible in the 
 
-YBG0006 Die Size Ball Grid Array package, whereas our boards use the 
+YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
 
 WSON package.
 
