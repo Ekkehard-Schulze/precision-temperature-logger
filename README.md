@@ -27,7 +27,7 @@ can be used with the same firmware.
 
 The logger writes a 'tab or comma separated value'
 
-format text file with ISO 8601 formatted datetime strings 
+format text file with ISO 8601 formatted date and time strings 
 
 to a micro-SD card. The format is compatible with python's pandas 
 
@@ -39,35 +39,36 @@ We provide a python script for plotting, interactive
 
 analysis and descriptive statistics. 
 
-The target board is 'Adafruit Feather 32u4 Adalogger #2795' 
+The target board is 'Adafruit Feather 32u4 Adalogger #2795'.
 
-in combination with a precision real time clock DS3231.
+It works in combination with a precision real time clock DS3231.
 
 We proved a PCB to integrate a 18650 lithium ion battery and a 
 
-DS3231 real time clock with the 'Adafruit feather logger' and 
+DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger' and 
 
-morevoer, also miniature 7 x 5 mm sized breakout boards for wire-
+morevoer, four miniature 7 x 5 mm sized breakout boards for wire-
 
-attached TMP117 sensors for laboratory usage e. g. in agar plates or 
+attached TMP117 sensors for laboratory usage, such as in agar plates or 
 
 liquids. The main board has two optional places for on-board TMP117
 
-sensors.
+sensors to log the environmental temperature, for example for usage 
+
+in incubators.
 
 
 Notes
 -----
 
-1.) For work in wet, salty or corrosive environments you
+1.) For usage in wet, salty or corrosive environments you
 
-must cover all sensor board conductive surfaces with a high 
+must cover all exposed sensor board conductive surfaces with a high 
 
 quality polyepoxide (cured epoxy resin).
 
-2.) You may like to try the improved, but software compatible sensor type TMP119.
 
-3.) For a qick start instead of using our project's custom printed circuit 
+2.) For a qick start instead of using our project's custom printed circuit 
 
 board the 'Adafruit Feather 32u4 Adalogger #2795' can be combined with an 
 
@@ -79,21 +80,35 @@ boards are commercially available (e. g. Adafruit #4821 or Sparkfun #15805),
 
 but these have a larger size than our laboratory optimizes sensor boards.
 
-4.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712' board, but the 
+
+3.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712' board, but the 
 
 user will have to breakout the I2C bus, provide pull-up resistors for the I2C bus, 
 
 a voltage devider for battery voltage sensing, a DS3231 clock, and TMP117 sensors.
 
 
+4.) You may like to try the software compatible sensor TMP119.
+
+TMP119 has higher a accuracy (±0.03°C (typical) from 0°C to 45°C
+
+and ±0.08°C (maximum) from 0°C to 45°C), but is only avaible in the 
+
+YBG0006 Die Size Ball Grid Array package, whereas our boards use the 
+
+WSON package.
+
+
 Contributions
 -------------
 
-This device was developed by the department of Bioinformatics and Molecular Genetics, 
+This device was developed by the department of Bioinformatics and Molecular Genetics
 
-Faculty of Biology ('The Baumeister Lab'), University of Freiburg, 79104 Freiburg, 
+('The Baumeister Lab'), Institute for Biology III, Faculty of Biology, 
 
-Germany in collaboration with the institute's electronics workshop 'AT-Technik'.
+University of Freiburg, Schänzlestraße 1, 79104 Freiburg, Germany
+
+in collaboration with the institute's electronics workshop 'AT-Technik'.
 
 The hardware was designed by Jürgen Schmidt and constructed by 
 
