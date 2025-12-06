@@ -12,7 +12,7 @@ without re-charging. Multiple devices have served
 
 various laboratory applications for years.
 
-Up to four TMP117 sensors provide NIST-tracable 
+Up to four TMP117 sensors provide NIST-traceable 
 
 accuracy not worse than ±0.1°C from –20 °C to 50°C.
 
