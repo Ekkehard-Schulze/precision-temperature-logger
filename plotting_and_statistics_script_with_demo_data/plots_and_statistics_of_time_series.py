@@ -34,7 +34,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-# ----------- user settings: selct tasks to be done using True/False ----------------------
+# ----------- task control: select tasks to be done using True, use False unselect taskto have task not done -------
 
 DO_interactive_browser_plot = True
 SAVE_interactive_html_plot = True
@@ -43,10 +43,8 @@ WRITE_timeline_png = False
 WRITE_LOG_data_as_EXCEL_file = True
 WRITE_LOG_data_as_open_doc_ods_file = True
 
-CHAR_CODING = "utf8"
-
-
 # ----------------- content definitions ------------------------
+CHAR_CODING = "utf8"
 
 OUTPUT_DIR_for_script = "output_files_of_py_script"  # you may set this to ""
 

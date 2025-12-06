@@ -80,7 +80,7 @@ boards are commercially available (e. g. Adafruit #4821 or Sparkfun #15805),
 
 but these have a much larger size than our sensor boards, which are optimized
 
-for watertight sealing and laboratory usage, e. g. inside the agar of
+for watertight sealing and laboratory usage, e. g. inside the salty wet agar of
 
 a Petri dish.
 
