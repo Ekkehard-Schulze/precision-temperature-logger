@@ -85,7 +85,7 @@ This device was developed by the department of Bioinformatics and Molecular Gene
 
 Faculty of Biology ('The Baumeister Lab'), University of Freiburg, 79104 Freiburg, 
 
-Germany in collaboration with the intitute's electronics workshop 'AT-Technik'.
+Germany in collaboration with the institute's electronics workshop 'AT-Technik'.
 
 The hardware was designed by Jürgen Schmidt and constructed by 
 
@@ -97,7 +97,8 @@ logging firmware by Ekkehard Schulze. Ekkehard Schulze also tested
 
 many alternative temperature sensors and identified the TMP117 as the 
 
-only type satifying our specific requirements in the temperature range
+only type satisfying our specific requirements in the temperature range
 
 close to 0°C.
+
 
