@@ -35,27 +35,24 @@ and plotly packages as well as with standard spreadsheet
 
 processing. 
 
-We provide a python script for plotting, interactive
-
-analysis and descriptive statistics. 
 
 The target board is 'Adafruit Feather 32u4 Adalogger #2795'.
 
 It works in combination with a precision real time clock DS3231.
 
-We proved a PCB to integrate a 18650 lithium ion battery and a 
+We provid a PCB to integrate a 18650 lithium ion battery and a 
 
 DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger' and 
 
-morevoer, four miniature 7 x 5 mm sized breakout boards for wire-
+moreover, four miniature 7 x 5 mm sized breakout boards for wire-
 
 attached TMP117 sensors. These serve as probes for laboratory usage 
 
 and can be inserted into agar plates or liquids. The main board has 
 
-two optional places for on-board TMP117 sensors to log the environmental 
+two optional places for on-board TMP117 sensors, which can be used to 
 
-temperature, for example for usage in incubators.
+log the environmental temperature, for example in incubators.
 
 
 Notes
@@ -94,13 +91,15 @@ a voltage devider for battery voltage sensing, a DS3231 clock, and TMP117 sensor
 
 4.) You may like to try the software compatible sensor TMP119.
 
-TMP119 has higher a accuracy (±0.03°C (typical) from 0°C to 45°C
+TMP119 has a higher accuracy (±0.03°C (typical) from 0°C to 45°C
 
 and ±0.08°C (maximum) from 0°C to 45°C), but is only avaible in the 
 
 YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
 
-WSON package.
+slightly larger WSON package. Remarkably, the die size of TMP119 
+
+is just 1.0 mm x 0.8 mm, which may allow further laboratory aplications.
 
 
 Contributions
@@ -124,8 +123,8 @@ logging firmware by Ekkehard Schulze. Ekkehard Schulze also tested
 
 many alternative temperature sensors and identified the TMP117 as the 
 
-only type satisfying our specific requirements in the temperature range
+only type satisfying our experimental requirements in the temperature 
 
-close to 0°C.
+range close to 0°C.
 
 
