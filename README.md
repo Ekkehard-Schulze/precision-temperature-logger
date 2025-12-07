@@ -128,3 +128,7 @@ only type satisfying our experimental requirements in the temperature
 range close to 0°C.
 
 
+Images
+-------
+
+![Alt text](hardware_sensor_breakout_boards\TMP117-WSON-package-Sensor-PCBs\populated TMP117 sensor breakout PCB.jpg"?raw=true "Sensor board before and after coating")
