@@ -29,7 +29,7 @@ The logger writes a 'tab or comma separated value'
 
 format text file with ISO 8601 formatted date and time strings 
 
-to a micro-SD card. The format is compatible with python's pandas 
+to a micro-SD card. This format is compatible with python's pandas 
 
 and plotly packages as well as with standard spreadsheet
 
