@@ -131,4 +131,4 @@ range close to 0°C.
 Images
 -------
 
-![Alt text](hardware_sensor_breakout_boards\TMP117-WSON-package-Sensor-PCBs\populated TMP117 sensor breakout PCB.jpg?raw=true "Sensor board before and after coating")
+![Alt text](./hardware_sensor_breakout_boards/TMP117-WSON-package-Sensor-PCBs/populated TMP117 sensor breakout PCB.jpg?raw=true "Sensor board before and after coating")
