@@ -19,11 +19,9 @@ accuracy not worse than ±0.1°C from –20°C to 50°C.
 
 Logging intervals can be set in a settings.txt file on the 
 
-SD-card by the user. The sensors are auto-detected, 
+SD-card by the user. The the firmware supports all 
 
-and all combinations of the four possible sensor addesses 
-
-can be used with the same firmware.
+combinations of the four possible sensor addesses.
 
 The logger writes a 'tab or comma separated value'
 
@@ -119,13 +117,13 @@ Joshua Schwarber. Jürgen Schmidt wrote an initial low-power voltage
 
 logging firmware, which then was extended to the present temperature 
 
-logging firmware by Ekkehard Schulze. Ekkehard Schulze also tested 
+logging firmware by Ekkehard Schulze. Ekkehard Schulze tested 
 
-many alternative temperature sensors and identified the TMP117 as the 
+multiple different temperature sensors typs and identified the 
 
-only type satisfying our experimental requirements in the temperature 
+Texas Instruments sensor TMP117AIDRVR as the only type satisfying 
 
-range close to 0°C.
+our experimental requirements in the temperature range close to 0°C.
 
 
 Images
