@@ -16,11 +16,23 @@
 
 r'''
 
-Plotly time series data with ISO date format
+Plotly based interactive inspection of time series data
 
-Lines with wrongly formatted ISO dates are optionally removed by parser
+Check user settings below to control which tasks are executed by this script.
 
-Check user settings below to control tasks performed by this code.
+Implemented tasks are:
+-----------------------
+DO_interactive_browser_plot
+
+SAVE_interactive_html_plot
+
+SAVE_statistics_file
+
+WRITE_timeline_png
+
+WRITE_LOG_data_as_EXCEL_file
+
+WRITE_LOG_data_as_open_doc_ods_file
 
 '''
 
