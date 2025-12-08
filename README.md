@@ -25,7 +25,7 @@ combinations of the four possible sensor addesses.
 
 The logger writes a 'tab or comma separated value'
 
-format text file with ISO 8601 formatted date and time strings 
+formated text file with ISO 8601 date and time strings 
 
 to a micro-SD card. This format is compatible with python's pandas 
 
