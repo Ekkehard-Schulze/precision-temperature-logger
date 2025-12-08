@@ -144,4 +144,8 @@ Sensor board with polytetrafluoroethylene isolated wires and plug
 
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117-WSON-package-Sensor-PCBs/Logger_with_Sensor.jpg)
 
-Logger with sensor
+Logger with sensor attached
+
+![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117_in_CyA.jpg)
+
+TMP117 directly soldered to wires and covered in ethyl 2-cyanoacrylate ("Super Glue") after years of laboratory usage
