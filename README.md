@@ -13,7 +13,7 @@ without re-charging. Multiple devices have served
 
 various laboratory applications for years.
 
-Up to four TMP117 sensors provide NIST-traceable 
+Up to four TMP117A sensors provide NIST-traceable 
 
 accuracy not worse than ±0.1°C from –20°C to 50°C.
 
@@ -89,7 +89,7 @@ a voltage devider for battery voltage sensing, a DS3231 clock, and TMP117 sensor
 
 4.) Take note that TMP117 product versions TMP117N and TMP117M are slightly 
 
-less accurate than TMP117AIDRVR.
+less accurate than TMP117A.
 
 
 5.) You may like to try the software compatible sensor TMP119.
@@ -126,7 +126,7 @@ logging firmware by Ekkehard Schulze. Ekkehard Schulze tested
 
 multiple different temperature sensors typs and identified the 
 
-Texas Instruments sensor TMP117AIDRVR as the only type satisfying 
+Texas Instruments sensor TMP117A as the only type satisfying 
 
 our experimental requirements in the temperature range close to 0°C.
 
