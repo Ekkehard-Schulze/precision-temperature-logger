@@ -82,7 +82,7 @@ difficult to seal for usage in wet and corrosive environments.
 
 user will have to breakout the I2C bus, provide pull-up resistors for the I2C bus, 
 
-a voltage devider for battery voltage sensing, a DS3231 clock, and TMP117 sensors.
+a voltage divider for battery voltage sensing, a DS3231 clock, and TMP117 sensors.
 
 
 4.) Take note that TMP117 product versions TMP117N and TMP117M are slightly 
