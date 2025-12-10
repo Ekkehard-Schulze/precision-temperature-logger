@@ -44,11 +44,11 @@ DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger' and
 
 moreover, four miniature 7 x 5 mm sized breakout boards for wire-
 
-attached TMP117 sensors. These serve as probes for laboratory usage 
+attached TMP117A sensors. These serve as probes for laboratory usage 
 
 and can be inserted into agar plates or liquids. The main board has 
 
-two optional places for on-board TMP117 sensors, which can be used to 
+two optional places for on-board TMP117A sensors, which can be used to 
 
 log the environmental temperature, for example in incubators.
 
@@ -65,19 +65,17 @@ quality polyepoxide (cured epoxy resin).
 
 2.) For a qick start instead of using our project's custom printed circuit 
 
-board the 'Adafruit Feather 32u4 Adalogger #2795' can be combined with an 
+board use the 'Adafruit Feather 32u4 Adalogger #2795' combined with an 
 
-'Adafruit DS3231 Precision RTC FeatherWing #3028' and powered with a 
+'Adafruit DS3231 Precision RTC FeatherWing #3028' and powered it with a 
 
 commercially available pluggable LiPo or LiIon battery. Some TMP117 breakout 
 
 boards are commercially available (e. g. Adafruit #4821 or Sparkfun #15805), 
 
-but these have a much larger size than our sensor boards, which are optimized
+but these have a much larger size than our sensor boards and are more 
 
-for watertight sealing and laboratory usage, e. g. inside the salty wet agar of
-
-a Petri dish.
+difficult to seal for usage in wet and corrosive environments.
 
 
 3.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712' board, but the 
