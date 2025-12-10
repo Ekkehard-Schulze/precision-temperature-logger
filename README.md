@@ -1,5 +1,5 @@
-Precision temperature SD-card logger for laboratory usage
----------------------------------------------------------
+Precision temperature SD-card logger for laboratory use
+-------------------------------------------------------
 
 We provide hardware design files, firmware, and a script
 
