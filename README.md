@@ -17,11 +17,9 @@ Up to four TMP117A sensors provide NIST-traceable
 
 accuracy not worse than ±0.1°C from –20°C to 50°C.
 
-Logging intervals can be set in a settings.txt file on the 
+The firmware supports all combinations of the four 
 
-SD-card by the user. The the firmware supports all 
-
-combinations of the four possible sensor addesses.
+possible sensor addesses.
 
 The logger writes a 'tab or comma separated value'
 
@@ -31,14 +29,15 @@ to a micro-SD card. This format is compatible with python's pandas
 
 and plotly packages as well as with standard spreadsheet
 
-processing. 
+processing. Logging intervals can be set in a settings.txt 
 
+file on the SD-card.
 
-The target board is 'Adafruit Feather 32u4 Adalogger #2795'.
+We use 'Adafruit Feather 32u4 Adalogger #2795' as the controller 
 
-It works in combination with a precision real time clock DS3231.
+board in combination with a precision real time clock DS3231.
 
-We provid a PCB to integrate a 18650 lithium ion battery and a 
+We provid a PCB to integrate a 18650 lithium ion battery and the 
 
 DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger' and 
 
@@ -46,11 +45,13 @@ moreover, four miniature 7 x 5 mm sized breakout boards for wire-
 
 attached TMP117A sensors. These serve as probes for laboratory usage 
 
-and can be inserted into agar plates or liquids. The main board has 
+and can be inserted for example into agar plates or liquid samples.  
 
-two optional places for on-board TMP117A sensors, which can be used to 
+The main board has two optional places for on-board TMP117A sensors, 
 
-log the environmental temperature, for example in incubators.
+which we use to record environmental temperatures, for example in 
+
+incubators.
 
 
 Notes
