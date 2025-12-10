@@ -29,9 +29,9 @@ to a micro-SD card. This format is compatible with python's pandas
 
 and plotly packages as well as with standard spreadsheet
 
-processing. Logging intervals can be set in a settings.txt 
+processing. The user can specify the logging interval 
 
-file on the SD-card.
+in a settings.txt file on the SD-card.
 
 We use 'Adafruit Feather 32u4 Adalogger #2795' as the controller 
 
@@ -43,9 +43,9 @@ DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger' and
 
 moreover, four miniature 7 x 5 mm sized breakout boards for wire-
 
-attached TMP117A sensors. These serve as probes for laboratory usage 
+attached TMP117A sensors. These serve as probes in laboratory applications 
 
-and can be inserted for example into agar plates or liquid samples.  
+and were used in agar plates, liquid samples and inubators.
 
 The main board has two optional places for on-board TMP117A sensors, 
 
