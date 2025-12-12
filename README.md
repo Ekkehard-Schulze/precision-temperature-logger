@@ -35,7 +35,7 @@ We use 'Adafruit Feather 32u4 Adalogger #2795' as the controller
 
 board in combination with a precision real time clock DS3231.
 
-We provid a PCB to integrate a 18650 lithium ion battery and the 
+We provide a PCB to integrate a 18650 lithium ion battery and the 
 
 DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger'. 
 
