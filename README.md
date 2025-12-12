@@ -62,9 +62,9 @@ must cover all exposed sensor board conductive surfaces with a high
 quality polyepoxide (cured epoxy resin).
 
 
-2.) For a qick start instead of using our project's custom printed circuit 
+2.) For a qick start instead of using our project's printed circuit 
 
-board use the 'Adafruit Feather 32u4 Adalogger #2795' with an 
+board you can use the 'Adafruit Feather 32u4 Adalogger #2795' with an 
 
 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it with a 
 
@@ -99,9 +99,11 @@ YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the
 
 slightly larger WSON package. Remarkably, the die size of TMP119 
 
-is just 1.0 mm x 0.8 mm, which may allow laboratory aplications,
+is just 1.5 mm x 1.0 mm. This may allow laboratory aplications,
 
-for which the WSON package size we used is too large.
+for which the 2.1 mm x 2.1 mm sized WSON package size we used is 
+
+too large.
 
 
 Contributions
