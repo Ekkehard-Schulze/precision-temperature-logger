@@ -1,17 +1,15 @@
 Precision temperature SD-card logger for laboratory use
 -------------------------------------------------------
 
-The logger is low power and intended for battery usage.
+The device is low power and runs for month from a single 
 
-It runs for month from a single 18650 LiIon cell
+18650 LiIon cell without re-charging. We provide hardware 
 
-without re-charging. We provide hardware design files, 
+design files, firmware, and a script for interactive 
 
-firmware, and a script for interactive data plotting and 
+graphical data analyzis and statistics. Multiple loggers 
 
-statistics. Multiple devices have served
-
-various laboratory applications for years.
+have served various laboratory applications for years.
 
 Up to four TMP117A sensors provide NIST-traceable 
 
@@ -45,7 +43,7 @@ Moreover, we provide four miniature 7 x 5 mm sized breakout boards for wire-
 
 attached TMP117A sensors. These serve as probes in laboratory applications, 
 
-for example for usage in agar plates, liquid samples and loboratory devices.
+for example for usage in agar plates, liquid samples and laboratory devices.
 
 The main board has two optional places for on-board TMP117A sensors, 
 
@@ -68,13 +66,13 @@ quality polyepoxide (cured epoxy resin).
 
 board use the 'Adafruit Feather 32u4 Adalogger #2795' with an 
 
-'Adafruit DS3231 Precision RTC FeatherWing #3028' powered it with a 
+'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it with a 
 
 pluggable LiPo or LiIon battery. Some TMP117 breakout boards are commercially 
 
 available (e. g. Adafruit #4821 or Sparkfun #15805), but these have a much 
 
-larger size than our sensor boards and are more difficult to seal for user
+larger size than our sensor boards and are more difficult to seal for use
 
 in wet and corrosive environments.
 
@@ -101,7 +99,9 @@ YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the
 
 slightly larger WSON package. Remarkably, the die size of TMP119 
 
-is just 1.0 mm x 0.8 mm, which may allow further laboratory aplications.
+is just 1.0 mm x 0.8 mm, which may allow laboratory aplications,
+
+for which the WSON package size we used is too large.
 
 
 Contributions
