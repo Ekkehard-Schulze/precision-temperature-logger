@@ -1,4 +1,5 @@
 / This config file is for the TMP117 Adafruit Feather 32u4 Adalogger
+/ Copy this file onto the logger's SD-card
 / This file requires UNIX line ends (LF). 
 / The first character of this line ('/') specifies a line as a comment.
 / A comment does not influence the logger.
