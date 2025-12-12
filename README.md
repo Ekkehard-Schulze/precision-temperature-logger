@@ -25,11 +25,9 @@ formated text file with ISO 8601 date and time strings
 
 to a micro-SD card. This format is compatible with python's pandas 
 
-and plotly packages as well as with standard spreadsheet
+and plotly packages as well as with spreadsheet processing. 
 
-processing. The user can specify the logging interval 
-
-in a settings.txt file on the SD-card.
+The user can set the logging interval in settings.txt on the SD card. 
 
 We use 'Adafruit Feather 32u4 Adalogger #2795' as the controller 
 
