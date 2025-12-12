@@ -1,15 +1,15 @@
 Precision temperature SD-card logger for laboratory use
 -------------------------------------------------------
 
-We provide hardware design files, firmware, and a script
-
-for interactive data plotting and statistics.
-
 The logger is low power and intended for battery usage.
 
 It runs for month from a single 18650 LiIon cell
 
-without re-charging. Multiple devices have served
+without re-charging. We provide hardware design files, 
+
+firmware, and a script for interactive data plotting and 
+
+statistics. Multiple devices have served
 
 various laboratory applications for years.
 
@@ -39,25 +39,25 @@ board in combination with a precision real time clock DS3231.
 
 We provid a PCB to integrate a 18650 lithium ion battery and the 
 
-DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger' and 
+DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger'. 
 
-moreover, four miniature 7 x 5 mm sized breakout boards for wire-
+Moreover, we provide four miniature 7 x 5 mm sized breakout boards for wire-
 
-attached TMP117A sensors. These serve as probes in laboratory applications 
+attached TMP117A sensors. These serve as probes in laboratory applications, 
 
-and were used in agar plates, liquid samples and inubators.
+for example for usage in agar plates, liquid samples and loboratory devices.
 
 The main board has two optional places for on-board TMP117A sensors, 
 
-which we use to record environmental temperatures, for example in 
+which serve as environmental temperature sensors, for example for usage in 
 
-incubators.
+incubators or climatized lab rooms.
 
 
 Notes
 -----
 
-1.) For usage in wet, salty or corrosive environments you
+1.) For measurements in wet, salty or corrosive environments you
 
 must cover all exposed sensor board conductive surfaces with a high 
 
@@ -66,17 +66,17 @@ quality polyepoxide (cured epoxy resin).
 
 2.) For a qick start instead of using our project's custom printed circuit 
 
-board use the 'Adafruit Feather 32u4 Adalogger #2795' combined with an 
+board use the 'Adafruit Feather 32u4 Adalogger #2795' with an 
 
-'Adafruit DS3231 Precision RTC FeatherWing #3028' and powered it with a 
+'Adafruit DS3231 Precision RTC FeatherWing #3028' powered it with a 
 
-commercially available pluggable LiPo or LiIon battery. Some TMP117 breakout 
+pluggable LiPo or LiIon battery. Some TMP117 breakout boards are commercially 
 
-boards are commercially available (e. g. Adafruit #4821 or Sparkfun #15805), 
+available (e. g. Adafruit #4821 or Sparkfun #15805), but these have a much 
 
-but these have a much larger size than our sensor boards and are more 
+larger size than our sensor boards and are more difficult to seal for user
 
-difficult to seal for usage in wet and corrosive environments.
+in wet and corrosive environments.
 
 
 3.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712' board, but the 
