@@ -27,7 +27,7 @@ to a micro-SD card. This format is compatible with python's pandas
 
 and plotly packages as well as with spreadsheet processing. 
 
-The user can set the logging interval in settings.txt on the SD card. 
+You can specify the logging interval in settings.txt on the SD card. 
 
 We use 'Adafruit Feather 32u4 Adalogger #2795' as the controller 
 
