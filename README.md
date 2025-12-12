@@ -1,7 +1,7 @@
 Precision temperature SD-card logger for laboratory use
 -------------------------------------------------------
 
-The device is low power and runs for month from a single 
+This device is low power and runs for month from a single 
 
 18650 LiIon cell without re-charging. We provide hardware 
 
