@@ -27,10 +27,8 @@ interval=300
 / Remove micro-SD card, if you do not want to log data during charging.
 / The yellow LED indicates charging activity. It goes dark when charging finished.
 / Charge current is 400 mA, maximal required charge time is 8 hours
-/ 
 / Attention: 400 mA charge current is NOT the default charge current 
 / of the Adafruit Feather 32u4 Adalogger #2795 board!
-/ 
-/ you have to change R0 to 2k2 (resistor package SMD 0805) to set 
+/ You have to change R0 to 2k2 (resistor package SMD 0805) to set 
 / 400 mA charge current
 
