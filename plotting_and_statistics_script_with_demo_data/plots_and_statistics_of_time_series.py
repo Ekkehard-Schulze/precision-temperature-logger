@@ -65,7 +65,7 @@ STATS_file_separator = "\t"
 parse_for_bad_lines = True
 parse_for_bad_datelines = True
 
-allsensor_options = ['TMP1', 'TMP2', 'TMP3', 'TMP4']
+#allsensor_options = ['TMP1', 'TMP2', 'TMP3', 'TMP4']  # replaced by accept all, but Logger-id, Date_time, VBatt
 
 BAT_voltage_field_name = 'Vbatt'
 
@@ -84,6 +84,8 @@ default_title = "TSV log data"
 # -----------------end of  content definitions ------------------------
 
 SECONDS_PER_HOURS = 60 * 60  # 3600 führt zu Rundungsfehlern, obwohl beide integer sind!
+
+no_sensor_list =[Date_time_field_name, BAT_voltage_field_name, LOGGER_ID_field_name]
 
 if SAVE_interactive_html_plot:
     import plotly.offline
@@ -170,7 +172,10 @@ def main():
 
     df = pd.read_csv(logger_tsv_file, encoding=CHAR_CODING, sep=None, comment='#', engine='python', skiprows=skiplines, on_bad_lines="skip")
 
-    accepted_sensors = allsensor_options
+    accepted_sensors = []
+    for field_name in df.columns:
+        if field_name not in no_sensor_list and not "Unnamed" in field_name: # Unnamed is pandas name for empty column
+            accepted_sensors.append(field_name)
 
     if Date_time_field_name not in df.columns:
         print('Datum stamp "' + Date_time_field_name + '" is missing in tsv-data')
@@ -236,13 +241,11 @@ def main():
 
         # ---------------------- plot battery voltage -----------------------------------------
 
-        if BAT_voltage_field_name in df.columns and ('unix-time' in df.columns or Date_time_field_name in df.columns):
-
-            timefield = Date_time_field_name if Date_time_field_name in df.columns else 'unix-time'
+        if BAT_voltage_field_name in df.columns:
 
             print(f"plotting {BAT_voltage_field_name}...")
 
-            fig_bat = go.Figure(go.Scatter(x=df[timefield], y=df[BAT_voltage_field_name], name=BAT_voltage_field_name))
+            fig_bat = go.Figure(go.Scatter(x=df[Date_time_field_name], y=df[BAT_voltage_field_name], name=BAT_voltage_field_name))
 
             fig_bat.update_layout(title=my_title + ": Battery Voltage [mV]    (full: 4200, empty: 3600)", plot_bgcolor='rgb(230, 230,230)', showlegend=True)
 
@@ -307,7 +310,8 @@ def main():
             plotly.offline.plot(fig_time, filename=f_html_name, auto_open=False)
 
         if DO_interactive_browser_plot:
-            fig_bat.show()
+            if BAT_voltage_field_name in df.columns:
+                fig_bat.show()
             fig_violine.show()
             fig_time.show()
             
