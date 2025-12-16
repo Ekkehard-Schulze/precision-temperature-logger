@@ -17,9 +17,9 @@ The firmware supports all combinations of the four
 
 possible sensor addesses.
 
-The logger writes a 'tab or comma separated value'
+The logger writes a tab separated value formated text file with 
 
-formated text file with ISO 8601 date and time to a micro-SD card. 
+ISO 8601 date and time to a micro-SD card. 
 
 This format is compatible with python's pandas 
 
