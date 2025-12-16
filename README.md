@@ -1,13 +1,11 @@
 Precision temperature SD-card logger for laboratory use
 -------------------------------------------------------
 
-This device is low power and runs for month from a single 
+This low- power device runs for month from a single 18650 LiIon 
 
-18650 LiIon cell without re-charging. We provide hardware 
+cell without re-charging. We provide hardware design files, 
 
-design files, firmware, and a script for interactive 
-
-graphical data analyzis and statistics. Multiple loggers 
+firmware, and a script for data analysis. Multiple loggers 
 
 have served various laboratory applications for years.
 
@@ -29,26 +27,23 @@ and plotly packages as well as with spreadsheet processing.
 
 You can specify the logging interval in settings.txt on the SD card. 
 
-We use 'Adafruit Feather 32u4 Adalogger #2795' as the controller 
+We use the 'Adafruit Feather 32u4 Adalogger #2795'
 
-board in combination with a precision real time clock DS3231.
+in combination with a precision real time clock DS3231.
 
-We provide a PCB to integrate a 18650 lithium ion battery and the 
+A custom printed circuit board integrates a 18650 lithium-ion 
 
-DS3231 real time clock with the 'Adafruit Feather 32u4 Adalogger'. 
+battery and the DS3231 clock. 
 
 Moreover, we provide four miniature 7 x 5 mm sized breakout boards for wire-
 
-attached TMP117A sensors. These serve as probes in laboratory applications, 
+attached TMP117A sensors. These act as probes in laboratory applications, 
 
-for example for usage in agar plates, liquid samples and laboratory devices.
+for example for usage in agar plates or liquid samples.
 
-The main board has two optional places for on-board TMP117A sensors, 
+The main board can carry two optional TMP117A sensors for environmental 
 
-which serve as environmental temperature sensors, for example for usage in 
-
-incubators or climatized lab rooms.
-
+temperature monitoring in incubators or lab rooms.
 
 Notes
 -----
@@ -66,7 +61,7 @@ board you can use the 'Adafruit Feather 32u4 Adalogger #2795' with an
 
 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it with a 
 
-pluggable LiPo or LiIon battery. Some TMP117 breakout boards are commercially 
+pluggable battery. Some TMP117 breakout boards are commercially 
 
 available (e. g. Adafruit #4821 or Sparkfun #15805), but these have a much 
 
@@ -97,11 +92,9 @@ YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the
 
 slightly larger WSON package. Remarkably, the die size of TMP119 
 
-is just 1.5 mm x 1.0 mm. This may allow laboratory aplications,
+is just 1.5 mm x 1.0 mm. This allows laboratory aplications,
 
-for which the 2.1 mm x 2.1 mm sized WSON package size we used is 
-
-too large.
+for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 
 
 Contributions
@@ -119,7 +112,7 @@ The hardware was designed by Jürgen Schmidt and constructed by
 
 Joshua Schwarber. Jürgen Schmidt wrote an initial low-power voltage 
 
-logging firmware, which then was extended to the present temperature 
+logging firmware, which was extended to the present temperature 
 
 logging firmware by Ekkehard Schulze. Ekkehard Schulze tested 
 
