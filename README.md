@@ -5,11 +5,11 @@ This low-power device runs for month from a single 18650 LiIon
 
 cell without re-charging. We provide hardware design files, 
 
-firmware, and a script for data analysis. Multiple loggers 
+firmware, and a script for graphical data analysis and statistics. 
 
-have served various laboratory applications for years.
+Multiple loggers have served various laboratory applications for 
 
-Up to four TMP117A sensors provide NIST-traceable 
+years. Up to four TMP117A sensors provide NIST-traceable 
 
 accuracy not worse than ±0.1°C from –20°C to 50°C.
 
