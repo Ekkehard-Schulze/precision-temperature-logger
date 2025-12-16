@@ -151,7 +151,10 @@ String Separator = "\t";                              // .tsv .csv table separat
 #define serial_verbose // serial print datastring
 
 
-//#define  CLOCK_TIME_IS_UTC    // un-comment this is for iso UTC date-time sytyle e.g. 2025-12-16T15:19:01Z
+//#define  CLOCK_TIME_IS_UTC    // un-comment this is for iso 8601 UTC date-time style e.g. '2025-12-16T15:19:01Z'
+
+//#define  APPEND_UTC_OFFSET_TO_ISO8601_DATE  // un-comment this is for iso 8601 UTC date-time with UTC offset, e.g. '2025-12-16T15:19:01+09:00'
+//#define  UTC_OFFSET_APPENDIX  +09:00       // un-comment this is for iso 8601 UTC date-time with UTC offset, e.g. '2025-12-16T15:19:01+09:00'
 
 //------- Board selection, you must just un-comment one single board, default is ADAFRUIT_FEATHER_LOGGER -----------------
 
