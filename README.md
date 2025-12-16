@@ -19,9 +19,9 @@ possible sensor addesses.
 
 The logger writes a 'tab or comma separated value'
 
-formated text file with ISO 8601 date and time strings 
+formated text file with ISO 8601 date and time to a micro-SD card. 
 
-to a micro-SD card. This format is compatible with python's pandas 
+This format is compatible with python's pandas 
 
 and plotly packages as well as with spreadsheet processing. 
 
