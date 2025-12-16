@@ -104,7 +104,7 @@
   The green LED remains lit if there is an initialization problem with the SD card.
   The green LED flashes green 3 times at startup if the battery voltage is > 4V, otherwise red 3 times.
   The red LED illuminates during measurement and writing.
-  Measurements stop when the voltage drops below 3.7V. This threshold is adjustable in the `collect_data_and_write_to_SD_card` routine.
+  Measurements stop when the voltage drops below 3.7V. This threshold is adjustable in the `get_measurements_and_write_to_SD_card` routine.
   The cutoff threshold is specified in mV. If the battery voltage falls below this threshold, no further measurements are performed.
 
 
@@ -488,7 +488,7 @@ Serial.println(headerstr);
 void loop()
 {
   go2sleep();                                  // go to sleep 
-  collect_data_and_write_to_SD_card();         // call 
+  get_measurements_and_write_to_SD_card();         // call 
   setWakeupTime();                             // set wakeup time
 }
 //--e-n-d---o-f---l-o-o-p-----------------------------------------------
@@ -511,8 +511,8 @@ void setWakeupTime() {
 }
 
 
-//--s-t-a-r-t---o-f--m-e-s-s-e-n---u-n-d---s-c-h-r-e-i-b-e-n-----------------------------------------------
-void collect_data_and_write_to_SD_card() {
+//--s-t-a-r-t---o-f-- get_measurements_and_write_to_SD_card ------------------------------------------------
+void get_measurements_and_write_to_SD_card() {
   // Capture data string and write to SD card
 
     if (VBat() >= OFF_mV_threshold) {                                  //Cutoff threshold: Stop measurement when battery is too low; value is in board definitions
@@ -619,7 +619,7 @@ delay(200); // without this delay serial data get scrambled by premature sleep.
 
   }
 }
-//--e-n-d---o-f--m-e-s-s-e-n---u-n-d---s-c-h-r-e-i-b-e-n-----------------------------------------------
+//--e-n-d---o-f-get_measurements_and_write_to_SD_card-----------------------------------------------
 
 
 void go2sleep() {
