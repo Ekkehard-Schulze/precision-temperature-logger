@@ -150,11 +150,17 @@ String Separator = "\t";                              // .tsv .csv table separat
 
 #define serial_verbose // serial print datastring
 
+
+//#define  CLOCK_TIME_IS_UTC    // un-comment this is for iso UTC date-time sytyle e.g. 2025-12-16T15:19:01Z
+
+//#define  APPEND_UTC_OFFSET_TO_ISO8601_DATE   // un-comment this is for iso date-time style e.g. 2008-02-01T09:00:22+05
+//#define  UTC_OFFSET_APPENDIX  "+01"          // un-comment thins in combinatiion line above  valid : e.g. +01  or +01:00
+
+
 //------- Board selection, you must just un-comment one single board, default is ADAFRUIT_FEATHER_LOGGER -----------------
 
 #define ADAFRUIT_FEATHER_LOGGER
 //#define OPENLOG
-
 
 //----Start of --o-f---Board Definitions------------------------------------------------------------
 
@@ -558,6 +564,16 @@ void collect_data_and_write_to_SD_card() {
     // we use iso Date_time format e.g.  2025-12-01T11:34:51  https://en.wikipedia.org/wiki/ISO_8601
     dataString += Separator + String(now.year()) + "-"+ monthString + "-" + dayString + "T"+ \
     hourString + ":" + minString + ":" + secString; 
+    
+#ifdef CLOCK_TIME_IS_UTC
+    dataString += "Z";
+#endif    
+      
+
+#ifdef APPEND_UTC_OFFSET_TO_ISO8601_DATE
+    dataString += UTC_OFFSET_APPENDIX;
+#endif  
+    
    
 // read up to 4 TMP117 sensors and put sensors to sleep again
 for(int i = 0; i<4; i++)
