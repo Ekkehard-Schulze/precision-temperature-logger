@@ -29,8 +29,9 @@ void setup() {
   // use this for set clock to compile time
   RTC.adjust(DateTime(__DATE__, __TIME__));   //set RTC date and time to COMPILE time
 
- // use this to set clock to fixed time  <-------- activate this function to set e.g. UTC, or any time different to your PC
- // RTC.adjust(DateTime(2025, 12, 18, 15, 55, 45)); // insert here:  Jahr, Monat, Tag, Stunde, Minute, Sekunde. 
+ // un-comment and edit the next line to set a time different to your PC's time, e.g. UTC 
+ // RTC.adjust(DateTime(2025, 12, 18, 15, 55, 45)); // insert here:  year, month, day, hour, minute, second
+                                                                     
 
 
   // esmod 20250502 clear lost power bit (EOSC = bit 7 in control register set to 1 )
