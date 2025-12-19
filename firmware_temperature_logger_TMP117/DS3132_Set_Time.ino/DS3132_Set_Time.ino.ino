@@ -1,9 +1,10 @@
-/* DS_3231 clock time Setting and Checking of the Time
-  (c) 2017 University of Freiburg - Faculty of Biology, ATbio, Jürgen Schmidt, ConFoBi Project 2016-0008
-  Development environment: Arduino IDE 1.8.19
-  Library RTClibExtended.h: https://github.com/FabioCuomo/FabioCuomo-DS3231
-  Some code lines are taken from the demo of the RTClibExtended.h library.
-  Date and Time are printed every second to the serial port.
+/* DS_3231 Uhrzeit stellen und Kontrolle
+  (c) 2017 Universität Freiburg - Fakultät für Biologie, ATbio, Juergen Schmidt, ConFoBi Projekt 2016-0008
+  Entwicklungsumgebung: Arduino IDE 1.6.11
+  Bibliothek RTClibExtended.h: https://github.com/FabioCuomo/FabioCuomo-DS3231
+  Einige Programmzeilen stammen aus dem Demo von der RTClibExtended.h Lib
+
+
 */
 
 
@@ -24,14 +25,17 @@ void setup() {
 
   Wire.begin();
   RTC.begin();
+  
+  // use this for set clock to compile time
   RTC.adjust(DateTime(__DATE__, __TIME__));   //set RTC date and time to COMPILE time
 
-  // esmod 20250502 by Ekkehard Schulze: 
-  // clear set "lost power bit" (EOSC = bit 7 in control register set to 1 )
-  // A single battery-under voltage will set this flag. Without re-setting this flag,
-  // the clock will STOP in battery-backup mode (but remember the last date-time), 
-  // even when supplemented with a fresh battery, but resume to run and advance 
-  // the stored time when Vcc is provided again.
+ // use this to set clock to fixed time  <-------- activate this function to set e.g. UTC, or any time different to your PC
+ // RTC.adjust(DateTime(2025, 12, 18, 15, 55, 45)); // insert here:  Jahr, Monat, Tag, Stunde, Minute, Sekunde. 
+
+
+  // esmod 20250502 clear lost power bit (EOSC = bit 7 in control register set to 1 )
+  // I guess if you remove Vcc AND the battery, you will reset this bit as well
+  // if EOSC is set, the clock will not advance, but stand still, when Vcc is off an Vbatt is on
   if (RTC.lostPower()) {
   unsigned char b;
   Wire.beginTransmission(0x68); // address DS3231

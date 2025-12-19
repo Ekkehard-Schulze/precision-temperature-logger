@@ -97,6 +97,18 @@ is just 1.5 mm x 1.0 mm. This allows laboratory aplications,
 for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 
 
+6.) For different technical requirements we provide a more experimental firmware, 
+
+with additionally supports the sensors
+
+* 
+ADT7420 
+OneWire DS18B20, DS18S20, DS1822, MAX31850 (for type K thermocouple) 
+BME280 (temperature, humidity, pressure)
+MLX90614 (IR contactless temperature)
+TSL2561 (for light intensity measurement)
+
+
 Contributions
 -------------
 
