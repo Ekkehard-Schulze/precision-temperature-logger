@@ -101,16 +101,16 @@ for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 
 with additionally supports the sensors
 
-* ADT7420 
+* ADT7420 (precision temperature)
 
 
-* OneWire DS18B20, DS18S20, DS1822, MAX31850 (for type K thermocouple) 
+* OneWire temperature DS18B20, DS18S20, DS1822, MAX31850 (for type K thermocouple) 
 
 * BME280 (temperature, humidity, pressure)
 
 * MLX90614 (IR contactless temperature)
 
-* TSL2561 (for light intensity measurement)
+* TSL2561 (illuminance)
 
 
 Contributions
