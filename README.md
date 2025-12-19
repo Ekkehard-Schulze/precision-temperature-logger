@@ -97,14 +97,15 @@ is just 1.5 mm x 1.0 mm. This allows laboratory aplications,
 for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 
 
-6.) For different technical requirements we provide a more experimental firmware, 
+6.) For different technical requirements we provide an experimental firmware, 
 
-with additionally supports the sensors
+with with additional sensor support for
 
 * ADT7420 (precision temperature)
 
+* OneWire temperature DS18B20, DS18S20, DS1822, MAX31850 (for type K thermocouple)
 
-* OneWire temperature DS18B20, DS18S20, DS1822, MAX31850 (for type K thermocouple) 
+  (The OneWire bus allows more sensors on a single cable)
 
 * BME280 (temperature, humidity, pressure)
 
