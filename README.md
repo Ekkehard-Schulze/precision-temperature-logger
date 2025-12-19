@@ -99,7 +99,7 @@ for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 
 6.) For different technical requirements we provide a firmware
 
-with additional sensor support for:
+with additional support for these sensors:
 
 * ADT7420 (precision temperature)
 
