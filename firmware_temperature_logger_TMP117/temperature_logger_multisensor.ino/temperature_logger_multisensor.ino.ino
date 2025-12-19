@@ -2,7 +2,7 @@
   Precision temperature logger using up to four Texas Instruments sensors TMP117 with 
   Adafruit Feather 32u4 Adalogger and DS3231 real time clock 
   
-  Experimental multi-sesnsor multi-board firware version, supporting additionally:
+  Experimental multi-sensor multi-board firware version, supporting additionally:
   --------------------------------------------------------------------------------
   ADT7420 
   Onewire senors DS18B20, DS18S20, DS1822, MAX31850 (for type K thermocouple) 
@@ -15,7 +15,7 @@
   
   Moreover, boards with ATmega 1284 or ATmega 644 allow all sensor options activated simultanously,
   however, these require to install the 'Mightycore' board option to show up in the 
-  board selection menue of the Arduino IDE.
+  board selection menu of the Arduino IDE.
 
   (c) 2017 Universität Freiburg - Fakultät für Biologie, 
   ATbio, Juergen Schmidt, ConFoBi, Projekts 2016-0008 and 2020-0007
