@@ -158,7 +158,7 @@ int Intervall_seconds = 300;   // Measurement interval in seconds. 3600 (= 1 hou
 
 String Separator = "\t";                              // .tsv .csv table separator char
 
-#define FILENAME "multi_log.tsv" 
+#define FILENAME "uni_log.tsv" // ONLY 8 chars + dot + 3 char !!!
 
 #define read_config_file  // read config file "settings.txt" (UNIX(LF) line end) from SD card. Relevant line:interval=300 . 
                           // Comment lines in "settings.txt"  start with / (single slash)
@@ -962,6 +962,7 @@ void setup() {
     headerstr+=Separator+"Vbatt";
     headerstr+=Separator+"Date_time";
 
+  Wire.begin();
   RTC.begin();
   RTC.armAlarm(1, false);                       //clear any pending alarms
   RTC.clearAlarm(1);
@@ -975,7 +976,7 @@ void setup() {
 
 
 #ifdef log_DS3231_temperature
-    headerstr+="Separator+DS3231_temp";     // Temperatur von der RTC
+    headerstr+=Separator+"DS3231_temp";     // Temperatur von der RTC
     sensorcount++;
 #endif
 
