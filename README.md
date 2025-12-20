@@ -13,9 +13,9 @@ years. Up to four TMP117A sensors provide NIST-traceable
 
 accuracy not worse than ±0.1°C from –20°C to 50°C.
 
-The firmware supports all combinations of the four 
+The firmware auto-detects sensors and supports all combinations 
 
-possible sensor addesses.
+of the four dedicated addresses.
 
 The logger writes a tab separated value formated text file with 
 
