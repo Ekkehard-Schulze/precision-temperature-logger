@@ -208,7 +208,7 @@ String Separator = "\t";                              // .tsv .csv table separat
 #warning "Adafruit Feather Logger m32u4 selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Feather_1";
-#define OFF_mV_threshold 3500
+#define OFF_mV_threshold 3500 // this is for LiION
 #define wakePin 0         //use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
 #define ledRedPin 13         //red LED
 #define ledGreenPin 8         //green LED
@@ -232,17 +232,17 @@ int BatteriePin = 9;
 #warning "Openlog m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3730      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Openlog_1";
-#define wakePin 2         //use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
-#define ledRedPin  13        //red LED
-#define ledGreenPin 7         //green LED
-OneWire  ds(5);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+#define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW. rem: A3 did NOT work
+#define ledRedPin  9        //rote LED, blue in original design, rewire PCB!, originally pin 13, which is SPI clk, not good for low power
+#define ledGreenPin 5         //green LED
+OneWire  ds(4);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);
 #define LEDredOff    digitalWrite(ledRedPin, LOW);
 #define LEDgreenOff  digitalWrite(ledGreenPin, LOW);
-int BatteriePin = 9;
-#define OFF_mV_threshold 0
+int BatteriePin = 15;
+#define OFF_mV_threshold 0   // this is for NiMH battery
 #define GOTO_SLEEP LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF);           //arduino enters sleep mode here
 #if defined __AVR_ATmega328P__
 #else
@@ -264,8 +264,8 @@ int BatteriePin = 9;
 #warning "Heldt m1284p Logger selected"     //  mightycore bootloader could be tested using reset button. Select UART2?
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Heldt_Log";
-#define OFF_mV_threshold 3550
-#define wakePin 10         // D2         use interrupt 0 (pin 0) and run function wakeUp when pin 0 gets LOW
+#define OFF_mV_threshold 3550  // this is for LiION or LiPO
+#define wakePin 10         // D2 use interrupt 0 INT0 (TQFP pin 11) and run function wakeUp when pin gets LOW
 #define ledRedPin  22        // doppelLED
 #define ledGreenPin 23         // doppelLED
 #define LEDredOn    digitalWrite(ledGreenPin, LOW); digitalWrite(ledRedPin, HIGH);
@@ -284,22 +284,22 @@ int BatteriePin = 24;      // PA0 = Pin24 = ADC0
 #endif
 
 
-
 #ifdef ARDUINO_NANO
 #warning "Arduino Nano m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "ArduNano";
-#define OFF_mV_threshold 3550
-#define wakePin 2         // PD2 use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
-#define ledRedPin  13        //rote LED
-#define ledGreenPin 7         //grüne LED
-OneWire  ds(5);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
-const int chipSelect = 4; // CS SD Karte
+#define OFF_mV_threshold 3550 // this is for LiION or LiPO
+#define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW, rem: A3 did NOT work
+#define ledRedPin  9        //rote LED, rewire PCB!, originally pin 13, which is SPI clk, not good for low power
+#define ledGreenPin 5         //green LED
+OneWire  ds(4);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);
 #define LEDredOff    digitalWrite(ledRedPin, LOW);
 #define LEDgreenOff  digitalWrite(ledGreenPin, LOW);
-int BatteriePin = 9;
+int BatteriePin = 15;
+#define OFF_mV_threshold 0   // this is for NiMH battery
 #define GOTO_SLEEP LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF);           //arduino enters sleep mode here
 #if defined __AVR_ATmega328P__
 #else
@@ -313,8 +313,8 @@ int BatteriePin = 9;
 #warning "Arduino Uno  m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Arduino_5_Volt_Testbed";
-#define OFF_mV_threshold 0
-#define wakePin 2         // PD2 use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
+#define OFF_mV_threshold 0 // this is for USB power
+#define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW, rem: A3 did NOT work
 #define ledRedPin  16        //rote LED
 #define ledGreenPin 3         //grüne LED
 OneWire  ds(17);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
@@ -337,8 +337,8 @@ int BatteriePin = 15;
 #warning "Arduino Uno 3.3 Volt mod  m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3591      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Arduino_Log";
-#define OFF_mV_threshold 3500
-#define wakePin 2         // PD2 use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
+#define OFF_mV_threshold 3500 // this is for LiION or LiPO
+#define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW. rem: A3 did NOT work
 #define ledRedPin  16        //rote LED
 #define ledGreenPin 3         //grüne LED
 OneWire  ds(17);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
@@ -361,8 +361,8 @@ int BatteriePin = 15;
 #warning "Greif board m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Greif_board_m328p_test_bed";
-#define OFF_mV_threshold 0
-#define wakePin 2         // PD2 int0 use interrupt run function wakeUp when pin 2 gets LOW. esrem: A3 did NOT work.
+#define OFF_mV_threshold 0 // this is for power supply
+#define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW. esrem: A3 did NOT work
 #define ledRedPin  6         //rote LED
 #define ledGreenPin 7         //grüne LED
 OneWire  ds(5);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
@@ -393,8 +393,8 @@ int BatteriePin = 9;
 #warning "Greif board m1284p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Greif_board_m1284_test_bed";
-#define OFF_mV_threshold 0
-#define wakePin 10         // D2         use interrupt 0 (pin 0) and run function wakeUp when pin 0 gets LOW
+#define OFF_mV_threshold 0  // this is for power supply
+#define wakePin 10         // D2 use interrupt 0 INT0 (DIL pin 16) and run function wakeUp when pin gets LOW
 #define ledRedPin  2         //rote LED     B2
 #define ledGreenPin 3         //grüne LED   B3
 OneWire  ds(1);  // B1  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
@@ -411,8 +411,6 @@ int BatteriePin = 24;      // PA0 = Pin24 = ADC0
 #endif
 #include <LowPower.h>
 #endif
-
-
 
 
 

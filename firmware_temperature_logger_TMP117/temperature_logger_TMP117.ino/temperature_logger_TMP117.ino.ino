@@ -167,7 +167,7 @@ String Separator = "\t";                              // .tsv .csv table separat
 #warning "Adafruit Feather Logger m32u4 selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "TMP117_logger_1";
-#define OFF_mV_threshold 3500
+#define OFF_mV_threshold 3500  // this is for LiION
 #define wakePin 0         //use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
 #define ledRedPin 13         //red LED
 #define ledGreenPin 8         //green LED
@@ -186,20 +186,22 @@ int BatteriePin = 9;
 #endif
 
 
+
 #ifdef OPENLOG
 #warning "Openlog m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3730      // optische Warnung beim Einschalten : 3 x rot blinken
-String LoggerName = "Openlog_TMP117_1";
-#define wakePin 2         //use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
-#define ledRedPin  13        //red LED
-#define ledGreenPin 7         //green LED
+String LoggerName = "Openlog_1";
+#define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW. rem: A3 did NOT work
+#define ledRedPin  9        //actully blue LED in original design, rewire PCB! 13->9, originally pin 13, which is SPI clk, not good for low power
+#define ledGreenPin 5         //green LED
+OneWire  ds(4);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);
 #define LEDredOff    digitalWrite(ledRedPin, LOW);
 #define LEDgreenOff  digitalWrite(ledGreenPin, LOW);
-int BatteriePin = 9;
-#define OFF_mV_threshold 0
+int BatteriePin = 15;
+#define OFF_mV_threshold 0   // this is for NiMH battery, use 3500 for LiPO or LiION
 #define GOTO_SLEEP LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF);           //arduino enters sleep mode here
 #if defined __AVR_ATmega328P__
 #else
