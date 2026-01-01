@@ -187,7 +187,7 @@ int BatteriePin = 9;
 
 
 
-#ifdef OPENLOG
+#ifdef OPENLOG // use 8 MHz internal oscillator for 3.3 V Vcc, fuses low, high extended: 0xE2 0xD7 0xFD
 #warning "Openlog m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3730      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Openlog_1";
