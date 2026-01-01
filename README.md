@@ -70,11 +70,13 @@ larger size than our sensor boards and are more difficult to seal for use
 in wet and corrosive environments.
 
 
-3.) Our firmware will also run on the 'SparkFun OpenLog #DEV-13712' board, but the 
+3.) Our firmware also supports the 'SparkFun OpenLog #DEV-13712' board, but the 
 
 user will have to breakout the I2C bus and INT0, provide pull-up resistors for the I2C 
 
 bus, a voltage divider for battery voltage sensing, a DS3231 clock, and TMP117 sensors.
+
+This needs microscope soldering and is for ambitious tinkerers only. 
 
 
 4.) Take note that TMP117 product versions TMP117N and TMP117M are slightly 
