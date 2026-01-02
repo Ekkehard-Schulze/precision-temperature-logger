@@ -163,10 +163,10 @@ TMP117A sensor soldered to wires and coated with cyanoacrylate after years of la
 
 Avoid outdoor use of cyanoacrylate polymer (CyA) coated sensors; UV light deteriorates CyA.
 
-![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/openlog_adaption.jpg)
+![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption.jpg)
 
 Adaption of an Openlog board for precision temperature logging
 
-![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/openlog_adaption_2.jpg)
+![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption_2.jpg)
 
 Adaption of an Openlog board for precision temperature logging
