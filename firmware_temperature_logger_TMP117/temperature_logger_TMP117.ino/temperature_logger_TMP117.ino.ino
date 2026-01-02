@@ -196,7 +196,16 @@ int BatteriePin = 9;
 #ifdef OPENLOG // use 8 MHz internal oscillator for 3.3 V Vcc, fuses low, high extended: 0xE2 0xD7 0xFD
 // add DS3231 clock to I2C modified
 // https://www.sparkfun.com/sparkfun-openlog.html
-// https://github.com/sparkfun/OpenLog                                   
+// https://github.com/sparkfun/OpenLog
+// Minicore settings: 
+// Borad: ATmega328
+// Clock: internal 8 MHz
+// BOD 2.7V
+// EEprom: EEprom retained
+// Compiler: LTO enabled
+// Variant: 328P / 328PA
+// Bootloader: Yes (Uart  0)
+// Baud rate: standard                                 
 #warning "Openlog m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3730      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Openlog_1";

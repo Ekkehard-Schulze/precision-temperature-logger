@@ -238,6 +238,15 @@ int BatteriePin = 9;
 // add DS3231 clock to I2C modified
 // https://www.sparkfun.com/sparkfun-openlog.html
 // https://github.com/sparkfun/OpenLog
+// Minicore settings: 
+// Borad: ATmega328
+// Clock: internal 8 MHz
+// BOD 2.7V
+// EEprom: EEprom retained
+// Compiler: LTO enabled
+// Variant: 328P / 328PA
+// Bootloader: Yes (Uart  0)
+// Baud rate: standard
 #warning "Openlog m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3730      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Openlog_1";
@@ -355,9 +364,14 @@ int BatteriePin = 15;
 // converted to 3.3 Volt Vcc, converted to DS3231 clock:
 // https://www.adafruit.com/product/114
 // Minicore settings: 
-// CPU m328p
+// Borad: ATmega328
 // Clock: internal 8 MHz
 // BOD 2.7V
+// EEprom: EEprom retained
+// Compiler: LTO enabled
+// Variant: 328P / 328PA
+// Bootloader: Yes (Uart  0)
+// Baud rate: standard
 #warning "Arduino Uno 3.3 Volt mod  m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3591      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Arduino_Log";
