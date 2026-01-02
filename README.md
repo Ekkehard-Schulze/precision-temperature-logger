@@ -165,7 +165,7 @@ Avoid outdoor use of cyanoacrylate polymer (CyA) coated sensors; UV light deteri
 
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption.jpg)
 
-Adaption of an Openlog board for precision temperature logging
+Adaption of an Openlog board for precision temperature logging using a I2C bus board
 
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption_2.jpg)
 
