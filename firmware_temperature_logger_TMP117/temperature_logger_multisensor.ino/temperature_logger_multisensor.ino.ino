@@ -205,6 +205,12 @@ String Separator = "\t";                              // .tsv .csv table separat
 //----Start of --o-f---Board Definitions------------------------------------------------------------
 
 #ifdef ADAFRUIT_FEATHER_LOGGER
+// https://www.adafruit.com/product/2795
+// https://github.com/adafruit/Adafruit-Feather-32u4-Adalogger-PCB
+// https://learn.adafruit.com/adafruit-feather-32u4-adalogger
+// https://www.adafruit.com/product/3028
+// https://github.com/adafruit/Adafruit-DS3231-Precision-RTC-FeatherWing-PCB
+// https://learn.adafruit.com/adafruit-ds3231-precision-rtc-breakout/
 #warning "Adafruit Feather Logger m32u4 selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Feather_1";
@@ -229,6 +235,9 @@ int BatteriePin = 9;
 
 
 #ifdef OPENLOG // use 8 MHz internal oscillator for 3.3 V Vcc, fuses low, high extended: 0xE2 0xD7 0xFD
+// add DS3231 clock to I2C modified
+// https://www.sparkfun.com/sparkfun-openlog.html
+// https://github.com/sparkfun/OpenLog
 #warning "Openlog m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3730      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Openlog_1";
@@ -253,6 +262,8 @@ int BatteriePin = 15;
 
 
 #ifdef HELDT_Logger
+// add DS3231 clock to now obsolete SD-card logger
+// SD-DATA-LOGGER V1, designed by Thomas Heldt in 2009, former: http://www.it-wns.de 
 // Mightycore settings: 
 // Board: ATmega1284p
 // Bootloader if YES choose UART1
@@ -285,6 +296,8 @@ int BatteriePin = 24;      // PA0 = Pin24 = ADC0
 
 
 #ifdef ARDUINO_NANO
+// add DS3231 clock and 5 Volt SD-card socket to:
+// https://docs.arduino.cc/hardware/nano/
 #warning "Arduino Nano m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "ArduNano";
@@ -310,6 +323,9 @@ int BatteriePin = 15;
 
 
 #ifdef ARDUINO_UNO_5Volt_testbed
+// https://docs.arduino.cc/hardware/uno-rev3/
+// convert to DS3231 clock:
+// https://www.adafruit.com/product/114
 #warning "Arduino Uno  m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Arduino_5_Volt_Testbed";
@@ -334,6 +350,14 @@ int BatteriePin = 15;
 
 
 #ifdef  ARDUINO_UNO_3Volt_logger // use 8 MHz internal oscillator for 3.3 V Vcc, fuses low, high extended: 0xE2 0xD7 0xFD
+// convert to 3.3 Volt Vcc:
+// https://docs.arduino.cc/hardware/uno-rev3/
+// converted to 3.3 Volt Vcc, converted to DS3231 clock:
+// https://www.adafruit.com/product/114
+// Minicore settings: 
+// CPU m328p
+// Clock: internal 8 MHz
+// BOD 2.7V
 #warning "Arduino Uno 3.3 Volt mod  m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3591      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Arduino_Log";
@@ -358,6 +382,8 @@ int BatteriePin = 15;
 
 
 #ifdef GREIF_BOARD_m328p
+// add DS3231 clock and SD-card socket to:
+// http://www.kreatives-chaos.com/artikel/atmega168-testboard-v2
 #warning "Greif board m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Greif_board_m328p_test_bed";
@@ -382,6 +408,8 @@ int BatteriePin = 9;
 
 
 #ifdef GREIF_BOARD_m1284      // if you choose mightycore bootloader select UART2
+// add DS3231 clock and SD-card socket to:
+// http://www.kreatives-chaos.com/artikel/atmega1632-testboard-v2
 // Mightycore settings: 
 // Board: ATmega1284p
 // Bootloader if YES choose UART1

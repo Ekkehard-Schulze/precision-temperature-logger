@@ -164,6 +164,12 @@ String Separator = "\t";                              // .tsv .csv table separat
 //----Start of --o-f---Board Definitions------------------------------------------------------------
 
 #ifdef ADAFRUIT_FEATHER_LOGGER
+// https://www.adafruit.com/product/2795
+// https://github.com/adafruit/Adafruit-Feather-32u4-Adalogger-PCB
+// https://learn.adafruit.com/adafruit-feather-32u4-adalogger
+// https://www.adafruit.com/product/3028
+// https://github.com/adafruit/Adafruit-DS3231-Precision-RTC-FeatherWing-PCB
+// https://learn.adafruit.com/adafruit-ds3231-precision-rtc-breakout/                                        
 #warning "Adafruit Feather Logger m32u4 selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "TMP117_logger_1";
@@ -188,13 +194,15 @@ int BatteriePin = 9;
 
 
 #ifdef OPENLOG // use 8 MHz internal oscillator for 3.3 V Vcc, fuses low, high extended: 0xE2 0xD7 0xFD
+// add DS3231 clock to I2C modified
+// https://www.sparkfun.com/sparkfun-openlog.html
+// https://github.com/sparkfun/OpenLog                                   
 #warning "Openlog m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3730      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Openlog_1";
 #define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW. rem: A3 did NOT work
 #define ledRedPin  9        //actully blue LED in original design, rewire PCB! 13->9, originally pin 13, which is SPI clk, not good for low power
 #define ledGreenPin 5         //green LED
-OneWire  ds(4);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);
