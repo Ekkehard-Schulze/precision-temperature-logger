@@ -188,13 +188,13 @@ String Separator = "\t";                              // .tsv .csv table separat
 // Make sure you select this board additionally also in the Arduino IDE!   
 //================---------------++++++++++------------------_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PC
 #define ADAFRUIT_FEATHER_LOGGER
+//#define OPENLOG
 //#define ARDUINO_UNO_3Volt_logger
 //#define HELDT_Logger       // m324p or m644p or m1284p 8 MHz internal
 //#define ARDUINO_UNO_5Volt_testbed
 //#define GREIF_BOARD_m328p
 //#define GREIF_BOARD_m1284    
 //#define ARDUINO_NANO
-//#define OPENLOG
 //---------------------------------------------------
 
 
@@ -305,6 +305,7 @@ int BatteriePin = 24;      // PA0 = Pin24 = ADC0
 
 
 #ifdef ARDUINO_NANO
+// not for low-power battery operation
 // add DS3231 clock and 5 Volt SD-card socket to:
 // https://docs.arduino.cc/hardware/nano/
 #warning "Arduino Nano m328p selected"
@@ -332,6 +333,7 @@ int BatteriePin = 15;
 
 
 #ifdef ARDUINO_UNO_5Volt_testbed
+// not for low-power battery operation
 // https://docs.arduino.cc/hardware/uno-rev3/
 // convert to DS3231 clock:
 // https://www.adafruit.com/product/114
@@ -340,8 +342,8 @@ int BatteriePin = 15;
 String LoggerName = "Arduino_5_Volt_Testbed";
 #define OFF_mV_threshold 0 // this is for USB power
 #define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW, rem: A3 did NOT work
-#define ledRedPin  16        //rote LED
-#define ledGreenPin 3         //grüne LED
+#define ledRedPin  16        //rote LED logger shield
+#define ledGreenPin 3         //grüne LED logger shield
 OneWire  ds(17);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
@@ -377,8 +379,8 @@ int BatteriePin = 15;
 String LoggerName = "Arduino_Log";
 #define OFF_mV_threshold 3500 // this is for LiION or LiPO
 #define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW. rem: A3 did NOT work
-#define ledRedPin  16        //rote LED
-#define ledGreenPin 3         //grüne LED
+#define ledRedPin  16        //rote LED logger shield
+#define ledGreenPin 3         //grüne LED logger shield
 OneWire  ds(17);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
@@ -398,6 +400,18 @@ int BatteriePin = 15;
 #ifdef GREIF_BOARD_m328p
 // add DS3231 clock and SD-card socket to:
 // http://www.kreatives-chaos.com/artikel/atmega168-testboard-v2
+// run at 3.3 V 8 MHz for low power operation
+// use 8 MHz internal oscillator for 3.3 V Vcc, fuses low, high extended: 0xE2 0xD7 0xFD
+// add DS3231 clock to I2C modified
+// Minicore settings: 
+// Borad: ATmega328
+// Clock: internal 8 MHz
+// BOD 2.7V
+// EEprom: EEprom retained
+// Compiler: LTO enabled
+// Variant: 328P / 328PA
+// Bootloader: Yes (Uart  0)
+// Baud rate: standard
 #warning "Greif board m328p selected"
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Greif_board_m328p_test_bed";
@@ -422,6 +436,7 @@ int BatteriePin = 9;
 
 
 #ifdef GREIF_BOARD_m1284      // if you choose mightycore bootloader select UART2
+// run at 3.3 V 8 MHz for low power operation
 // add DS3231 clock and SD-card socket to:
 // http://www.kreatives-chaos.com/artikel/atmega1632-testboard-v2
 // Mightycore settings: 
