@@ -55,7 +55,14 @@ must cover all exposed sensor board conductive surfaces with a high
 quality polyepoxide (cured epoxy resin).
 
 
-2.) For a qick start instead of using our project's printed circuit 
+
+2.) Take note that TMP117 product versions TMP117N and TMP117M are slightly 
+
+less accurate than TMP117A.
+
+
+
+3.) For a qick start instead of using our project's printed circuit 
 
 board you can use the 'Adafruit Feather 32u4 Adalogger #2795' with an 
 
@@ -70,7 +77,8 @@ larger size than our sensor boards and are more difficult to seal for use
 in wet and corrosive environments.
 
 
-3.) Our firmware also supports the 'SparkFun OpenLog #DEV-13712' board, but the 
+
+4.) Our firmware also supports the 'SparkFun OpenLog #DEV-13712' board, but the 
 
 user will have to breakout the I2C bus and INT0, provide pull-up resistors for the I2C 
 
@@ -78,10 +86,6 @@ bus, a voltage divider for battery voltage sensing, a DS3231 clock, and TMP117 s
 
 This needs microscope soldering and is for ambitious tinkerers only. 
 
-
-4.) Take note that TMP117 product versions TMP117N and TMP117M are slightly 
-
-less accurate than TMP117A.
 
 
 5.) You may like to try the software compatible sensor TMP119.
@@ -97,6 +101,7 @@ slightly larger WSON package. Remarkably, the die size of TMP119
 is just 1.5 mm x 1.0 mm. This allows laboratory aplications,
 
 for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
+
 
 
 6.) For different technical requirements we provide a firmware
