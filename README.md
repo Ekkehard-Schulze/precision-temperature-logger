@@ -104,9 +104,11 @@ for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 
 
 
-6.) For different technical requirements we provide a firmware
+6.) For different technical requirements we provide an alternative 
 
-with additional support for these sensors:
+firmware, which in addition to TMP117 also supports for these 
+
+sensors:
 
 * ADT7420 (precision temperature)
 
@@ -119,6 +121,10 @@ with additional support for these sensors:
 * MLX90614 (infra red non-contact temperature)
 
 * TSL2561 (illuminance)
+
+This firmware is complex and requires selecting sensors by uncommenting 
+
+define statements in the C-code.
 
 
 Contributions
