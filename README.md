@@ -64,11 +64,11 @@ less accurate than TMP117A.
 
 3.) For a qick start instead of using our project's printed circuit 
 
-board you can use the 'Adafruit Feather 32u4 Adalogger #2795' with an 
+board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
 
-'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it with a 
+with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it 
 
-pluggable battery. Some TMP117 breakout boards are commercially 
+with a pluggable battery. Some TMP117 breakout boards are commercially 
 
 available (e. g. Adafruit #4821 or Sparkfun #15805), but these have a much 
 
