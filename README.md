@@ -179,3 +179,7 @@ Adaption of an Openlog board for precision temperature logging using a I2C bus b
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption_2.jpg)
 
 Adaption of an Openlog board for precision temperature logging requires microscope soldering
+
+![plots_and_statistics_of_time_series](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/plots_and_statistics_of_time_series.py_screenshot.webp)
+
+Example screenshot of interactive data analysis using the script plots_and_statistics_of_time_series.py
