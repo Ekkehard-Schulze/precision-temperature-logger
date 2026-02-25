@@ -182,4 +182,4 @@ Adaption of an Openlog board for precision temperature logging requires microsco
 
 ![plots_and_statistics_of_time_series](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/plots_and_statistics_of_time_series.py_screenshot.webp)
 
-Example screenshot of interactive data analysis using the script plots_and_statistics_of_time_series.py
+Screenshot of interactive data analysis using the script "plots_and_statistics_of_time_series.py"
