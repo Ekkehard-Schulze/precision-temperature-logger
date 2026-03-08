@@ -48,7 +48,7 @@ temperature monitoring in incubators or lab rooms.
 Notes
 -----
 
-1.) For measurements in wet, salty or corrosive environments you
+1. For measurements in wet, salty or corrosive environments you
 
 must cover all exposed sensor board conductive surfaces with a high 
 
@@ -56,13 +56,13 @@ quality polyepoxide (cured epoxy resin).
 
 
 
-2.) Take note that TMP117 product versions TMP117N and TMP117M are slightly 
+2. Take note that TMP117 product versions TMP117N and TMP117M are slightly 
 
 less accurate than TMP117A.
 
 
 
-3.) For a qick start instead of using our project's printed circuit 
+3. For a qick start instead of using our project's printed circuit 
 
 board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
 
@@ -78,7 +78,7 @@ in wet and corrosive environments.
 
 
 
-4.) Our firmware also supports the 'SparkFun OpenLog #DEV-13712' board, but the 
+4. Our firmware also supports the 'SparkFun OpenLog #DEV-13712' board, but the 
 
 user will have to breakout the I2C bus and INT0, provide pull-up resistors for the I2C 
 
@@ -88,7 +88,7 @@ This needs microscope soldering and is for ambitious tinkerers only.
 
 
 
-5.) You may like to try the software compatible sensor TMP119.
+5. You may like to try the software compatible sensor TMP119.
 
 TMP119 has a higher accuracy (±0.03°C (typical) from 0°C to 45°C
 
@@ -104,7 +104,7 @@ for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 
 
 
-6.) For different technical requirements we provide an alternative 
+6. For different technical requirements we provide an alternative 
 
 firmware, which in addition to TMP117 also supports these sensors:
 
