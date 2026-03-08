@@ -1,48 +1,38 @@
 Precision temperature SD-card logger for laboratory use
--------------------------------------------------------
+========================================================
 
 This low-power device runs for month from a single 18650 LiIon 
-
 cell without re-charging. We provide hardware design files, 
-
 firmware, and a script for graphical data analysis and statistics. 
-
 Multiple loggers have served various laboratory applications for 
+years. 
 
-years. Up to four TMP117A sensors provide NIST-traceable 
-
+Features
+--------
+- Up to four TMP117A sensors provide NIST-traceable 
 accuracy not worse than ±0.1°C from –20°C to 50°C.
 
-The firmware auto-detects sensors and supports all combinations 
-
+- The firmware auto-detects sensors and supports all combinations 
 of the four dedicated addresses.
 
-The logger writes a tab separated value formated text file with 
-
+- The logger writes a tab separated value formated text file with 
 ISO 8601 date and time to a micro-SD card. 
-
 This format is compatible with python's pandas 
-
 and plotly packages as well as with spreadsheet processing. 
 
-You can specify the logging interval in settings.txt on the SD card. 
+- You can specify the logging interval in settings.txt on the SD card. 
 
-We use the 'Adafruit Feather 32u4 Adalogger #2795'
-
+- We use the 'Adafruit Feather 32u4 Adalogger #2795'
 in combination with a precision real time clock DS3231.
 
-A custom printed circuit board integrates a 18650 lithium-ion 
+- A custom printed circuit board integrates a 18650 lithium-ion 
+ battery and the DS3231 clock. 
 
-battery and the DS3231 clock. 
-
-Moreover, we provide four miniature 7 x 5 mm sized breakout boards for wire-
-
+- Moreover, we provide four miniature 7 x 5 mm sized breakout boards for wire-
 attached TMP117A sensors. These act as probes in laboratory applications, 
-
 for example for usage in agar plates or liquid samples.
 
-The main board can carry two optional TMP117A sensors for environmental 
-
+- The main board can carry two optional TMP117A sensors for environmental 
 temperature monitoring in incubators or lab rooms.
 
 Notes
