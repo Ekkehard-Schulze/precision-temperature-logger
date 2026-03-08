@@ -25,14 +25,14 @@ and plotly packages as well as with spreadsheet processing.
 
 - A custom printed circuit board integrates a 18650 lithium-ion 
  battery, the DS3231 clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
- and up to two on-board TMP117A sensors.
+ and up to two on-board TMP117A sensors for environmental 
+temperature monitoring in incubators or lab rooms.
+
 
 - We provide four miniature 7 x 5 mm sized breakout boards for wire-attached 
 TMP117A sensors. These act as probes in laboratory applications, 
 for example for usage in agar plates or liquid samples.
 
-- The main board can carry two optional TMP117A sensors for environmental 
-temperature monitoring in incubators or lab rooms.
 
 Notes
 -----
