@@ -23,11 +23,8 @@ and plotly packages as well as with spreadsheet processing.
 
 - You can specify the logging interval in settings.txt on the SD card. 
 
-- We use the 'Adafruit Feather 32u4 Adalogger #2795'
-in combination with a precision real time clock DS3231.
-
 - A custom printed circuit board integrates a 18650 lithium-ion 
- battery and the DS3231 clock. 
+ battery, the DS3231 clock and the 'Adafruit Feather 32u4 Adalogger #2795'
 
 - We provide four miniature 7 x 5 mm sized breakout boards for wire-attached 
 TMP117A sensors. These act as probes in laboratory applications, 
