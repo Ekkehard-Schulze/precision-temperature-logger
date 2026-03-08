@@ -101,7 +101,7 @@ DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouple)
 	* TSL2561 (illuminance)
 
 &emsp;&emsp;This firmware is complex and requires selecting sensors by uncommenting 
-define statements in the C-code.
+define statements in the C source code.
 
 
 Contributions
