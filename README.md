@@ -108,25 +108,15 @@ Contributions
 -------------
 
 This device was developed by the department of Bioinformatics and Molecular Genetics
-
 ('The Baumeister Lab'), Institute for Biology III, Faculty of Biology, 
-
 University of Freiburg, Schänzlestraße 1, 79104 Freiburg, Germany
-
 in collaboration with the institute's electronics workshop 'AT-Technik'.
-
 The hardware was designed by Jürgen Schmidt and constructed by 
-
 Joshua Schwarber. Jürgen Schmidt wrote an initial low-power voltage 
-
 and non-precision temperature logging firmware, which was extended to the present temperature 
-
 logging firmware by Ekkehard Schulze. Ekkehard Schulze tested 
-
 multiple different temperature sensors typs and identified the 
-
 Texas Instruments sensor TMP117A as the only type satisfying 
-
 our experimental requirements in the temperature range close to 0°C.
 
 
