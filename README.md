@@ -119,7 +119,7 @@ The hardware was designed by Jürgen Schmidt and constructed by
 
 Joshua Schwarber. Jürgen Schmidt wrote an initial low-power voltage 
 
-logging firmware, which was extended to the present temperature 
+and non-precision temperature logging firmware, which was extended to the present temperature 
 
 logging firmware by Ekkehard Schulze. Ekkehard Schulze tested 
 
