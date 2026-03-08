@@ -89,7 +89,7 @@ for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 6. For different technical requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
 
-	* ADT7420 (precision temperature)
+&emsp;&emsp;* ADT7420 (precision temperature)
 
 * OneWire (temperature, allows for a larger number of sensors on a single cable)
 
