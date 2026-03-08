@@ -101,7 +101,7 @@ firmware, which in addition to TMP117 also supports these sensors:
 
 * TSL2561 (illuminance)
 
-   This firmware is complex and requires selecting sensors by uncommenting 
+&emsp;&emsp;This firmware is complex and requires selecting sensors by uncommenting 
 define statements in the C-code.
 
 
