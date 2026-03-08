@@ -16,7 +16,7 @@ accuracy not worse than ±0.1°C from –20°C to 50°C.
 - The firmware auto-detects sensors and supports all combinations 
 of the four dedicated addresses.
 
-- The logger writes a tab separated value formated text file with 
+- Writes a tab separated value formated text file with 
 ISO 8601 date and time to a micro-SD card. 
 This format is compatible with python's pandas 
 and plotly packages as well as with spreadsheet processing. 
