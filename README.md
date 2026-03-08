@@ -7,7 +7,7 @@ years.
 
 Features
 --------
-- This low-power device runs for month from a single 18650 LiIon 
+- Runs for month from a single 18650 LiIon 
 cell without re-charging.
 
 - Up to four TMP117A sensors provide NIST-traceable 
