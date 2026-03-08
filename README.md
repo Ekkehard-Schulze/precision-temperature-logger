@@ -1,14 +1,15 @@
 Precision temperature SD-card logger for laboratory use
 ========================================================
-
-This low-power device runs for month from a single 18650 LiIon 
-cell without re-charging. We provide hardware design files, 
+We provide hardware design files, 
 firmware, and a script for graphical data analysis and statistics. 
 Multiple loggers have served various laboratory applications for 
 years. 
 
 Features
 --------
+- This low-power device runs for month from a single 18650 LiIon 
+cell without re-charging.
+
 - Up to four TMP117A sensors provide NIST-traceable 
 accuracy not worse than ±0.1°C from –20°C to 50°C.
 
