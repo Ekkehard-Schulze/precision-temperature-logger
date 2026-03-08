@@ -21,7 +21,7 @@ ISO 8601 date and time to a micro-SD card.
 This format is compatible with python's pandas 
 and plotly packages as well as with spreadsheet processing. 
 
-- You can specify the logging interval in settings.txt on the SD card. 
+- The user can specify the logging interval in settings.txt on the SD card. 
 
 - A custom printed circuit board integrates a 18650 lithium-ion 
  battery, the DS3231 clock and the 'Adafruit Feather 32u4 Adalogger #2795'
