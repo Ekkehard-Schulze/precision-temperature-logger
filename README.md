@@ -28,7 +28,7 @@ in combination with a precision real time clock DS3231.
 - A custom printed circuit board integrates a 18650 lithium-ion 
  battery and the DS3231 clock. 
 
-- Moreover, we provide four miniature 7 x 5 mm sized breakout boards for wire-
+- We provide four miniature 7 x 5 mm sized breakout boards for wire-
 attached TMP117A sensors. These act as probes in laboratory applications, 
 for example for usage in agar plates or liquid samples.
 
