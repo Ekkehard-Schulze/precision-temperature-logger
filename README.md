@@ -68,7 +68,7 @@ This needs microscope soldering and is for ambitious tinkerers only.
 5. For other research requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
 
-	* OneWire temperature, this allows for a larger number of sensors on a many meter long two-conductor cable bus
+	- OneWire temperature, this allows for a larger number of sensors on a many meter long two-conductor cable bus
         * DS18B20, 
 		* DS18S20, DS1822, MAX31850 (the latter for type K thermocouples).
 
