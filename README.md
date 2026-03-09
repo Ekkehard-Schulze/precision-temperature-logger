@@ -16,7 +16,7 @@ accuracy not worse than ±0.1 °C from –20 °C to 50 °C.
 - The firmware auto-detects sensors and supports all combinations 
 of the four dedicated addresses.
 
-- Writes a tab separated value formated text file with 
+- Writes a tab separated value formatted text file with 
 ISO 8601 date and time to a micro-SD card. 
 This format is compatible with python's pandas 
 and plotly packages as well as with spreadsheet processing. 
@@ -31,7 +31,7 @@ temperature monitoring in incubators or lab rooms.
 
 - Four 7 x 5 mm sized custom printed breakout circuit boards for wire-attached 
 TMP117A sensors. These act as probes in laboratory applications, 
-for example for usage in agar plates or liquid samples.
+for example, for usage in agar plates or liquid samples.
 
 
 Notes
@@ -48,11 +48,11 @@ less accurate than TMP117A.
 
 
 
-3. For a qick start instead of using our project's printed circuit 
+3. For a quick start instead of using our project's printed circuit 
 board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
 with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it 
 with a pluggable battery. Some TMP117 breakout boards are commercially 
-available (e. g. Adafruit #4821 or Sparkfun #15805), but these have a much 
+available (e. g. Adafruit #4821 or SparkFun #15805), but these have a much 
 larger size than our sensor boards and are more difficult to seal for use
 in wet and corrosive environments.
 
@@ -68,7 +68,7 @@ This needs microscope soldering and is for ambitious tinkerers only.
 5. For other research requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
 
-    * OneWire temperature, this allows for a larger number of sensors on a many meter long two-conductor cable bus
+    * OneWire temperature, this allows for a larger number of sensors on a many meters long two-conductor cable bus
       * DS18B20 
       * DS18S20
       * DS1822
@@ -76,7 +76,7 @@ firmware, which in addition to TMP117 also supports these sensors:
 
     * BME280 (temperature, humidity, pressure)
 
-    * MLX90614 (infra red non-contact temperature)
+    * MLX90614 (infrared non-contact temperature)
 
     * TSL2561 (illuminance)
 	
@@ -89,10 +89,10 @@ firmware, which in addition to TMP117 also supports these sensors:
 
 6. You may like to try the newer and software compatible sensor type TMP119.
 TMP119 has a higher accuracy (±0.03 °C (typical) from 0 °C to 45 °C
-and ±0.08 °C (maximum) from 0 °C to 45 °C), but is only avaible in the 
+and ±0.08 °C (maximum) from 0 °C to 45 °C), but is only available in the 
 YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
 slightly larger WSON package. Remarkably, the die size of TMP119 
-is just 1.5 mm x 1.0 mm. This allows laboratory aplications,
+is just 1.5 mm x 1.0 mm. This allows laboratory applications,
 for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 
 
@@ -108,7 +108,7 @@ The hardware was designed by Jürgen Schmidt and constructed by
 Joshua Schwarber. Jürgen Schmidt wrote an initial low-power voltage 
 and non-precision temperature logging firmware, which was extended to the present temperature 
 logging firmware by Ekkehard Schulze. Ekkehard Schulze tested 
-multiple different temperature sensors typs and identified the 
+multiple different temperature sensors types and identified the 
 Texas Instruments sensor TMP117A as the only type satisfying 
 our experimental requirements in the temperature range close to 0 °C.
 
