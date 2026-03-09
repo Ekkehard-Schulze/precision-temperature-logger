@@ -73,7 +73,7 @@ firmware, which in addition to TMP117 also supports these sensors:
       * DS18S20
       * DS1822
       * MAX31850  for type K thermocouples
-	    *test
+	    * test
 		  * ets2
 		
 		
