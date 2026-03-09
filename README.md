@@ -80,7 +80,7 @@ firmware, which in addition to TMP117 also supports these sensors:
 
 	* ADT7420 (precision temperature)
 
-	* OneWire (temperature, allows for a larger number of sensors on a single two-conductor cable)
+	* OneWire (temperature, allows for a larger number of sensors on a muultiple meter long two-conductor cable bus)
 DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouple).
 
 	* BME280 (temperature, humidity, pressure)
