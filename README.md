@@ -29,7 +29,7 @@ and plotly packages as well as with spreadsheet processing.
 temperature monitoring in incubators or lab rooms.
 
 
-- We provide four miniature 7 x 5 mm sized breakout boards for wire-attached 
+- Four miniature 7 x 5 mm sized custom printed breakout circuit boards for wire-attached 
 TMP117A sensors. These act as probes in laboratory applications, 
 for example for usage in agar plates or liquid samples.
 
