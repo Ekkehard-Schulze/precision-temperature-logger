@@ -65,7 +65,7 @@ This needs microscope soldering and is for ambitious tinkerers only.
 
 
 
-6. For other research requirements we provide an alternative 
+5. For other research requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
 
 	* OneWire (temperature, allows for a larger number of sensors on a many meter long two-conductor cable bus)
@@ -84,7 +84,7 @@ DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouples).
 
 
 
-5. You may like to try the software compatible sensor TMP119.
+6. You may like to try the software compatible sensor TMP119.
 TMP119 has a higher accuracy (±0.03°C (typical) from 0°C to 45°C
 and ±0.08°C (maximum) from 0°C to 45°C), but is only avaible in the 
 YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
