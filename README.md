@@ -65,16 +65,6 @@ This needs microscope soldering and is for ambitious tinkerers only.
 
 
 
-5. You may like to try the software compatible sensor TMP119.
-TMP119 has a higher accuracy (±0.03°C (typical) from 0°C to 45°C
-and ±0.08°C (maximum) from 0°C to 45°C), but is only avaible in the 
-YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
-slightly larger WSON package. Remarkably, the die size of TMP119 
-is just 1.5 mm x 1.0 mm. This allows laboratory aplications,
-for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
-
-
-
 6. For other research requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
 
@@ -91,6 +81,17 @@ DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouples).
 
 &emsp;&emsp;This firmware is complex and requires selecting sensors by uncommenting 
 '#define' statements <br />&emsp;&emsp;in the C source code. However, the sensors are auto-detected and types can be mixed.
+
+
+
+5. You may like to try the software compatible sensor TMP119.
+TMP119 has a higher accuracy (±0.03°C (typical) from 0°C to 45°C
+and ±0.08°C (maximum) from 0°C to 45°C), but is only avaible in the 
+YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
+slightly larger WSON package. Remarkably, the die size of TMP119 
+is just 1.5 mm x 1.0 mm. This allows laboratory aplications,
+for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
+
 
 
 Contributions
