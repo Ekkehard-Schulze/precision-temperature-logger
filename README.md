@@ -90,7 +90,8 @@ DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouples).
 	* ADT7420 (precision temperature, but inferior to TMP117A)	
 
 &emsp;&emsp;This firmware is complex and requires selecting sensors by uncommenting 
-'#define' statements  <br />&emsp;&emsp;in the C source code.
+'#define' statements  <br />&emsp;&emsp;
+in the C source code. However, the sonsors are auto-detected and types can be mixed.
 
 
 Contributions
