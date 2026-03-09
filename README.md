@@ -78,8 +78,6 @@ for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 6. For other research requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
 
-	* ADT7420 (precision temperature)
-
 	* OneWire (temperature, allows for a larger number of sensors on a muultiple meter long two-conductor cable bus)
 DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouple).
 
@@ -88,6 +86,8 @@ DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouple).
 	* MLX90614 (infra red non-contact temperature)
 
 	* TSL2561 (illuminance)
+	
+	* ADT7420 (precision temperature, but inferior to TMP117A)	
 
 &emsp;&emsp;This firmware is complex and requires selecting sensors by uncommenting 
 define statements in the C source code.
