@@ -78,7 +78,7 @@ for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 6. For other research requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
 
-	* OneWire (temperature, allows for a larger number of sensors on a muultiple meter long two-conductor cable bus)
+	* OneWire (temperature, allows for a larger number of sensors on a many meter long two-conductor cable bus)
 DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouple).
 
 	* BME280 (temperature, humidity, pressure)
