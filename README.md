@@ -75,14 +75,14 @@ for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
 
 
 
-6. For different research requirements we provide an alternative 
+6. For other research requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
 
 	* ADT7420 (precision temperature)
 
-	* OneWire (temperature, allows for a larger number of sensors on a single cable)
+	* OneWire (temperature, allows for a larger number of sensors on a single two-conductor cable)
 DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouple) using 
- the parasite power (two cables).
+ parasite power (two cables).
 
 	* BME280 (temperature, humidity, pressure)
 
