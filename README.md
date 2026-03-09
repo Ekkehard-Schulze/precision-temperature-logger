@@ -11,7 +11,7 @@ Features
 cell without re-charging.
 
 - Up to four TMP117A sensors provide NIST-traceable 
-accuracy not worse than ±0.1°C from –20°C to 50°C.
+accuracy not worse than ±0.1 °C from –20 °C to 50 °C.
 
 - The firmware auto-detects sensors and supports all combinations 
 of the four dedicated addresses.
@@ -88,8 +88,8 @@ firmware, which in addition to TMP117 also supports these sensors:
 
 
 6. You may like to try the newer and software compatible sensor type TMP119.
-TMP119 has a higher accuracy (±0.03°C (typical) from 0°C to 45°C
-and ±0.08°C (maximum) from 0°C to 45°C), but is only avaible in the 
+TMP119 has a higher accuracy (±0.03 °C (typical) from 0 °C to 45 °C
+and ±0.08 °C (maximum) from 0 °C to 45 °C), but is only avaible in the 
 YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
 slightly larger WSON package. Remarkably, the die size of TMP119 
 is just 1.5 mm x 1.0 mm. This allows laboratory aplications,
@@ -110,7 +110,7 @@ and non-precision temperature logging firmware, which was extended to the presen
 logging firmware by Ekkehard Schulze. Ekkehard Schulze tested 
 multiple different temperature sensors typs and identified the 
 Texas Instruments sensor TMP117A as the only type satisfying 
-our experimental requirements in the temperature range close to 0°C.
+our experimental requirements in the temperature range close to 0 °C.
 
 
 Images
