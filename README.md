@@ -84,7 +84,7 @@ DS18B20, DS18S20, DS1822, MAX31850 (the latter for type K thermocouples).
 
 
 
-6. You may like to try the software compatible sensor TMP119.
+6. You may like to try the newer, baut software compatible sensor TMP119.
 TMP119 has a higher accuracy (±0.03°C (typical) from 0°C to 45°C
 and ±0.08°C (maximum) from 0°C to 45°C), but is only avaible in the 
 YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
