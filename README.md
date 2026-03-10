@@ -1,7 +1,7 @@
 Precision temperature SD-card logger for laboratory use
 ========================================================
 We provide hardware design files, 
-firmware, and a script for graphical data analysis and statistics. 
+firmware, and a script for graphical data analysis and statistics. \
 Multiple loggers have served various laboratory applications for 
 years. 
 
@@ -14,7 +14,7 @@ cell without re-charging.
 accuracy not worse than ±0.1 °C from –20 °C to 50 °C.
 
 - The firmware auto-detects sensors and supports all combinations 
-of the four dedicated addresses.
+of the four dedicated I2C-bus addresses.
 
 - Writes a tab separated value formatted text file with 
 ISO 8601 date and time to a micro-SD card. 
