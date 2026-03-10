@@ -59,7 +59,7 @@ in wet and corrosive environments.
 
 
 4. Our firmware also supports the 'SparkFun OpenLog #DEV-13712' board, but the 
-user will have to breakout the I2C bus and INT0, provide pull-up resistors for the I2C 
+user will have to breakout the I2C-bus and INT0, provide pull-up resistors for the I2C 
 bus, a voltage divider for battery voltage sensing, a DS3231 clock, and TMP117 sensors.
 This needs microscope soldering and is for ambitious tinkerers only. 
 
@@ -137,7 +137,7 @@ deteriorates CyA. The scale is mm.
 
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption.jpg)
 
-Adaption of an Openlog board for precision temperature logging using a I2C bus board
+Adaption of an Openlog board for precision temperature logging using a I2C-bus board
 
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption_2.jpg)
 
