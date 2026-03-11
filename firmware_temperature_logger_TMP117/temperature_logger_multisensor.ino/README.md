@@ -23,7 +23,8 @@ sensors are auto-detected and sensor types can be mixed.
 
 The file 'temperature_logger_multisensor.ino.ino' is the source code for the Arduino IDE 1.8.19.
 You need to install the required libraries to compile this, see the ../libraries folder here.
-You will need to edit the user settings in the code.
+
+You need to edit the user settings in the code if you require differnt sensor combinations than TMP117+1Wire.
 
 The file 'temperature_logger_TMP117+1Wire_multisensor.ino.ino.with_bootloader.feather32u4.hex' is a pre-compiled example binary for
 the 'Adafruit Feather 32u4 Adalogger #2795'. It should be possible to flash the controller with the command
