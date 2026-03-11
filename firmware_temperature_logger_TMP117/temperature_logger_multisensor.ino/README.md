@@ -17,7 +17,7 @@ Alternative firmware, which in addition to TMP117 also supports these sensors:
     * ADT7420 (precision temperature, but inferior to TMP117A)	
 
 This firmware is more complicated and requires selecting sensors by uncommenting 
-'#define' statements <br />&emsp;&emsp;in the C source code. The selected 
+'#define' statements in the C source code. The selected 
 sensors are auto-detected and sensor types can be mixed.
 
 
