@@ -35,4 +35,4 @@ and replacing <HEX_FILE> with temperature_logger_TMP117.ino.ino.with_bootloader.
 
 You need to install avrdude for this. 
 
-Take note that the source code supports
+
