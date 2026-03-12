@@ -11,7 +11,7 @@ the 'Adafruit Feather 32u4 Adalogger #2795'. It should be possible to flash the 
 
 &emsp;&emsp;avrdude -p m32u4 -P <YOUR_PORT> -c avr109 -U flash:w:<HEX_FILE>:i
 
-&emsp;&emsp;with replacing your <YOUR_PORT> with something like COM1 ... COM20 (the name of your virtual serial port of the device) 
+&emsp;&emsp;with replacing your <YOUR_PORT> with something like COM1 ... COM99 (the name of your virtual serial port of the device) 
 and replacing\
 &emsp;&emsp; <HEX_FILE> with temperature_logger_TMP117.ino.ino.with_bootloader.feather32u4.hex.
 You may have to **double-click** the RST button\
