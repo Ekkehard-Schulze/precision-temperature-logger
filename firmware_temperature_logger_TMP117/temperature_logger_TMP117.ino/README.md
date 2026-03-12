@@ -2,11 +2,11 @@ Notes
 -----
 This firmware is kept simple and supports four TMP117/TMP119 sensors, one for each of the dedicated I2C-bus addresses.
 
-The file 'temperature_logger_TMP117.ino.ino' is the source code for the Arduino IDE 1.8.19.
+1. The file 'temperature_logger_TMP117.ino.ino' is the source code for the Arduino IDE 1.8.19.
 You need to install the required libraries to compile this, see the ../libraries folder here.
 You find more information here: https://learn.adafruit.com/adafruit-feather-32u4-adalogger/using-with-arduino-ide
 
-The file 'temperature_logger_TMP117.ino.ino.with_bootloader.feather32u4.hex' is a pre-compiled binary for
+2. The file 'temperature_logger_TMP117.ino.ino.with_bootloader.feather32u4.hex' is a pre-compiled binary for
 the 'Adafruit Feather 32u4 Adalogger #2795'. It should be possible to flash the controller with the command
 
 avrdude -p m32u4 -P <YOUR_PORT> -c avr109 -U flash:w:<HEX_FILE>:i
