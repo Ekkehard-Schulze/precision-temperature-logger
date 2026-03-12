@@ -25,10 +25,13 @@ sensors are auto-detected and sensor types can be mixed.
 You need to install the required libraries to compile this, see the ../libraries folder here.
 You find more information here: https://learn.adafruit.com/adafruit-feather-32u4-adalogger/using-with-arduino-ide
 
-If you require differnt sensor combinations than TMP117+1Wire you need to edit the user settings in the code. Due to 
-memory limitations of Atmega 32U4 it is not possible to select all sensors at the same time.
+&emsp;&emsp;If you require differnt sensor combinations than TMP117+1Wire you need to edit the user 
+settings in the code. Due to 
+memory limitations\
+&emsp;&emsp;of Atmega 32U4 it is not possible to select all sensors at the same time.
 
-The file 'temperature_logger_TMP117+1Wire_multisensor.ino.ino.with_bootloader.feather32u4.hex' is a pre-compiled example binary for
+2. The file 'temperature_logger_TMP117+1Wire_multisensor.ino.ino.with_bootloader.feather32u4.hex' is a 
+pre-compiled example binary for
 the 'Adafruit Feather 32u4 Adalogger #2795'. It should be possible to flash the controller with the command
 
 avrdude -p m32u4 -P <YOUR_PORT> -c avr109 -U flash:w:<HEX_FILE>:i
