@@ -1,7 +1,8 @@
 Notes
 -----
-**Alternative firmware, which in addition to TMP117 also supports these sensors:**
+**Alternative firmware, which supports these sensors:**
 
+* TMP117 or TMP119 (precision temperature)
 * OneWire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
   * DS18B20 
   * DS18S20
