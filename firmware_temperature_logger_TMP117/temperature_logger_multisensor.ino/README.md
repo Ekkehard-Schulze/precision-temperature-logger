@@ -2,19 +2,19 @@ Notes
 -----
 **Alternative firmware, which in addition to TMP117 also supports these sensors:**
 
-    * OneWire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
-      * DS18B20 
-      * DS18S20
-      * DS1822
-      * MAX31850  for type K thermocouples
+* OneWire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
+  * DS18B20 
+  * DS18S20
+  * DS1822
+  * MAX31850  for type K thermocouples
 
-    * BME280 (temperature, humidity, pressure)
+* BME280 (temperature, humidity, pressure)
 
-    * MLX90614 (infrared non-contact temperature)
+* MLX90614 (infrared non-contact temperature)
 
-    * TSL2561 (illuminance)
-	
-    * ADT7420 (precision temperature, but inferior to TMP117A)	
+* TSL2561 (illuminance)
+
+* ADT7420 (precision temperature, but inferior to TMP117A)	
 
 This firmware is more complicated and requires selecting sensors by uncommenting 
 '#define' statements in the C source code. The selected 
