@@ -23,8 +23,8 @@ sensors are auto-detected and sensor types can be mixed.
 
 1. The file 'temperature_logger_multisensor.ino.ino' is the source code for the Arduino IDE 1.8.19.
 You need to install the required libraries to compile this, see the ../libraries folder here.
-You find more information here: https://learn.adafruit.com/adafruit-feather-32u4-adalogger/using-with-arduino-ide
-&emsp;&emsp;If you require differnt sensor combinations than TMP117+1Wire you need to edit the user 
+You find more information here: https://learn.adafruit.com/adafruit-feather-32u4-adalogger/using-with-arduino-ide.
+If you require differnt sensor combinations than TMP117+1Wire you need to edit the user 
 settings in the code. Due to memory limitations of Atmega 32U4 it is not possible to select all sensors at the same time.
 
 2. The file 'temperature_logger_TMP117+1Wire_multisensor.ino.ino.with_bootloader.feather32u4.hex' is a 
