@@ -40,7 +40,7 @@ and replacing\
 You may have to **double-click** the RST button\
 &emsp;&emsp;to get into the bootloader. 
 ***You need to install avrdude for this.***
-**If you choose this option, you do not need to install and operate the**\
-&emsp;&emsp;***Arduino IDE and libraries***.
+If you choose this option, you do not need to install and operate the\
+&emsp;&emsp;Arduino IDE and libraries.
 
 
