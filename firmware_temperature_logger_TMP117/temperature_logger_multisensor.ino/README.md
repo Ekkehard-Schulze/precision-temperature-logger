@@ -1,6 +1,6 @@
 Notes
 -----
-Alternative firmware, which in addition to TMP117 also supports these sensors:
+**Alternative firmware, which in addition to TMP117 also supports these sensors:**
 
     * OneWire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
       * DS18B20 
@@ -21,7 +21,7 @@ This firmware is more complicated and requires selecting sensors by uncommenting
 sensors are auto-detected and sensor types can be mixed.
 
 
-The file 'temperature_logger_multisensor.ino.ino' is the source code for the Arduino IDE 1.8.19.
+1. The file 'temperature_logger_multisensor.ino.ino' is the source code for the Arduino IDE 1.8.19.
 You need to install the required libraries to compile this, see the ../libraries folder here.
 You find more information here: https://learn.adafruit.com/adafruit-feather-32u4-adalogger/using-with-arduino-ide
 
