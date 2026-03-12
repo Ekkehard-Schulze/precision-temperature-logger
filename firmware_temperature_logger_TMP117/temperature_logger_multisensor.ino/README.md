@@ -23,7 +23,7 @@ sensors are auto-detected and sensor types can be mixed.
 
 
 1. The file 'temperature_logger_multisensor.ino.ino' is the source code for the Arduino IDE 1.8.19.
-You need to install the required libraries to compile this, see the ../libraries folder here.
+***You need to install the required libraries to compile this***, see the ../libraries folder here.
 You find more information here: https://learn.adafruit.com/adafruit-feather-32u4-adalogger/using-with-arduino-ide.
 If you require differnt sensor combinations than TMP117+1Wire you need to edit the user 
 settings in the code. Due to memory limitations of Atmega 32U4 it is not possible to select all sensors at the same time.
@@ -38,8 +38,8 @@ the 'Adafruit Feather 32u4 Adalogger #2795'. It should be possible to flash the 
 and replacing\
 &emsp;&emsp;<HEX_FILE> with temperature_logger_TMP117.ino.ino.with_bootloader.feather32u4.hex.
 You may have to **double-click** the RST button\
-&emsp;&emsp;to get into the bootloader. You need to install avrdude for this. If choose this option, you do 
-not need to install and operate the\
-&emsp;&emsp;Arduino IDE and libraries.
+&emsp;&emsp;to get into the bootloader. You need to install avrdude for this. ***If choose this option, you do 
+***not need to install and operate the\
+**&emsp;&emsp;Arduino IDE and libraries.
 
 
