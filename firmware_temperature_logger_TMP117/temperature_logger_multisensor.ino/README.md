@@ -39,7 +39,7 @@ and replacing\
 &emsp;&emsp;<HEX_FILE> with temperature_logger_TMP117.ino.ino.with_bootloader.feather32u4.hex.
 You may have to **double-click** the RST button\
 &emsp;&emsp;to get into the bootloader. You need to install avrdude for this. 
-**If you choose this option, you do not need to install and operate the\
-&emsp;&emsp;***Arduino IDE and libraries.
+**If you choose this option, you do not need to install and operate the**\
+&emsp;&emsp;***Arduino IDE and libraries***.
 
 
