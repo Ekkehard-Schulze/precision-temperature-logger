@@ -40,7 +40,8 @@ the 'Adafruit Feather 32u4 Adalogger #2795'. It should be possible to flash the 
 and replacing\
 &emsp;&emsp;<HEX_FILE> with temperature_logger_TMP117.ino.ino.with_bootloader.feather32u4.hex.
 You may have to **double-click** the RST button\
-&emsp;&emsp;to get into the bootloader. You need to install avrdude for this. If choose this option, you do not need to install and operate the
-Arduino IDE and libraries.
+&emsp;&emsp;to get into the bootloader. You need to install avrdude for this. If choose this option, you do 
+not need to install and operate the\
+&emsp;&emsp;Arduino IDE and libraries.
 
 
