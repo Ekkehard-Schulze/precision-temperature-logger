@@ -4,6 +4,6 @@ Notes
 
 So, compile and upload the code using the Arduino IDE. Typically, after the upload the microcontroller restarts
 and transfers the compile time to the DS3231 RTC. Using this method, the RTC will be a little
-behind the real time. Make sure the microcontroller is not startet a second time, this 
-would give a time which is far behind the real time. Instead, after setting the DS3231 RTC
-flash the application firmware to the microcontroller.
+behind the real time. Make sure the microcontroller is not startet for a second time, this 
+would give a time which is far behind the real time. Instead, after setting the DS3231 RTC time,
+upload the application firmware to the microcontroller.
