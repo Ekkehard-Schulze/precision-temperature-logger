@@ -8,6 +8,6 @@ behind the real time. Make sure the microcontroller is not started for a second 
 would set a time which is far more behind the real time. Instead, after setting the DS3231 RTC time,
 upload the application firmware to the microcontroller.
 
-If you want to transfer a different time than your PC's system time, you have to temporarily change
-yout PC's system time to the intended time, compile and run the firmware, and then change your PC's
-system time back to the original. This approach can be used, for example, to change the clock to UTC.
+ To transfer a different time than the PC's system time, temporarily change
+the PC's system time to the intended time, compile and run the firmware, and then change the PC's
+system time back to the original. This approach can be used, for example, to set the clock to UTC.
