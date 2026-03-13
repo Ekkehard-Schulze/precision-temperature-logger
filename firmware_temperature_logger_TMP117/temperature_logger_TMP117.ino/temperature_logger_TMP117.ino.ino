@@ -150,7 +150,6 @@ String Separator = "\t";                              // .tsv .csv table separat
 
 #define serial_verbose // serial print datastring
 
-
 //#define  CLOCK_TIME_IS_UTC    // un-comment this is for iso 8601 UTC date-time style e.g. '2025-12-16T15:19:01Z'
 
 //#define  APPEND_UTC_OFFSET_TO_ISO8601_DATE  // un-comment this is for iso 8601 UTC date-time with UTC offset, e.g. '2025-12-16T15:19:01+09:00'
@@ -160,6 +159,11 @@ String Separator = "\t";                              // .tsv .csv table separat
 
 #define ADAFRUIT_FEATHER_LOGGER
 //#define OPENLOG
+
+//--E-n-d----o-f-----U-s-e-r---S-e-t-t-i-n-g-s----------<<<<<<<<<<<<<<<<<<<<<<<<<<<<< USER
+
+
+
 
 //----Start of --o-f---Board Definitions------------------------------------------------------------
 
@@ -235,7 +239,6 @@ int BatteriePin = 15;
 // #define RedLedOn_for_low_power
 // #define no_Auto_power_off_on_bat_low
 
-//--E-n-d----o-f-----U-s-e-r---S-e-t-t-i-n-g-s----------<<<<<<<<<<<<<<<<<<<<<<<<<<<<< USER
 
 #include <Wire.h>
 #include <RTClibExtended.h>

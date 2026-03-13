@@ -197,6 +197,10 @@ String Separator = "\t";                              // .tsv .csv table separat
 //#define ARDUINO_NANO
 //---------------------------------------------------
 
+//--E-n-d----o-f-----U-s-e-r---S-e-t-t-i-n-g-s----------<<<<<<<<<<<<<<<<<<<<<<<<<<<<< USER
+
+
+
 
 
 #include <OneWire.h>  // required before board definitions
@@ -478,8 +482,6 @@ int BatteriePin = 24;      // PA0 = Pin24 = ADC0
 // #define RedLedOn_for_measurement
 // #define RedLedOn_for_low_power
 // #define no_Auto_power_off_on_bat_low
-
-//--E-n-d----o-f-----U-s-e-r---S-e-t-t-i-n-g-s----------<<<<<<<<<<<<<<<<<<<<<<<<<<<<< USER
 
 #include <Wire.h>
 #include <RTClibExtended.h>
