@@ -36,7 +36,7 @@ void setup() {
 
   // esmod 20250502 clear lost power bit (EOSC = bit 7 in control register set to 1 )
   // I guess if you remove Vcc AND the battery, you will reset this bit as well
-  // if EOSC is set, the clock will not advance, but stand still, when Vcc is off an Vbatt is on
+  // if EOSC is set, the clock will not advance, but stand still, when Vcc is off and Vbatt is on
   if (RTC.lostPower()) {
   unsigned char b;
   Wire.beginTransmission(0x68); // address DS3231
