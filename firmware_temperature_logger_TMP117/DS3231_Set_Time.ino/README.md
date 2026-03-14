@@ -15,7 +15,7 @@ system time back to the original. This approach can be used to set the clock for
 
 3. Alternatively, to set the clock to a fixed time, uncomment line 33 and edit the time specified.
 Compile and upload the software, then use an accurate reference clock to reset or startup
-the microcontroller manually at this specific time.
+the microcontroller at this specific time.
 
 Make sure the microcontroller is not started for a second time with this firmware, this 
 would set a time which is too far behind the real time. Instead,
