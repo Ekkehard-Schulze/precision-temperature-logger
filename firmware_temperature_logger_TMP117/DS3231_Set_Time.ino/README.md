@@ -1,13 +1,13 @@
 Arduino firmware to set the time of the DS3231 real time clock
 ============================================================
 
-Choose one of three alternative methods
+Choose one of three methods:
 -------
 
 1. To set the clock to the compile time of the script compile and upload the code in 
 the Arduino IDE; the microcontroller then restarts and updates the DS3231 RTC time. 
-Using this method, the RTC will be a little (e.g. 1 second)
-behind the real time. Make sure the microcontroller is not started for a second time, this 
+The RTC will be a little (e.g. 1 second)
+behind the real time. Make sure the microcontroller is not started for a second time with this firmware, this 
 would set a time which is too far behind the real time. 
 
 2. To set a different time than the PC's system time, temporarily change
