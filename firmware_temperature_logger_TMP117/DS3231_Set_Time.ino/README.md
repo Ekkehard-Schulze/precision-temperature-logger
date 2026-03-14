@@ -1,6 +1,5 @@
-Notes
-======
-**This Arduino firmware sets the time of the DS3231 real time clock **
+Arduino firmware to set the time of the DS3231 real time clock
+============================================================
 
 Choose one of three alternative methods
 -------
