@@ -18,6 +18,6 @@ Compile and upload the software, then use an accurate reference clock to reset o
 the microcontroller at this specific time.
 
 Make sure the microcontroller is not started for a second time with this firmware, this 
-would set a time which is too far behind the real time. Instead,
+would set a time which is behind the real time. Instead,
 after setting the DS3231 RTC time, immediately upload the 
 application firmware to the microcontroller. 
