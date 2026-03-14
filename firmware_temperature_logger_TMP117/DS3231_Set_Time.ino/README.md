@@ -11,7 +11,7 @@ behind the real time.
 
 2. To set a different time than the PC's system time, temporarily change
 the PC's system time to the intended time, compile and run the firmware, and then change the PC's
-system time back to the original. This approach can for example be used to set the clock to UTC.
+system time back to the original. This approach can be used to set the clock for example to UTC.
 
 3. Alternatively, to set the clock to a fixed time, uncomment line 33 and edit the time specified.
 Compile and upload the software, then use an accurate reference clock to reset or startup
