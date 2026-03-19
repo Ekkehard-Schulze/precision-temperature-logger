@@ -72,7 +72,8 @@ firmware, which in addition to TMP117 also supports these sensors:
       * DS18B20 
       * DS18S20
       * DS1822
-      * MAX31850  for type K thermocouples
+      * MAX31850  for type K thermocouples. An optional  correction according to the ITS-90 standard
+is provided. This substantially improves the accuracy at extreme temperatures.
 
     * BME280 (temperature, humidity, pressure)
 
