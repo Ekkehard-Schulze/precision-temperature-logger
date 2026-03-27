@@ -11,7 +11,7 @@ Features
 cell without re-charging.
 
 - Up to four TMP117A sensors provide NIST-traceable 
-accuracy not worse than ±0.1 °C from –20 °C to 50 °C.
+accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to 50&nbsp;°C.
 
 - The firmware auto-detects sensors and supports all combinations 
 of the four dedicated I2C-bus addresses.
@@ -73,7 +73,7 @@ firmware, which in addition to TMP117 also supports these sensors:
       * DS18S20
       * DS1822
       * MAX31850  for type K thermocouples. An optional  correction according to the ITS-90 standard
-is provided. This substantially improves the accuracy at extreme temperatures, e. g. below -30 °C or above 600 °C.
+is provided. This substantially improves the accuracy at extreme temperatures, e. g. below -30&nbsp;°C or above 600&nbsp;°C.
 
     * BME280 (temperature, humidity, pressure)
 
@@ -90,8 +90,8 @@ sensors are auto-detected and sensor types can be mixed.
 
 
 6. You may like to try the newer and software compatible sensor type TMP119.
-TMP119 has a higher accuracy (±0.03 °C (typical) from 0 °C to 45 °C
-and ±0.08 °C (maximum) from 0 °C to 45 °C), but is only available in the 
+TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
+and ±0.08&nbsp;°C (maximum) from 0&nbsp;°C to 45&nbsp;°C), but is only available in the 
 YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
 slightly larger WSON package. Remarkably, the die size of TMP119 
 is just 1.5 mm x 1.0 mm. This allows laboratory applications,
@@ -112,7 +112,7 @@ and non-precision temperature logging firmware, which was extended to the presen
 logging firmware by Ekkehard Schulze. Ekkehard Schulze tested 
 multiple different temperature sensors types and identified the 
 Texas Instruments sensor TMP117A as the only type satisfying 
-our experimental requirements in the temperature range close to 0 °C.
+our experimental requirements in the temperature range close to 0&nbsp;°C.
 
 
 Images
