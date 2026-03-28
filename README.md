@@ -128,7 +128,7 @@ Sensor board with polytetrafluoroethylene isolated wires and plug
 
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117-WSON-package-Sensor-PCBs/Logger_with_Sensor.jpg)
 
-Logger with external sensor attached via cable. A further sensor is present on the main board. The scale is mm/cm.
+Logger with external sensor attached via cable. A further sensor is present on the main board. The scale is cm/mm.
 
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117_in_CyA.JPG)
 
