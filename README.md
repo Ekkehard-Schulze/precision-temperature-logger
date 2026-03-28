@@ -2,7 +2,7 @@ Precision temperature logger for laboratory use
 ========================================================
 This logger writes a text file with data and timestamp to a SD-Card.
 We provide hardware design files, 
-firmware, and a script for graphical data analysis and statistics. \
+firmware, and a script for graphical data analysis and statistics. 
 Multiple loggers have served various laboratory applications for 
 years. 
 
