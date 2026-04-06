@@ -42,7 +42,7 @@ Notes
 must cover all exposed sensor board conductive surfaces with a high 
 quality polyepoxide (cured epoxy resin).
 
-2. The main printed circuit board must be coated for water resistance in humid conditions. 
+2. The main printed circuit board must be coated for water resistance if used in humid conditions. 
 We used the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktchemie.com to operate the device in a 4 °C incubator.
 This an acrylic protective lacquer.
 
