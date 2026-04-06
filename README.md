@@ -96,8 +96,8 @@ TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nb
 and ±0.08&nbsp;°C (maximum) from 0&nbsp;°C to 45&nbsp;°C), but is only available in the 
 YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
 slightly larger WSON package. Remarkably, the die size of TMP119 
-is just 1.5 mm x 1.0 mm. This allows laboratory applications,
-for which the 2.1 mm x 2.1 mm sized WSON package size is too large.
+is just 1.5&nbsp;mm x 1.0&nbsp;mm. This allows laboratory applications,
+for which the 2.1&nbsp;mm x 2.1&nbsp;mm sized WSON package size is too large.
 
 
 
