@@ -42,7 +42,8 @@ Notes
 must cover all exposed sensor board conductive surfaces with a high 
 quality polyepoxide (cured epoxy resin).
 
-
+2. The main printed circuit board must be coated for water resistance in humid conditions. 
+We used "PLASTIC 70," an acrylic protective lacquer, to operate the device in a 4 °C incubator. 
 
 2. Take note that TMP117 product versions TMP117N and TMP117M are slightly 
 less accurate than TMP117A.
