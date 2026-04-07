@@ -64,10 +64,8 @@ in wet and corrosive environments.
 
 
 
-4. Our firmware also supports the 'SparkFun OpenLog #DEV-13712' board, but the 
-user will have to breakout the I2C-bus and INT0, re-wire one LED, and provide pull-up resistors for the I2C 
-and 1-wire bus, a voltage divider for battery voltage sensing, a DS3231 clock, and TMP117 sensors.
-This needs trace cutting and microscope soldering and is for skilled electronic technicians only. 
+4. Our firmware also supports the 'SparkFun OpenLog DEV-13712' board with modifications.
+ An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, and add pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors, requiring trace cutting and microscope soldering. This work requires trace cutting and soldering under a microscope.
 
 
 
