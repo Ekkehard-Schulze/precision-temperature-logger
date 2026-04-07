@@ -65,7 +65,7 @@ in wet and corrosive environments.
 
 
 4. Our firmware also supports the 'SparkFun OpenLog DEV-13712' board with modifications.
- An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. This work requires trace cutting and soldering under a microscope.
+ An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. This modifications require trace cutting and soldering under a microscope.
 
 
 
