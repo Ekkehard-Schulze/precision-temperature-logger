@@ -45,6 +45,10 @@ quality polyepoxide (cured epoxy resin).
 2. The main printed circuit board must be coated for water resistance if used in humid conditions. 
 We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktchemie.com to operate the device in a 4&nbsp;°C incubator. 
 
+2. Charging must be done between 0&nbsp;°C to 45&nbsp;°C, best at room temperature.
+
+2. The logger can be operated at temperatures between -20&nbsp;°C to 50&nbsp;°C
+
 2. Take note that TMP117 product versions TMP117N and TMP117M are slightly 
 less accurate than TMP117A.
 
