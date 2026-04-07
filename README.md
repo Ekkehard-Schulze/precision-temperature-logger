@@ -52,8 +52,6 @@ We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktc
 2. Take note that TMP117 product versions TMP117N and TMP117M are slightly 
 less accurate than TMP117A.
 
-
-
 3. For a quick start instead of using our project's printed circuit 
 board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
 with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it 
@@ -62,12 +60,8 @@ available (e. g. Adafruit #4821 or SparkFun #15805), but these have a much
 larger size than our sensor boards and are more difficult to seal for use
 in wet and corrosive environments.
 
-
-
 4. Our firmware also supports the 'SparkFun OpenLog DEV-13712' board with modifications.
  An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. This modifications require trace cutting and soldering under a microscope.
-
-
 
 5. For other research requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
@@ -91,9 +85,7 @@ is provided. This substantially improves the accuracy at extreme temperatures, e
 '#define' statements <br />&emsp;&emsp;in the C source code. The selected 
 sensors are auto-detected and sensor types can be mixed.
 
-
-
-6. You may like to try the newer and software compatible sensor type TMP119.
+9. You may like to try the newer and software compatible sensor type TMP119.
 TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
 and ±0.08&nbsp;°C (maximum) from 0&nbsp;°C to 45&nbsp;°C), but is only available in the 
 YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
