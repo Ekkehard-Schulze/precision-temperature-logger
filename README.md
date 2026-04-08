@@ -49,8 +49,7 @@ We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktc
 
 2. Charging must be done between 0&nbsp;°C to 45&nbsp;°C, best at room temperature.
 
-2. To set the Adafruit Feather 32u4 Adalogger #2795 up 
-to the preferred charging current of 400 mA replace R0 on the Feather board with a 2k2 SMD 0805 resistor. Otherwise, the default charging current is 100 mA, which requires four times the charging time.
+2. Replace R0 on the Adafruit Feather 32u4 Adalogger 2795 with a 2.2k SMD resistor for a 400 mA charging current; otherwise, it defaults to 100 mA, taking four times longer to charge. 
 
 2. Take note that TMP117 product versions TMP117N and TMP117M are slightly 
 less accurate than TMP117A.
