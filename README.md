@@ -24,7 +24,7 @@ and plotly packages as well as with spreadsheet processing.
 
 - The user can specify the logging interval in settings.txt on the SD card. 
 
-- A custom printed circuit board integrates a 18650 lithium-ion 
+- A custom printed circuit board integrates an 18650 lithium-ion 
  battery, an accurate DS3231 clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
  and up to two on-board TMP117A sensors for environmental 
 temperature monitoring in incubators or lab rooms.
@@ -68,17 +68,17 @@ larger size than our sensor boards and are more difficult to seal for use
 in wet and corrosive environments.
 
 4. Our firmware also supports the 'SparkFun OpenLog DEV-13712' board with modifications.
- An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. This modifications require trace cutting and soldering under a microscope.
+ An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. These modifications require trace cutting and soldering under a microscope.
 
 5. For other research requirements we provide an alternative 
 firmware, which supports additional sensor types:
-    * TMP117  (precision temperature)
+    * TMP117 (precision temperature)
     * ADT7420 (precision temperature, but inferior to TMP117A)		
     * 1-Wire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
       * DS18B20 
       * DS18S20
       * DS1822
-      * MAX31850  for type K thermocouples. An optional  correction according to the ITS-90 standard
+      * MAX31850  for type K thermocouples. An optional correction according to the ITS-90 standard
 is provided. This substantially improves the accuracy at extreme temperatures, e. g. below -30&nbsp;°C or above 600&nbsp;°C.
 
     * BME280 (humidity, atmospheric pressure, non-precision temperature)
