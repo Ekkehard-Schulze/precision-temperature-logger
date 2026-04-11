@@ -25,7 +25,7 @@ and plotly packages as well as with spreadsheet processing.
 - The user can specify the logging interval in settings.txt on the SD card. 
 
 - A custom printed circuit board integrates a 18650 lithium-ion 
- battery, an extremely accurate DS3231 clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
+ battery, an accurate DS3231 clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
  and up to two on-board TMP117A sensors for environmental 
 temperature monitoring in incubators or lab rooms.
 
@@ -53,6 +53,8 @@ We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktc
 
 2. Take note that TMP117 product versions TMP117N and TMP117M are slightly 
 less accurate than TMP117A.
+
+2. Take note that DS3231 real-time clock my drift up to 63 seconds per year.
 
 2. Take note that DS3231 real-time clock product version DS3231M is less accurate but more vibration-resistant. 
 
@@ -90,7 +92,7 @@ is provided. This substantially improves the accuracy at extreme temperatures, e
 '#define' statements <br />&emsp;&emsp;in the C source code. The selected 
 sensors are auto-detected and sensor types can be mixed.
 
-11. You may like to try the newer and software compatible sensor type TMP119.
+12. You may like to try the newer and software compatible sensor type TMP119.
 TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
 and ±0.08&nbsp;°C (maximum) from 0&nbsp;°C to 45&nbsp;°C), but is only available in the 
 YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
