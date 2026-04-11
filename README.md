@@ -80,7 +80,7 @@ firmware, which supports these sensors:
       * MAX31850  for type K thermocouples. An optional  correction according to the ITS-90 standard
 is provided. This substantially improves the accuracy at extreme temperatures, e. g. below -30&nbsp;°C or above 600&nbsp;°C.
 
-    * BME280 (humidity, atmospheric pressure, non-precision temperature, )
+    * BME280 (humidity, atmospheric pressure, non-precision temperature)
 
     * MLX90614 (infrared non-contact temperature)
 
