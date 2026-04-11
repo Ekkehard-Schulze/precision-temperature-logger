@@ -25,7 +25,7 @@ and plotly packages as well as with spreadsheet processing.
 - The user can specify the logging interval in settings.txt on the SD card. 
 
 - A custom printed circuit board integrates a 18650 lithium-ion 
- battery, the DS3231 clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
+ battery, an extremely accurate DS3231 clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
  and up to two on-board TMP117A sensors for environmental 
 temperature monitoring in incubators or lab rooms.
 
@@ -54,6 +54,8 @@ We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktc
 2. Take note that TMP117 product versions TMP117N and TMP117M are slightly 
 less accurate than TMP117A.
 
+2. Take note that DS3231 real-time clock product version DS3231M is less accurate but more vibration-resistant. 
+
 3. For a quick start instead of using our project's printed circuit 
 board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
 with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it 
@@ -67,7 +69,8 @@ in wet and corrosive environments.
 
 5. For other research requirements we provide an alternative 
 firmware, which in addition to TMP117 also supports these sensors:
-
+    * TMP117  (precision temperature)
+    * ADT7420 (precision temperature, but inferior to TMP117A)		
     * 1-Wire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
       * DS18B20 
       * DS18S20
@@ -75,13 +78,13 @@ firmware, which in addition to TMP117 also supports these sensors:
       * MAX31850  for type K thermocouples. An optional  correction according to the ITS-90 standard
 is provided. This substantially improves the accuracy at extreme temperatures, e. g. below -30&nbsp;°C or above 600&nbsp;°C.
 
-    * BME280 (temperature, humidity, pressure)
+    * BME280 (humidity, atmospheric pressure, non-precision temperature, )
 
     * MLX90614 (infrared non-contact temperature)
 
     * TSL2561 (illuminance)
 	
-    * ADT7420 (precision temperature, but inferior to TMP117A)	
+
 
 &emsp;&emsp;This firmware is more complicated and requires selecting sensors by uncommenting 
 '#define' statements <br />&emsp;&emsp;in the C source code. The selected 
