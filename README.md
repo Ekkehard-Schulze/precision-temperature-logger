@@ -70,7 +70,7 @@ in wet and corrosive environments.
  An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. This modifications require trace cutting and soldering under a microscope.
 
 5. For other research requirements we provide an alternative 
-firmware, which in addition to TMP117 also supports these sensors:
+firmware, which supports these sensors:
     * TMP117  (precision temperature)
     * ADT7420 (precision temperature, but inferior to TMP117A)		
     * 1-Wire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
