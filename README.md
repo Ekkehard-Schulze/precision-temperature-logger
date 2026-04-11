@@ -54,7 +54,7 @@ We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktc
 2. TMP117 product versions TMP117N and TMP117M are slightly 
 less accurate than TMP117A.
 
-2. The DS3231 real-time clock my drift up to 63 seconds per year.
+2. The DS3231 real-time clock may drift up to 63 seconds per year.
 
 2. The DS3231 real-time clock product version DS3231M is less accurate but more vibration-resistant. It may drift 
 up to 158 seconds per year.
