@@ -51,12 +51,13 @@ We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktc
 
 2. Replace R0 on the Adafruit Feather 32u4 Adalogger 2795 with a 2.2k SMD resistor for a 400 mA charging current; otherwise, it defaults to 100 mA, taking four times longer to charge. 
 
-2. Take note that TMP117 product versions TMP117N and TMP117M are slightly 
+2. TMP117 product versions TMP117N and TMP117M are slightly 
 less accurate than TMP117A.
 
-2. Take note that DS3231 real-time clock my drift up to 63 seconds per year.
+2. The DS3231 real-time clock my drift up to 63 seconds per year.
 
-2. Take note that DS3231 real-time clock product version DS3231M is less accurate but more vibration-resistant. 
+2. The DS3231 real-time clock product version DS3231M is less accurate but more vibration-resistant. It may drift 
+up to 158 seconds per year.
 
 3. For a quick start instead of using our project's printed circuit 
 board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
