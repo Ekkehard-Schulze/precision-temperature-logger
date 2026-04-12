@@ -91,9 +91,9 @@ is provided. This substantially improves the accuracy at extreme temperatures, e
 
 &emsp;&emsp;This firmware is more complicated and requires selecting sensors by uncommenting 
 '#define' statements <br />&emsp;&emsp;in the C source code. The selected 
-sensors are auto-detected and sensor types can be mixed, however due\
+sensors are then auto-detected and sensor types can be mixed, however due\
 &emsp;&emsp;to memory limitations only 
-subset of options can be implemented together.
+subsets of options can be implemented together.
 
 12. You may like to try the newer and software compatible sensor type TMP119.
 TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
