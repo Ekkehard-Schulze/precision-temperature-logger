@@ -14,3 +14,4 @@
 *.txt binary
 *.png binary
 *.jpg binary
+*.html linguist-detectable=false
