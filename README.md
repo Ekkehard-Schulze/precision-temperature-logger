@@ -34,6 +34,8 @@ temperature monitoring in incubators or lab rooms.
 TMP117A sensors. These act as probes in laboratory applications, 
 for example, for usage in agar plates or liquid samples.
 
+- An alternative firmware supports other sensor types for an extended temperature range or for logging
+ humidity, atmospheric pressure, infrared non-contact temperature and illuminance. 
 
 Notes
 -----
