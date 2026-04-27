@@ -146,7 +146,7 @@ deteriorates it. The scale is mm.
 
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption.jpg)
 
-Adaption of an Openlog board for precision temperature logging using a I2C-bus board and a commercial DS3231 clock module.
+Adaption of an Openlog board for precision temperature logging using a I2C-bus board and a DS3231 clock module.
 
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption_2.jpg)
 
