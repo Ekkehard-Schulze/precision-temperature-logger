@@ -118,7 +118,7 @@ The hardware was designed by Jürgen Schmidt and constructed by
 Joshua Schwarber. Jürgen Schmidt wrote an initial low-power voltage 
 and non-precision temperature logging firmware, which was extended to the present temperature 
 logging firmware by Ekkehard Schulze. Ekkehard Schulze tested 
-multiple different temperature sensors types and identified the 
+various temperature sensors types and identified the 
 Texas Instruments sensor TMP117A as the only type satisfying 
 our experimental requirements in the temperature range close to 0&nbsp;°C.
 
