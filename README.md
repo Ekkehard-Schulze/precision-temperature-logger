@@ -45,7 +45,7 @@ must cover all exposed sensor board conductive surfaces with a high
 quality polyepoxide (cured epoxy resin).
 
 2. The main printed circuit board must be coated for water resistance if used in humid conditions. 
-We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktchemie.com to operate the device in a 4&nbsp;°C incubator. 
+We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktchemie.com to operate the device in a 2&nbsp;°C incubator. 
 
 2. The logger can be operated at temperatures between -20&nbsp;°C to +50&nbsp;°C.
 
