@@ -104,6 +104,7 @@ YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the
 slightly larger WSON package. Remarkably, the die size of TMP119 
 is just 1.5&nbsp;mm x 1.0&nbsp;mm. This allows laboratory applications,
 for which the 2.1&nbsp;mm x 2.1&nbsp;mm sized WSON package size is too large.
+A commercial breakout board for TMP119 is https://www.adafruit.com/product/6482 from Adafruit.
 
 
 
