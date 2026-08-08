@@ -67,7 +67,8 @@ with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it
 with a pluggable battery. Some TMP117 breakout boards are commercially 
 available (e. g. Adafruit #4821 or SparkFun #15805), but these have a much 
 larger size than our sensor boards and are more difficult to seal for use
-in wet and corrosive environments.
+in wet and corrosive environments. You may consider also Adafruit #6482, 
+which is a breakout board for TMP119, see below.
 
 4. Our firmware also supports the 'SparkFun OpenLog DEV-13712' board with modifications.
  An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. These modifications require trace cutting and soldering under a microscope.
@@ -100,11 +101,10 @@ subsets of options can be implemented together.
 12. You may like to try the newer and software compatible sensor type TMP119.
 TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
 and ±0.08&nbsp;°C (maximum) from 0&nbsp;°C to 45&nbsp;°C), but is only available in the 
-YBG0006 'Die Size Ball Grid Array' package, whereas our boards use the 
-slightly larger WSON package. Remarkably, the die size of TMP119 
-is just 1.5&nbsp;mm x 1.0&nbsp;mm. This allows laboratory applications,
+YBG0006 'Die Size Ball Grid Array' package, which doesn't match our boards layout.
+Remarkably, the die size of TMP119 is just 1.5&nbsp;mm x 1.0&nbsp;mm. This allows laboratory applications,
 for which the 2.1&nbsp;mm x 2.1&nbsp;mm sized WSON package size is too large.
-A commercial breakout board for TMP119 is https://www.adafruit.com/product/6482 from Adafruit.
+
 
 
 
