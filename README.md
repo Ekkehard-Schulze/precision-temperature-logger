@@ -67,8 +67,8 @@ with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it
 with a pluggable battery. Some TMP117 breakout boards are commercially 
 available (e. g. Adafruit #4821 or SparkFun #15805), but these have a much 
 larger size than our sensor boards and are more difficult to seal for use
-in wet and corrosive environments. You may consider also Adafruit #6482, 
-which is a breakout board for TMP119, see below.
+in wet and corrosive environments. You may also consider Adafruit #6482, which is 
+a breakout board for TMP119 (see below).
 
 4. Our firmware also supports the 'SparkFun OpenLog DEV-13712' board with modifications.
  An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. These modifications require trace cutting and soldering under a microscope.
