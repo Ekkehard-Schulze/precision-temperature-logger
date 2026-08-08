@@ -103,7 +103,8 @@ TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nb
 and ±0.08&nbsp;°C (maximum) from 0&nbsp;°C to 45&nbsp;°C), but is only available in the 
 YBG0006 'Die Size Ball Grid Array' package, which doesn't match our boards layout.
 Remarkably, the die size of TMP119 is just 1.5&nbsp;mm x 1.0&nbsp;mm. This allows laboratory applications,
-for which the 2.1&nbsp;mm x 2.1&nbsp;mm sized WSON package size is too large.
+for which the 2.1&nbsp;mm x 2.1&nbsp;mm sized WSON package size is too large. A breakout board is available as 
+Adafruit #6482, or, as https://www.pcbway.com/project/shareproject/[FPCB_version]_Precision_thermometer_humidity_sensor_with_digital_I2C_interfac_736a557b.html.
 
 
 
