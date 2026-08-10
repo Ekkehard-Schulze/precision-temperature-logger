@@ -131,18 +131,21 @@ Images
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117-WSON-package-Sensor-PCBs/populated%20TMP117%20sensor%20breakout%20PCB.jpg)
 
 TMP117A sensor board before and after coating with epoxy resin.
-
-
+\
+\
+\
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117-WSON-package-Sensor-PCBs/Sensor_with_wires_and_plug.jpg)
 
 Sensor board with polytetrafluoroethylene isolated wires and plug.
-
-
+\
+\
+\
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117-WSON-package-Sensor-PCBs/Logger_with_Sensor.jpg)
 
 Logger with external sensor attached via cable. A further sensor is present on the main board. The scale is cm/mm.
-
-
+\
+\
+\
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117_in_CyA.JPG)
 
 TMP117A sensor soldered to wires and coated with polymerized cyanoacrylate after years of lab use. This 
@@ -151,17 +154,18 @@ deteriorates it. The scale is mm.
 \
 \
 \
-\
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption.jpg)
 
 Adaption of an Openlog board (SparkFun DEV-13712) for precision temperature logging using a custom I2C-bus board and a DS3231 clock module (ZS-042). This represents the most cost-effective method of making a precision temperature logger.
-
-
+\
+\
+\
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption_2.jpg)
 
 However, adaption of an Openlog board for precision temperature logging requires microscope soldering and trace cutting.
-
-
+\
+\
+\
 ![plots_and_statistics_of_time_series](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/plots_and_statistics_of_time_series.py_screenshot.webp)
 
 ![plots_and_statistics_of_time_series](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/plots_and_statistics_of_time_series.py_screenshot_2.webp)
