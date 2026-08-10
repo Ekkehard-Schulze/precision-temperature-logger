@@ -148,10 +148,10 @@ Logger with external sensor attached via cable. A further sensor is present on t
 TMP117A sensor soldered to wires and coated with polymerized cyanoacrylate after years of lab use. This 
 was done to minimize the size of the sensor. Avoid outdoor use of cyanoacrylate polymer coated sensors; enduring UV light 
 deteriorates it. The scale is mm.
-.
-.
-.
-.
+\
+\
+\
+\
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption.jpg)
 
 Adaption of an Openlog board (SparkFun DEV-13712) for precision temperature logging using a custom I2C-bus board and a DS3231 clock module (ZS-042). This represents the most cost-effective method of making a precision temperature logger.
