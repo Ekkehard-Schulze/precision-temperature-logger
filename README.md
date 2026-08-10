@@ -129,6 +129,7 @@ Images
 -------
 
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117-WSON-package-Sensor-PCBs/populated%20TMP117%20sensor%20breakout%20PCB.jpg)
+<p style="line-height: 10px;"><br></p>
 
 TMP117A sensor board before and after coating with epoxy resin.
 \
