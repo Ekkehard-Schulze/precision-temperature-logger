@@ -195,7 +195,7 @@ String Separator = "\t";                              // .tsv .csv table separat
 //================---------------++++++++++------------------_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PC
 #define ADAFRUIT_FEATHER_LOGGER
 //#define OPENLOG
-//#define ARDUINO_UNO_3Volt_logger
+//#define ARDUINO_UNO_3Volt_logger // m328p 8 MHz;  m328p @ 3V3 is not certified for more than 8 MHz. I saw failures at 16 MHz.ß
 //#define HELDT_Logger       // m324p or m644p or m1284p 8 MHz internal
 //#define ARDUINO_UNO_5Volt_testbed
 //#define GREIF_BOARD_m328p
