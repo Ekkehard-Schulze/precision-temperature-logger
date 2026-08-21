@@ -141,10 +141,16 @@
   SD write 20ms 60mA
   Sleep 0.35mA
   -> with a 300-second cycle -> 0.383mA on average -> With a 4400mAh battery, 478 days
+  
+Revisions
+----------
+20260820 vs. 21.2
+         failed ADT7420 sleep mode fixed, keep 8 x averaging, fixed code from GoogleAI, now in low µA range
+  
 */
 
 #define VERSION "21"
-#define SUBVERSION "1"
+#define SUBVERSION "2"
 
 // Attention: select board in Arduino-IDE and additionally select board in the board selector section below in this code
 //            ------------------             ===============   (pre-selected default is Adafruit Feather 32u4 Adalogger)
@@ -173,9 +179,9 @@ String Separator = "\t";                              // .tsv .csv table separat
 
 //-------S-e-n-s-o-r--I-n-c-l-u-s-i-o-n-s------------------------------------------------------------------------------------
 #define include_TMP117           // NIST traceble silicon temperature 0.1 °C accurate, 0x48 - 0x4B i2c adresses are probed, can be combined with ADT7420, however just one per address, 4 in total
-//#define include_ADT7420         // NIST traceble silicon temperature 0.25 °C accurate,  0x48 - 0x4B i2c adresses are probed, can be combined with TMP117, however just one per address, 4 in total
+#define include_ADT7420         // NIST traceble silicon temperature 0.25 °C accurate,  0x48 - 0x4B i2c adresses are probed, can be combined with TMP117, however just one per address, 4 in total
 #define include_1wire            // DS1820, DS18B20, DS18S20, MAX31850(silicon temperature+type K thermocouple,mixed multiple sensors work)
-//#define include_TypeK_linearization  // NIST linearization table for Type K Thermoelements for 1Wire MAX31850
+#define include_TypeK_linearization  // NIST linearization table for Type K Thermoelements for 1Wire MAX31850
 //#define include_MLX90614        // IR-thermometer
 //#define include_BME280_Sensor   // temperature, pressure, humidity
 //#define include_TSL2561         // light (Lux) sensor
@@ -197,11 +203,7 @@ String Separator = "\t";                              // .tsv .csv table separat
 //#define ARDUINO_NANO
 //---------------------------------------------------
 
-//--E-n-d----o-f-----U-s-e-r---S-e-t-t-i-n-g-s----------<<<<<<<<<<<<<<<<<<<<<<<<<<<<< USER
-
-
-
-
+//--E-n-d----o-f-----U-s-e-r---S-e-t-t-i-n-g-s----------
 
 #include <OneWire.h>  // required before board definitions
 
@@ -483,6 +485,7 @@ int BatteriePin = 24;      // PA0 = Pin24 = ADC0
 // #define RedLedOn_for_low_power
 // #define no_Auto_power_off_on_bat_low
 
+
 #include <Wire.h>
 #include <RTClibExtended.h>
 #include <SPI.h>          // Required for SD card
@@ -653,43 +656,114 @@ char isTMP117(int TMP117_Addressl)  {
 /********************************************************************************************************************************************
  * Global Variables ADT7420
  *****************************************/
-float adt7420_float;
-short adt7420_short;
+//float adt7420_float;
+//short adt7420_short;
 
-#define ARRAY_SIZE_ADT7420 2 // Maximum size of the buffer
-#define REQUEST_ADT7420 2 //number of bytes to REQUEST_ADT7420 at a time from I2C
-
+//#define ARRAY_SIZE_ADT7420 2 // Maximum size of the buffer
+//#define REQUEST_ADT7420 2 //number of bytes to REQUEST_ADT7420 at a time from I2C
 
 char adt7420_present[] = { 0, 0, 0, 0 }; // boolean for presence of sensor
 
 
-short buffer_adt7420[ARRAY_SIZE_ADT7420]; // Create a buffer to hold values passed through I2C
+// short buffer_adt7420[ARRAY_SIZE_ADT7420]; // Create a buffer to hold values passed through I2C
 
 /*****************************************
  * Functions ADT7420
  *****************************************/
 
-short getTemp_ADT7420(int adr ){
+// short getTemp_ADT7420(int adr ){
 
-  Wire.requestFrom(adr, REQUEST_ADT7420); // Request two bytes of data from the temperature sensor
+  // Wire.requestFrom(adr, REQUEST_ADT7420); // Request two bytes of data from the temperature sensor
 
-  while(Wire.available()){ //While there is still data to be transfered
-    for (int i =0; i < REQUEST_ADT7420; i++){ // Put REQUEST bytes
-      buffer_adt7420[i] = Wire.read();
+  // while(Wire.available()){ //While there is still data to be transfered
+    // for (int i =0; i < REQUEST_ADT7420; i++){ // Put REQUEST bytes
+      // buffer_adt7420[i] = Wire.read();
+    // }
+  // }
+
+  // short retTemp_ADT7420 = 0; // define a short value that will be set and returned by the function
+
+  // for (int i = 0; i < REQUEST_ADT7420; i++){ // A loop to handle each byte contained in the buffer. This loop recombines the bytes sent over I2C into a single short
+    // retTemp_ADT7420 = retTemp_ADT7420<<8; // shift all bits to the right 8 spaces
+    // retTemp_ADT7420 |= buffer_adt7420[i]; // This is equivalent to retTemp_ADT7420 = retTemp_ADT7420 | buffer_adt7420[i]. This effectively concatenates the retrieved bytes into a single short
+  // }
+
+  // // return retTemp_ADT7420*.0078; // Multiply by a scaling factor (found on the data sheet) to convert to Celsius
+  // return retTemp_ADT7420;
+
+// }  // /********************************************************************************************************************************************
+
+
+// short getTemp_ADT7420(int adr) {
+  // // 1. Point to the Temperature Value MSB Register (0x00)
+  // Wire.beginTransmission(adr);
+  // Wire.write((uint8_t)0x00); 
+  // Wire.endTransmission(false); // false = repeated start, keeps control of the bus
+
+  // // 2. Request 2 bytes (assuming REQUEST_ADT7420 is 2)
+  // byte received = Wire.requestFrom(adr, 2);
+  
+  // if (received != 2) {
+    // return 0; // Error handling if sensor doesn't respond with 2 bytes
+  // }
+
+  // // 3. Read the two bytes directly without nested loops
+  // byte msb = Wire.read();
+  // byte lsb = Wire.read();
+
+  // // 4. Combine into a signed 16-bit short
+  // short retTemp_ADT7420 = (msb << 8) | lsb;
+
+  // return retTemp_ADT7420;
+// }
+
+
+#define ADT7420_REG_TEMP_MSB      0x00  // Temperature Value MSB Register
+#define ADT7420_REG_CONFIG        0x03  // Configuration Register
+
+// Triggers 8 sequential 16-bit one-shot reads, averages them, and leaves sensor asleep, code 20260820 from Google AI
+float readAveragedTemperature(uint8_t address) {
+  float totalTemperature = 0.0;
+
+  for (int i = 0; i < 8; i++) {
+    // 1. Trigger 16-bit One-Shot Mode (Write 0xA0 to Configuration Register)
+    // Bit 7 = 1 (16-bit resolution), Bits [6:5] = 01 (One-shot mode)
+    Wire.beginTransmission(address);
+    Wire.write(ADT7420_REG_CONFIG);
+    Wire.write(0xA0); 
+    Wire.endTransmission();
+
+    // 2. Wait for the conversion to finish (typically 240 ms)
+    delay(270);
+
+    // 3. Read the 16-bit temperature result (MSB + LSB)
+    Wire.beginTransmission(address);
+    Wire.write(ADT7420_REG_TEMP_MSB);
+    Wire.endTransmission(false); // Restart condition
+
+    Wire.requestFrom(address, (uint8_t)2);
+    if (Wire.available() == 2) {
+      uint8_t msb = Wire.read();
+      uint8_t lsb = Wire.read();
+
+      // Combine bytes into a signed 16-bit integer
+      int16_t rawData = (msb << 8) | lsb;
+
+      // Convert raw data to Celsius for 16-bit resolution
+      // No bit-shifting needed because all 16 bits belong to the reading.
+      // 1 LSB = 0.0078125°C, which is equivalent to dividing by 128.0
+      float celsius = rawData / 128.0;
+
+      totalTemperature += celsius;
     }
   }
 
-  short retTemp_ADT7420 = 0; // define a short value that will be set and returned by the function
+  // 4. Return the calculated average
+  return totalTemperature / 8.0;
+}
 
-  for (int i = 0; i < REQUEST_ADT7420; i++){ // A loop to handle each byte contained in the buffer. This loop recombines the bytes sent over I2C into a single short
-    retTemp_ADT7420 = retTemp_ADT7420<<8; // shift all bits to the right 8 spaces
-    retTemp_ADT7420 |= buffer_adt7420[i]; // This is equivalent to retTemp_ADT7420 = retTemp_ADT7420 | buffer_adt7420[i]. This effectively concatenates the retrieved bytes into a single short
-  }
 
-  // return retTemp_ADT7420*.0078; // Multiply by a scaling factor (found on the data sheet) to convert to Celsius
-  return retTemp_ADT7420;
 
-}  // /********************************************************************************************************************************************
 
 void adt7420_control (uint8_t i2caddr, uint8_t cvalue)
     {
@@ -1090,6 +1164,11 @@ Wire.beginTransmission(0x48+i); // 0x48 is first adress of sensor
   if (Wire.endTransmission() == 0) {
   adt7420_present[i]= TRUE;
       headerstr+=Separator+"ADT"+ String (i+1); sensorcount++;
+  delay(10);    
+  Wire.beginTransmission(0x48+i); // sleep mode
+	  Wire.write(ADT7420_REG_CONFIG);
+	  Wire.write(0xE0); 
+	  Wire.endTransmission();
    // Serial.println("ADT7420 found at 0x48");
   }
 }
@@ -1116,6 +1195,11 @@ Wire.beginTransmission(0x48+i); // 0x48 is first adress of sensor
     else {     
   adt7420_present[i]= TRUE;
       ADT_header+=Separator+"ADT"+ String (i+1); sensorcount++;
+  delay(10);    
+  Wire.beginTransmission(0x48+i); // sleep mode
+    Wire.write(ADT7420_REG_CONFIG);
+    Wire.write(0xE0); 
+    Wire.endTransmission();  
    // Serial.println("ADT7420 found at 0x48");
     }
   }
@@ -1336,19 +1420,9 @@ for(int i = 0; i<4; i++)
 for(int i = 0; i<4; i++)
     {
     if (adt7420_present[i]) { 
-          adt7420_control(0x48+i,0xb10000000);  // continous vonversion 16 bit // 0x48 is first adress of sensor    
-          delay(250);
-          adt7420_float = 0; 
-          for(int averages = 1; averages<9; averages++)  {    // make 8 averages  for one measurement, takes 2.25 seconds
-              adt7420_float += getTemp_ADT7420(0x48+i); // 0x48 is first adress of sensor
-              delay(250);
-              }
-          adt7420_float = adt7420_float  * 0.0078125 / 8;  // actuelly 0.0078 is the datasheet value for ADT7420, 0.0078125 is the datasheet value for ADT7422 (diff: 25°C -> 25.04°C)
-          // Serial.print(adt7420_float, 2); // Print the temperature through the serial port
-          // Serial.print(Separator);
           dataString += Separator;
-          dataString += String(adt7420_float); //adc Funktion
-          adt7420_control(0x48+i,0xb11100000); // shutdown
+          dataString += String(readAveragedTemperature(0x48+i)); //adc Funktion
+          // adt7420_control(0x48+i, 0xE0); // shutdown 0b11100000
        }
     }
 #endif
