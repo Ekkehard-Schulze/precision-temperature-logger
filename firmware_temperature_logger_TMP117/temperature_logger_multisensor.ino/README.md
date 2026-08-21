@@ -2,7 +2,7 @@ Notes
 -----
 **Alternative firmware, which supports these sensors:**
 
-* TMP117 or TMP119 (precision temperature)
+* TMP117 or TMP119 (precision temperature, up to 4 sensors)
 * OneWire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
   * DS18B20 
   * DS18S20
@@ -15,7 +15,7 @@ Notes
 
 * TSL2561 (illuminance)
 
-* ADT7420 (precision temperature, but inferior to TMP117A)	
+* ADT7420 (precision temperature, up to 4 sensors, no address overlap with TMP117 allowed, inferior to TMP117A)	
 
 This firmware is more complicated and requires selecting sensor code by uncommenting 
 '#define' statements in the C source code. The resulting firmware then detects the selected 
