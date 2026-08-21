@@ -34,10 +34,10 @@ settings in the code. Due to memory limitations of Atmega 32U4 it is not possibl
 2. The file 'temperature_logger_TMP117+ADT7420+1Wire_multisensor.with_bootloader.feather32u4.hex' is a 
 pre-compiled example binary for
 the 'Adafruit Feather 32u4 Adalogger #2795'. It should be possible to flash the controller with the command
-
-&emsp;&emsp;avrdude -p m32u4 -P <YOUR_PORT> -c avr109 -U flash:w:<HEX_FILE>:i
-
-&emsp;&emsp;with replacing your <YOUR_PORT> with something like COM1 ... COM99 (the name of your virtual serial port of the device) 
+    
+avrdude -p m32u4 -P <YOUR_PORT> -c avr109 -U flash:w:<HEX_FILE>:i
+    
+with replacing your <YOUR_PORT> with something like COM1 ... COM99 (the name of your virtual serial port of the device) 
 and replacing\
 &emsp;&emsp;<HEX_FILE> with temperature_logger_TMP117.ino.ino.with_bootloader.feather32u4.hex.
 You may have to **double-click** the RST button\
