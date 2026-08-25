@@ -266,14 +266,14 @@ def main():
             for sensor in accepted_sensors:
                 if sensor in df.columns:
                     n += 1
-            fig_violine = make_subplots(rows=1, cols=n)
+            fig_violin = make_subplots(rows=1, cols=n)
 
             c = 0
             for sensor in accepted_sensors:
 
                 if sensor in df.columns:
                     c += 1
-                    fig_violine.append_trace(
+                    fig_violin.append_trace(
                         go.Violin(
                             y=df[sensor],
                             name=sensor,
@@ -283,10 +283,10 @@ def main():
                         ), row=1, col=c
                     )  # plot second to last trace
 
-            # fig_violine.update_layout(title='temperature logged',plot_bgcolor='rgb(230, 230,230)', showlegend=True)
-            # fig_violine.update_layout(title=df[LOGGER_ID_field_name][1],plot_bgcolor='rgb(230, 230,230)', showlegend=True)
+            # fig_violin.update_layout(title='temperature logged',plot_bgcolor='rgb(230, 230,230)', showlegend=True)
+            # fig_violin.update_layout(title=df[LOGGER_ID_field_name][1],plot_bgcolor='rgb(230, 230,230)', showlegend=True)
 
-            # fig_violine.show()
+            # fig_violin.show()
 
         except:
             print('Violin plot failed')
@@ -310,15 +310,20 @@ def main():
         if SAVE_interactive_html_plot:
             print("Writing timeline plot to interactive html...")
             last_datetime = str(df[Date_time_field_name].iloc[-1]).replace(":", "_")
-            stem_prefix = last_datetime + "_interactive_plot_"
+            stem_prefix = last_datetime + "_interactive_time_plot_"
             #f_html_name = str(pathlib.Path(logger_tsv_file).parent) + os.sep + stem_prefix + str(pathlib.Path(logger_tsv_file).stem) + ".html"
-            f_html_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, stem_prefix, ".html")                    
+            f_html_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, stem_prefix, ".html") 
+            print("Writing violin plot to interactive html...")
             plotly.offline.plot(fig_time, filename=f_html_name, auto_open=False)
+            stem_prefix = last_datetime + "_interactive_violin_plot_"
+            f_html_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, stem_prefix, ".html")                    
+            plotly.offline.plot(fig_violin, filename=f_html_name, auto_open=False)            
+            
 
         if DO_interactive_browser_plot:
             if BAT_voltage_field_name in df.columns:
                 fig_bat.show()
-            fig_violine.show()
+            fig_violin.show()
             fig_time.show()
             
         if WRITE_timeline_png:
