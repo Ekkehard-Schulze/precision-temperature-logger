@@ -147,13 +147,13 @@ deteriorates it. The scale is mm.
 \
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption.jpg)
 
-Adaption of an Openlog board (SparkFun DEV-13712) for precision temperature logging using a custom I2C-bus board and a DS3231 clock module (ZS-042). LED, EEPROM and the battery charging circuit were removed from the clock board. This represents the most cost-effective method of making a precision temperature logger. See point 11 in notes section above.
+Adaption of an Openlog board (SparkFun DEV-13712) for precision temperature logging using a custom I2C-bus board and a DS3231 clock module (ZS-042). LED, EEPROM and the battery charging circuit were removed from the clock board. This represents the most cost-effective method of making a precision temperature logger.
 \
 \
 \
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption_2.jpg)
 
-However, adaption of an Openlog board for precision temperature logging requires microscope soldering and trace cutting.
+However, adaption of an Openlog board for precision temperature logging requires microscope soldering and trace cutting. See point 11 in notes section above.
 \
 \
 \
