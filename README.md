@@ -61,6 +61,9 @@ less accurate than TMP117A.
 2. The DS3231 real-time clock product version DS3231M is less accurate but more vibration-resistant. It may drift 
 up to 158 seconds per year.
 
+2. SD card types vary widely in their standby current. For a longer battery life, 
+select an SD card with a low standby current.
+
 3. For a quick start instead of using our project's printed circuit 
 board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
 with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it 
