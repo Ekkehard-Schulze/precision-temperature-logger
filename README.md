@@ -139,8 +139,8 @@ Logger with external sensor attached via cable. A further sensor is present on t
 \
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117_in_CyA.JPG)
 
-TMP117A sensor soldered to wires and coated with polymerized cyanoacrylate after years of lab use. This 
-was done to minimize the size of the sensor. Avoid outdoor use of cyanoacrylate polymer coated sensors; enduring UV light 
+TMP117A sensor soldered to wires and coated with polymerized cyanoacrylate after years of lab use. This mounting
+was done to minimize the size of the probe. Avoid outdoor use of cyanoacrylate polymer coated sensors; enduring UV light 
 deteriorates it. The scale is mm.
 \
 \
