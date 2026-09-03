@@ -10,8 +10,7 @@ cell without re-charging.
 - Up to four TMP117A sensors provide NIST-traceable 
 accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C.
 
-- The firmware auto-detects sensors and supports all combinations 
-of the four dedicated I2C-bus addresses.
+- The firmware automatically detects sensors and supports all combinations of the four dedicated I2C bus addresses.
 
 - Writes a tab separated value formatted text file with 
 ISO 8601 date and time to a micro-SD card. 
