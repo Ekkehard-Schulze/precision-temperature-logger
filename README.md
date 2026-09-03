@@ -19,7 +19,7 @@ and plotly packages as well as with spreadsheet processing.
 - The user can specify the logging interval in settings.txt on the SD card. 
 
 - A custom printed circuit board integrates an 18650 lithium-ion 
- battery, an accurate DS3231 clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
+ battery, an accurate DS3231SN clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
  and up to two on-board TMP117A sensors for environmental 
 temperature monitoring in incubators or lab rooms.
 
@@ -50,9 +50,9 @@ We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktc
 2. TMP117 product versions TMP117N and TMP117M are slightly 
 less accurate than TMP117A.
 
-2. The DS3231 real-time clock may drift up to 63 seconds per year.
+2. The DS3231SN real-time clock may drift up to 63 seconds per year.
 
-2. The DS3231 real-time clock product version DS3231M is less accurate but more vibration-resistant. It may drift 
+2. The alternative DS3231M real-time clock version is less accurate but more vibration-resistant. It may drift 
 up to 158 seconds per year.
 
 2. SD card types vary widely in their standby current. For a longer battery life, 
