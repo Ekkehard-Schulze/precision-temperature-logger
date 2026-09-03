@@ -93,11 +93,7 @@ a breakout board for TMP119 (see below).
 	
 
 
-&emsp;&emsp;This firmware is more complicated and requires selecting sensors by uncommenting 
-'#define' statements <br />&emsp;&emsp;in the C source code. The selected 
-sensors are then auto-detected and sensor types can be mixed, however due\
-&emsp;&emsp;to memory limitations only 
-subsets of options can be implemented together.
+&emsp;&emsp;This firmware is more complex and requires you to select sensors by uncommenting "#define" statements in the C source code. While the chosen sensors are then automatically detected and different sensor types can be mixed, memory limitations mean that only certain subsets of options can be implemented together.
 
 13. You may like to try the newer and software compatible sensor type TMP119.
 TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
