@@ -1,10 +1,6 @@
 Precision temperature logger for laboratory use
 ========================================================
-Writes a text file with data and timestamps to a SD-card.
-We provide hardware design files, 
-firmware, and a script for graphical data analysis and statistics. 
-Multiple loggers have served various laboratory applications for 
-years. 
+Logs data and timestamps directly to an SD card. The package includes hardware design files, firmware, and a data analysis script. Our loggers have been reliably used in diverse laboratory applications for years. 
 
 Features
 --------
