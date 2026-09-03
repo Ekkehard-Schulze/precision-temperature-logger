@@ -4,8 +4,7 @@ Logs data and timestamps directly to an SD card. The package includes hardware d
 
 Features
 --------
-- Runs for month from a single 18650 LiIon 
-cell without re-charging.
+- Runs for months on a single 18650 Li-ion cell without recharging
 
 - Up to four TMP117A sensors provide NIST-traceable 
 accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C.
