@@ -79,7 +79,7 @@ a breakout board for TMP119 (see below).
 5. For other research requirements we provide an alternative 
 firmware, which supports more sensor types:
     * TMP117 and TMP119 (precision temperature)
-    * ADT7420 (precision temperature, but inferior to TMP117A)		
+    * ADT7420 (precision temperature, but inferior to TMP117A and TMP119)		
     * 1-Wire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
       * DS18B20 
       * DS18S20
