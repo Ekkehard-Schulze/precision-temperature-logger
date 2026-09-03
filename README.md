@@ -100,7 +100,7 @@ sensors are then auto-detected and sensor types can be mixed, however due\
 &emsp;&emsp;to memory limitations only 
 subsets of options can be implemented together.
 
-12. You may like to try the newer and software compatible sensor type TMP119.
+13. You may like to try the newer and software compatible sensor type TMP119.
 TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
 and ±0.08&nbsp;°C (maximum) from 0&nbsp;°C to 45&nbsp;°C), but is only available in the 
 YBG0006 'Die Size Ball Grid Array' package, which doesn't match our boards layout.
