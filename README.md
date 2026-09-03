@@ -84,8 +84,7 @@ firmware, which supports more sensor types:
       * DS18B20 
       * DS18S20
       * DS1822
-      * MAX31850  for type K thermocouples. An optional correction according to the ITS-90 standard
-is provided. This extends the useful range from -30&nbsp;°C to +600&nbsp;°C to -200&nbsp;°C to +1200&nbsp;°C
+      * MAX31850 for type K thermocouples allows measurements from -30 °C to +600 °C. The optional correction according to the ITS-90 standard extends this range from -200 °C to +1200 °C.
 
     * BME280 (humidity, atmospheric pressure, non-precision temperature)
 
