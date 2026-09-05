@@ -146,7 +146,15 @@ deteriorates it. The scale is mm.
 \
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption.jpg)
 
-Adaption of an Openlog board (SparkFun DEV-13712) for highly accurate temperature logging using a custom I2C-bus board and a DS3231 clock module (ZS-042). LED, EEPROM and the battery charging circuit were removed from the clock board. This represents the most cost-effective way of making a temperature logger for this firmware. Generate the respective binary by uncommenting the openlog "#define OPENLOG" statement in the C source code, and commenting the "#define ADAFRUIT_FEATHER_LOGGER" statement.
+Adaption of an Openlog board (SparkFun DEV-13712) for highly accurate temperature logging using a custom I2C-bus board and a DS3231 clock module (ZS-042). LED, EEPROM and the battery charging circuit were removed from the clock board for power optimization. This setup represents the most budget-friendly hardware configuration supported by the firmware. 
+
+*Firmware Note:* To generate the binary for this hardware, ensure `#define OPENLOG` is active and `#define ADAFRUIT_FEATHER_LOGGER` is commented out in the C source file.
+
+
+ Generate the respective binary by uncommenting the openlog "#define OPENLOG" statement in the C source code, and commenting the "#define ADAFRUIT_FEATHER_LOGGER" statement.
+
+ To build the corresponding binary, adjust the C source code configuration variables as follows:
+
 \
 \
 \
