@@ -1,4 +1,4 @@
-Precision temperature logger for laboratory use
+Highly accurate temperature logger for laboratory use
 ========================================================
 Logs data and timestamps directly to an SD card. The package includes hardware design files, firmware, and a data analysis script. Our loggers have been reliably used in diverse laboratory applications for years. 
 
