@@ -109,7 +109,7 @@ University of Freiburg, Schänzlestraße 1, 79104 Freiburg, Germany
 in collaboration with the institute's electronics workshop 'AT-Technik'.
 The hardware was designed by Jürgen Schmidt and constructed by 
 Joshua Schwarber. Jürgen Schmidt wrote an initial low-power voltage 
-and non-precision temperature logging firmware, which was extended to the present temperature 
+and temperature logging firmware, which was extended to the present highly accurate temperature 
 logging firmware by Ekkehard Schulze. Ekkehard Schulze tested 
 various temperature sensors types and identified the 
 Texas Instruments sensor TMP117A as the only type satisfying 
