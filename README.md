@@ -75,8 +75,8 @@ a breakout board for TMP119 (see below).
     * ADT7420 (±0.20 °C accuracy from −10°C to +85 °C)		
     * 1-Wire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
       * DS18B20 (±0.5 °C accuracy from -10°C to +85 °C)
-      * DS18S20 (±0.5 °C accuracy from -10°C to +85 °C)
-      * DS1822  (±2.0 °C accuracy from -10°C to +85 °C)
+      * DS18S20 (±0.5 °C accuracy from -10°C to +85 °C, obsolete)
+      * DS1822  (±2.0 °C accuracy from -10°C to +85 °C, obsolete)
       * MAX31850 for type K thermocouples allows measurements from -30 °C to +600 °C. The optional correction according to the ITS-90 standard extends this range from -200 °C to +1200 °C.
 
     * BME280 (humidity, atmospheric pressure, less accurate temperature)
