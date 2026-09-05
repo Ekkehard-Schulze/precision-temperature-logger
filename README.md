@@ -71,12 +71,12 @@ a breakout board for TMP119 (see below).
  An electronic technician must breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. These modifications require trace cutting and soldering under a microscope.
 
 5. To meet alternative research requirements, we offer a specialized firmware version that supports a wider range of sensor types:
-    * TMP117 and TMP119 (accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C.)
-    * ADT7420 ( ±0.20 °C accuracy from −10°C to +85 °C)		
+    * TMP117 and TMP119 (accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C)
+    * ADT7420 (±0.20 °C accuracy from −10°C to +85 °C)		
     * 1-Wire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
-      * DS18B20 (±0.5°C accuracy from -10°C to +85°C)
-      * DS18S20 (±0.5°C accuracy from -10°C to +85°C)
-      * DS1822  (±2.0°C accuracy from -10°C to +85°C)
+      * DS18B20 (±0.5 °C accuracy from -10°C to +85 °C)
+      * DS18S20 (±0.5 °C accuracy from -10°C to +85 °C)
+      * DS1822  (±2.0 °C accuracy from -10°C to +85 °C)
       * MAX31850 for type K thermocouples allows measurements from -30 °C to +600 °C. The optional correction according to the ITS-90 standard extends this range from -200 °C to +1200 °C.
 
     * BME280 (humidity, atmospheric pressure, less accurate temperature)
