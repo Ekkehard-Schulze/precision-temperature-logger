@@ -152,7 +152,7 @@ Adaption of an Openlog board (SparkFun DEV-13712) for highly accurate temperatur
 \
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption_2.jpg)
 
-However, adaption of an Openlog board for precision temperature logging requires microscope soldering and trace cutting. See point 11 in the __Notes__ section above.
+However, adaption of an Openlog board for for this firmware requires microscope soldering and trace cutting. See point 11 in the __Notes__ section above.
 \
 \
 \
