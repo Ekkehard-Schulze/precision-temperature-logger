@@ -68,7 +68,7 @@ in wet and corrosive environments. You may also consider Adafruit #6482, which i
 a breakout board for TMP119 (see below).
 
 4. Our firmware also supports the 'SparkFun OpenLog DEV-13712' board with modifications.
- An electronic technician must flash the firmware, breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. These modifications require trace cutting and soldering under a microscope.
+ An electronic technician must flash the firmware using an ISP programmer, breakout the I2C-bus and INT0, re-wire one LED, add I2C and 1-Wire bus pull-up resistors, a voltage divider, a DS3231 clock, and TMP117 sensors. These modifications require trace cutting and soldering under a microscope. 
 
 5. To meet alternative research requirements, we offer a specialized firmware version that supports a wider range of sensor types:
     * TMP117 and TMP119 (accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C)
