@@ -61,7 +61,9 @@ select an SD card with a low standby current.
 3. For a quick start instead of using our project's printed circuit 
 board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
 with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it 
-with a pluggable battery. Some TMP117 breakout boards are commercially 
+with a pluggable battery. You only have to solder male and female socket connectors (headers) to
+connect both boards.
+Some TMP117 breakout boards are commercially 
 available (e. g. Adafruit #4821 or SparkFun #15805), but these have a much 
 larger size than our sensor boards and are more difficult to seal for use
 in wet and corrosive environments. You may also consider Adafruit #6482, which is 
