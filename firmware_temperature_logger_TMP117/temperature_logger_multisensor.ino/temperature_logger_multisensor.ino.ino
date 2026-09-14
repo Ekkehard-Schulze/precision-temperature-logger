@@ -194,8 +194,8 @@ String Separator = "\t";                              // .tsv .csv table separat
 // Make sure you select this board additionally also in the Arduino IDE!   
 //================---------------++++++++++------------------_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PCB_PC
 #define ADAFRUIT_FEATHER_LOGGER
-//#define OPENLOG
-//#define ARDUINO_UNO_3Volt_logger // m328p 8 MHz;  m328p @ 3V3 is not certified for more than 8 MHz. I saw failures at 16 MHz.ß
+//#define OPENLOG  // compile for 8 MHz ATmega328p using either Arduino Pro Mini or Minicore with 8 MHz
+//#define ARDUINO_UNO_3Volt_logger // m328p 8 MHz; m328p 3V3 requires <= 13.3 MHz. I saw failures at 16 MHz.
 //#define HELDT_Logger       // m324p or m644p or m1284p 8 MHz internal
 //#define ARDUINO_UNO_5Volt_testbed
 //#define GREIF_BOARD_m328p

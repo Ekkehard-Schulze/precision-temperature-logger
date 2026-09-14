@@ -158,7 +158,7 @@ String Separator = "\t";                              // .tsv .csv table separat
 //------- Board selection, you must just un-comment one single board, default is ADAFRUIT_FEATHER_LOGGER -----------------
 
 #define ADAFRUIT_FEATHER_LOGGER
-//#define OPENLOG
+//#define OPENLOG  // compile for 8 MHz ATmega328p using either Arduino Pro Mini or Minicore with 8 MHz
 
 //--E-n-d----o-f-----U-s-e-r---S-e-t-t-i-n-g-s----------<<<<<<<<<<<<<<<<<<<<<<<<<<<<< USER
 
