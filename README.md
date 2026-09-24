@@ -74,7 +74,7 @@ a breakout board for TMP119 (see below).
    * Flash the firmware via an ISP programmer
    * Break out the I2C-bus and INT0
    * Re-wire one LED
-   * Add pull-up resistors for I2C and 1-Wire buses
+   * Add pull-up resistors for I2C and 1-Wire bus
    * Add a voltage divider for battery monitoring
    * Integrate a DS3231 RTC and TMP117 sensors 
 
