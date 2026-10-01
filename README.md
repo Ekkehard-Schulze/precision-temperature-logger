@@ -43,7 +43,7 @@ We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktc
 
 2. The logger can be **operated** at temperatures between **-20&nbsp;°C to +50&nbsp;°C**.
 
-2. **Charging** must be done between 0&nbsp;°C to 45&nbsp;°C, best at room temperature.
+2. **Charging** must be done between **0&nbsp;°C to 45&nbsp;°C**, best at room temperature.
 
 2. **Replace R0** on the Adafruit Feather 32u4 Adalogger 2795 with a 2.2k SMD resistor **for a 400 mA charging current**; otherwise, it defaults to 100 mA, taking four times longer to charge. 
 
@@ -52,11 +52,11 @@ less accurate** than TMP117A.
 
 2. The **DS3231SN real-time clock may drift** up to 63 seconds per year.
 
-2. The alternative **DS3231M real-time clock** version is less accurate but more vibration-resistant. It may drift 
-up to 158 seconds per year.
+2. The alternative **DS3231M real-time clock** version is less accurate but more vibration-resistant. It **may drift 
+up to 158 seconds per year**.
 
 2. SD card types vary widely in their standby current. For a longer battery life, 
-select an SD card with a low **standby current**.
+**select an SD card with a low standby current**.
 
 3. For a **quick start** instead of using our project's printed circuit 
 board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
