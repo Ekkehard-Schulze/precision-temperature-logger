@@ -128,13 +128,13 @@ Images
 
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117-WSON-package-Sensor-PCBs/populated%20TMP117%20sensor%20breakout%20PCB.jpg)
 
-**TMP117A sensor board before and after coating with epoxy resin.**
+**TMP117A sensor board before and after coating with epoxy resin**
 \
 \
 \
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117-WSON-package-Sensor-PCBs/Sensor_with_wires_and_plug.jpg)
 
-**Sensor board with polytetrafluoroethylene isolated wires and plug**.
+**Sensor board with polytetrafluoroethylene isolated wires and plug**
 \
 \
 \
@@ -146,7 +146,7 @@ Images
 \
 ![Sensor before and after coating with epoxy resin](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/hardware_sensor_breakout_boards/TMP117_in_CyA.JPG)
 
-TMP117A sensor soldered to wires and **coated with polymerized cyanoacrylate** after years of lab use. This mounting
+**TMP117A sensor soldered to wires and coated with polymerized cyanoacrylate** after years of lab use. This mounting
 was performed to minimize the size of the probe. Avoid outdoor use of cyanoacrylate polymer coated sensors; enduring UV light 
 deteriorates it. The scale is mm.
 \
