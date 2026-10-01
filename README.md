@@ -69,7 +69,7 @@ larger size than our sensor boards and are more difficult to seal for use
 in wet and corrosive environments. You may also consider Adafruit #6482, which is 
 a breakout board for TMP119 (see below).
 
-4. SparkFun **OpenLog (DEV-13712) compatibility**.
+4. **SparkFun OpenLog (DEV-13712) compatibility**.
    Our firmware supports this board with advanced hardware modifications. The following steps require precise trace cutting and microscopic soldering, ideally performed by an electronics technician:
    * Flash the firmware via an ISP programmer
    * Break out the I2C-bus and INT0
@@ -154,7 +154,7 @@ deteriorates it. The scale is mm.
 \
 ![Openlog adaption](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/Openlog_adaption.jpg)
 
-Adaption of an Openlog board (SparkFun DEV-13712) for highly accurate temperature logging using an improvised  I2C-bus board and a DS3231 clock module (ZS-042). LED, EEPROM and the battery charging circuit were removed from the clock board for power optimization. This setup represents the most budget-friendly hardware configuration supported by the firmware. 
+Adaption of an Openlog board (SparkFun DEV-13712) for highly accurate temperature logging using an improvised  I2C-bus board and a DS3231 clock module (ZS-042). LED, EEPROM and the battery charging circuit were removed from the clock board for power optimization. **This setup represents the most budget-friendly hardware configuration** supported by the firmware. 
  To build the binary for this hardware, ensure `#define OPENLOG` is active and `#define ADAFRUIT_FEATHER_LOGGER` is commented out in the C source file.
 \
 \
