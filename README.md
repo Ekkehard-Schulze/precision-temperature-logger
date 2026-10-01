@@ -7,7 +7,7 @@ Features
 - Runs for months on a single 18650 Li-ion cell without recharging
 
 - Up to four TMP117A sensors provide NIST-traceable 
-accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C.
+accuracy not worse than **±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C**.
 
 - The firmware automatically detects sensors and supports all combinations of the four dedicated I2C bus addresses.
 
@@ -97,7 +97,7 @@ a breakout board for TMP119 (see below).
     This firmware is more complex and requires you to select sensors by uncommenting "#define" statements in the C source code. While the chosen sensors are then automatically detected and different sensor types can be mixed, memory limitations mean that only certain subsets of options can be implemented together.
 
 13. You may like to try the newer and software compatible sensor type TMP119.
-**TMP119 has a higher accuracy** (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
+**TMP119 has a higher accuracy(±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C**
 and ±0.08&nbsp;°C (maximum) from 0&nbsp;°C to 45&nbsp;°C), but is only available in the 
 YBG0006 'Die Size Ball Grid Array' package, which doesn't match our boards layout.
 Remarkably, the die size of TMP119 is just 1.5&nbsp;mm x 1.0&nbsp;mm. This allows laboratory applications,
