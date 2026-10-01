@@ -34,31 +34,31 @@ for example, for usage in agar plates or liquid samples.
 Notes
 -----
 
-1. For measurements in wet, salty or corrosive environments you
+1. For measurements in **wet, salty or corrosive environments** you
 must cover all exposed sensor board conductive surfaces with a high 
 quality polyepoxide (cured epoxy resin).
 
-2. The main printed circuit board must be coated for water resistance if used in humid conditions. 
+2. The main printed circuit board must be coated for **water resistance** if used in humid conditions. 
 We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktchemie.com to operate the device in a 2&nbsp;°C incubator. 
 
-2. The logger can be operated at temperatures between -20&nbsp;°C to +50&nbsp;°C.
+2. The logger can be **operated** at temperatures between **-20&nbsp;°C to +50&nbsp;°C**.
 
-2. Charging must be done between 0&nbsp;°C to 45&nbsp;°C, best at room temperature.
+2. **Charging** must be done between 0&nbsp;°C to 45&nbsp;°C, best at room temperature.
 
-2. Replace R0 on the Adafruit Feather 32u4 Adalogger 2795 with a 2.2k SMD resistor for a 400 mA charging current; otherwise, it defaults to 100 mA, taking four times longer to charge. 
+2. **Replace R0** on the Adafruit Feather 32u4 Adalogger 2795 with a 2.2k SMD resistor **for a 400 mA charging current**; otherwise, it defaults to 100 mA, taking four times longer to charge. 
 
-2. TMP117 product versions TMP117N and TMP117M are slightly 
-less accurate than TMP117A.
+2. TMP117 product versions **TMP117N and TMP117M are slightly 
+less accurate** than TMP117A.
 
-2. The DS3231SN real-time clock may drift up to 63 seconds per year.
+2. The **DS3231SN real-time clock may drift** up to 63 seconds per year.
 
-2. The alternative DS3231M real-time clock version is less accurate but more vibration-resistant. It may drift 
+2. The alternative **DS3231M real-time clock** version is less accurate but more vibration-resistant. It may drift 
 up to 158 seconds per year.
 
 2. SD card types vary widely in their standby current. For a longer battery life, 
-select an SD card with a low standby current.
+select an SD card with a low **standby current**.
 
-3. For a quick start instead of using our project's printed circuit 
+3. For a **quick start** instead of using our project's printed circuit 
 board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
 with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it 
 with a pluggable battery. You only have to solder male and female socket connectors (headers) to
@@ -69,7 +69,7 @@ larger size than our sensor boards and are more difficult to seal for use
 in wet and corrosive environments. You may also consider Adafruit #6482, which is 
 a breakout board for TMP119 (see below).
 
-4. SparkFun OpenLog (DEV-13712) Compatibility.
+4. SparkFun **OpenLog (DEV-13712) compatibility**.
    Our firmware supports this board with advanced hardware modifications. The following steps require precise trace cutting and microscopic soldering, ideally performed by an electronics technician:
    * Flash the firmware via an ISP programmer
    * Break out the I2C-bus and INT0
@@ -78,7 +78,7 @@ a breakout board for TMP119 (see below).
    * Add a voltage divider for battery monitoring
    * Integrate a DS3231 RTC and TMP117 sensors 
 
-5. To meet alternative research requirements, we offer a specialized firmware version that supports a wider range of sensor types:
+5. To meet **alternative research requirements**, we offer a specialized firmware version that supports a wider range of sensor types:
     * TMP117 and TMP119 (accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C)
     * ADT7420 (±0.20 °C accuracy from −10°C to +85 °C)		
     * 1-Wire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
@@ -97,7 +97,7 @@ a breakout board for TMP119 (see below).
     This firmware is more complex and requires you to select sensors by uncommenting "#define" statements in the C source code. While the chosen sensors are then automatically detected and different sensor types can be mixed, memory limitations mean that only certain subsets of options can be implemented together.
 
 13. You may like to try the newer and software compatible sensor type TMP119.
-TMP119 has a higher accuracy (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
+**TMP119 has a higher accuracy** (±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C
 and ±0.08&nbsp;°C (maximum) from 0&nbsp;°C to 45&nbsp;°C), but is only available in the 
 YBG0006 'Die Size Ball Grid Array' package, which doesn't match our boards layout.
 Remarkably, the die size of TMP119 is just 1.5&nbsp;mm x 1.0&nbsp;mm. This allows laboratory applications,
