@@ -150,10 +150,10 @@ String Separator = "\t";                              // .tsv .csv table separat
 
 #define serial_verbose // serial print datastring
 
-//#define  CLOCK_TIME_IS_UTC    // un-comment this is for iso 8601 UTC date-time style e.g. '2025-12-16T15:19:01Z'
+//#define  CLOCK_TIME_IS_UTC    // un-comment this is for ISO 8601 UTC date-time style e.g. '2025-12-16T15:19:01Z'
 
-//#define  APPEND_UTC_OFFSET_TO_ISO8601_DATE  // un-comment this is for iso 8601 UTC date-time with UTC offset, e.g. '2025-12-16T15:19:01+09:00'
-//#define  UTC_OFFSET_APPENDIX  +09:00       // un-comment this is for iso 8601 UTC date-time with UTC offset, e.g. '2025-12-16T15:19:01+09:00'
+//#define  APPEND_UTC_OFFSET_TO_ISO8601_DATE  // un-comment this is for ISO 8601 UTC date-time with UTC offset, e.g. '2025-12-16T15:19:01+09:00'
+//#define  UTC_OFFSET_APPENDIX  +09:00       // un-comment this is for ISO 8601 UTC date-time with UTC offset, e.g. '2025-12-16T15:19:01+09:00'
 
 //------- Board selection, you must just un-comment one single board, default is ADAFRUIT_FEATHER_LOGGER -----------------
 
@@ -197,7 +197,7 @@ int BatteriePin = 9;
 
 
 
-#ifdef OPENLOG // use 8 MHz internal oscillator for 3.3 V Vcc, fuses low, high extended: 0xE2 0xD7 0xFD
+#ifdef OPENLOG // use 8 MHz internal oscillator for 3.3 V Vcc, fuses low, high, extended = 0xE2, 0xD7, 0xFD
 // add DS3231 clock to I2C modified
 // https://www.sparkfun.com/sparkfun-openlog.html
 // https://github.com/sparkfun/OpenLog
@@ -582,7 +582,7 @@ void get_measurements_and_write_to_SD_card() {
       hourString = String(now.hour());
     }
     
-    // we use iso Date_time format e.g.  2025-12-01T11:34:51  https://en.wikipedia.org/wiki/ISO_8601
+    // we use ISO Date_time format e.g.  2025-12-01T11:34:51  https://en.wikipedia.org/wiki/ISO_8601
     dataString += Separator + String(now.year()) + "-"+ monthString + "-" + dayString + "T"+ \
     hourString + ":" + minString + ":" + secString; 
     
