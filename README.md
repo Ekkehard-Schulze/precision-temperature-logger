@@ -4,32 +4,32 @@ Logs data and timestamps directly to an SD card. The package includes hardware d
 
 Features
 --------
-- Runs for months on a single 18650 Li-ion cell without recharging
+- Runs for **months** on a single 18650 Li-ion cell without recharging
 
 - Up to four TMP117A sensors provide NIST-traceable 
 **accuracy** not worse than **±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C**.
 
-- The firmware automatically detects sensors and supports all combinations of the four dedicated I2C bus addresses.
+- The firmware **automatically detects sensors** and supports all combinations of the four dedicated I2C bus addresses.
 
 - Writes a tab separated value formatted text file with 
-ISO 8601 date and time to a micro-SD card. 
+**ISO 8601 date and time** to a micro-SD card. 
 This format is compatible with python's pandas 
 and plotly packages as well as with spreadsheet processing. 
 
-- The user can specify the logging interval in settings.txt on the SD card. 
+- The user can **specify the logging interval in settings.txt** on the SD card. 
 
-- A custom printed circuit board integrates an 18650 lithium-ion 
+- A custom **printed circuit board** integrates an 18650 lithium-ion 
  battery, an accurate DS3231SN clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
  and up to two on-board TMP117A sensors for environmental 
 temperature monitoring in incubators or lab rooms.
 
 
-- Four 7 x 5 mm sized custom printed breakout circuit boards for wire-attached 
-TMP117A sensors. These act as probes in laboratory applications, 
+- Four **7 x 5 mm sized custom printed breakout circuit boards for wire-attached 
+TMP117A sensors**. These act as probes in laboratory applications, 
 for example, for usage in agar plates or liquid samples.
 
-- An alternative firmware supports sensor types for an extended temperature range, for logging
- humidity, atmospheric pressure, infrared non-contact temperature and illuminance, see below. 
+- An **alternative firmware supports sensor types for an extended temperature range, for logging
+ humidity, atmospheric pressure, infrared non-contact temperature and illuminance**, see below. 
 
 Notes
 -----
