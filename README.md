@@ -7,7 +7,7 @@ Features
 - Runs for months on a single 18650 Li-ion cell without recharging
 
 - Up to four TMP117A sensors provide NIST-traceable 
-accuracy not worse than **±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C**.
+**accuracy** not worse than **±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C**.
 
 - The firmware automatically detects sensors and supports all combinations of the four dedicated I2C bus addresses.
 
@@ -50,7 +50,7 @@ We applied the acrylic protective lacquer "PLASTIK 70" from https://www.kontaktc
 2. TMP117 product versions **TMP117N and TMP117M are slightly 
 less accurate** than TMP117A.
 
-2. The **DS3231SN real-time clock may drift** up to 63 seconds per year.
+2. The **DS3231SN real-time clock may drift up to 63 seconds per year**.
 
 2. The alternative **DS3231M real-time clock** version is less accurate but more vibration-resistant. It **may drift 
 up to 158 seconds per year**.
