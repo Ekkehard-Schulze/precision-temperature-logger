@@ -330,10 +330,11 @@ def main():
             f_html_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, stem_prefix, ".html")                    
             plotly.offline.plot(fig_violin, filename=f_html_name, auto_open=False)            
 
-            print("Writing battery voltage plot to interactive html...")
-            stem_prefix = last_datetime + "_interactive_battery_voltage_plot_"
-            f_html_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, stem_prefix, ".html")                    
-            plotly.offline.plot(fig_bat, filename=f_html_name, auto_open=False)            
+            if BAT_voltage_field_name in df.columns:
+                print("Writing battery voltage plot to interactive html...")
+                stem_prefix = last_datetime + "_interactive_battery_voltage_plot_"
+                f_html_name = output_dir_with_path + add_prefix_to_file_stem_and_swap_extension(logger_tsv_file, stem_prefix, ".html")                    
+                plotly.offline.plot(fig_bat, filename=f_html_name, auto_open=False)            
             
 
         if DO_interactive_browser_plot:
