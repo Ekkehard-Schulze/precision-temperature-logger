@@ -165,8 +165,8 @@ However, adaption of an Openlog board for this firmware requires advanced hardwa
 \
 \
 \
-![plots_and_statistics_of_time_series](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/plots_and_statistics_of_time_series.py_screenshot.webp)
+![plot_and_analyze_time_series](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/plots_and_statistics_of_time_series.py_screenshot.webp)
 
 ![plots_and_statistics_of_time_series](https://github.com/Ekkehard-Schulze/precision-temperature-logger/blob/main/images/plots_and_statistics_of_time_series.py_screenshot_2.webp)
 
-Screenshots of **interactive data analysis** using the script "plots_and_statistics_of_time_series.py".
+Screenshots of **interactive data analysis** using the script "plot_and_analyze_time_series.py".
