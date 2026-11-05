@@ -97,7 +97,7 @@ a breakout board for TMP119 (see below).
 	
 
 
-    This firmware is more complex and requires you to select sensors by uncommenting "#define" statements in the C source code. While different sensor types can be mixed, memory limitations mean that only certain combinations of options can be joined in one firmware version. **The firmware then automatically doscovers the connected sensors on startup and indicates their total number via LED blinks.**
+    This firmware is more complex and requires you to select sensors by uncommenting "#define" statements in the C source code. While different sensor types can be mixed, memory limitations mean that only certain combinations of options can be joined in one firmware version. **The firmware then automatically discovers the connected sensors on startup and indicates their total number via LED blinks.**
 > ⚠️ **Pro-Tip:** If you need more than four temperature sensors, use 1-Wire models.
 
 
