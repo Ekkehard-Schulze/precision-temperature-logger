@@ -98,6 +98,8 @@ a breakout board for TMP119 (see below).
 
 
     This firmware is more complex and requires you to select sensors by uncommenting "#define" statements in the C source code. While different sensor types can be mixed, memory limitations mean that only certain subsets of options can be implemented together in one firmware version. The firmware then automatically detects the connected sensors on startup and indicates their total number via LED blinks.
+> ⚠️ **Pro-Tip:** If you need more than four temperature sensors, use 1-Wire models.
+
 
 13. You may like to try the newer and software compatible sensor type TMP119.
 **TMP119 has a higher accuracy(±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C**
