@@ -9,7 +9,10 @@ Features
 - Up to four TMP117A sensors provide NIST-traceable 
 **accuracy** not worse than **±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C**.
 
-- The firmware **automatically detects sensors** and supports all combinations of the four dedicated I2C bus addresses.
+- **Automatic Sensor Detection:** The firmware automatically detects and supports all combinations of the four dedicated I2C bus addresses. Upon startup, the number of connected sensors is indicated via LED blinks.
+
+- **Battery Status Report:** During the startup sequence, the firmware evaluates the battery health and reports whether it is "good" or "no good" via distinct LED blinks.
+
 
 - Writes a tab separated value formatted text file with 
 **ISO 8601 date and time** to a micro-SD card. 
