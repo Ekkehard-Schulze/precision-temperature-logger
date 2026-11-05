@@ -9,7 +9,7 @@ Features
 - Up to four TMP117A sensors provide NIST-traceable 
 **accuracy** not worse than **±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C**.
 
-- **Automatic Sensor Detection:** The firmware automatically detects and supports all combinations of the four dedicated I2C bus addresses. Upon startup, the number of connected sensors is indicated via LED blinks.
+- **Automatic Sensor Detection:** The firmware automatically discovers and supports all combinations of the four dedicated I2C bus addresses. Upon startup, the number of connected sensors is indicated via LED blinks.
 
 - **Battery Status Report:** During the startup sequence, the firmware evaluates the battery health and reports whether it is "good" or "no good" via distinct LED blinks.
 
@@ -97,7 +97,7 @@ a breakout board for TMP119 (see below).
 	
 
 
-    This firmware is more complex and requires you to select sensors by uncommenting "#define" statements in the C source code. While different sensor types can be mixed, memory limitations mean that only certain subsets of options can be implemented together in one firmware version. **The firmware then automatically detects the connected sensors on startup and indicates their total number via LED blinks.**
+    This firmware is more complex and requires you to select sensors by uncommenting "#define" statements in the C source code. While different sensor types can be mixed, memory limitations mean that only certain combinations of options can be joined in one firmware version. **The firmware then automatically doscovers the connected sensors on startup and indicates their total number via LED blinks.**
 > ⚠️ **Pro-Tip:** If you need more than four temperature sensors, use 1-Wire models.
 
 
