@@ -64,7 +64,7 @@ up to 158 seconds per year**.
 **select an SD card with a low standby current**.
 
 3. For a **quick start** instead of using our project's printed circuit 
-board and case you can use the 'Adafruit Feather 32u4 Adalogger #2795' 
+board and case you can combine the 'Adafruit Feather 32u4 Adalogger #2795' 
 with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it 
 with a pluggable battery. You only have to solder male and female socket connectors (headers) to
 connect both boards.
