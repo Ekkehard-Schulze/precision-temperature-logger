@@ -26,7 +26,7 @@ and plotly packages as well as with spreadsheet processing.
  and up to two on-board TMP117A sensors for environmental 
 temperature monitoring in incubators or lab rooms.
 
-- A production-ready STEP (.stp) file specifies the **laser-cut plastic components needed to assemble a protective casing** for the internal hardware.
+- A production-ready STEP (.stp) file specifies the **laser-cut plastic components needed to assemble a protective casing** for the electronic hardware.
 
 
 - Four **7 x 5 mm sized custom printed breakout circuit boards for wire-attached 
