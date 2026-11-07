@@ -102,7 +102,7 @@ a breakout board for TMP119 (see below).
     This firmware is more complex and requires you to select sensors by uncommenting "#define" statements in the C source code. While different sensor types can be mixed, memory limitations mean that only certain combinations of options can be joined in one firmware version. **The firmware then automatically discovers the connected sensors on startup and indicates their total number via LED blinks.**
 > ⚠️ **Tip:** If you need more than four temperature sensors, use 1-Wire models.
 
-13. A highly affordable, but less convenient alternative for recording up to four TMP117 or TMP119 sensors simultaneously is the **Cave Pearl e360 Classroom Logger** using specifically adapted code. [Repository](https://github.com/Ekkehard-Schulze/e360-Classroom-Data-Logger-2023)
+13. A highly affordable, but less convenient to use alternative for recording up to four TMP117 or TMP119 sensors simultaneously is the **Cave Pearl e360 Classroom Logger** using specifically adapted code. [Repository](https://github.com/Ekkehard-Schulze/e360-Classroom-Data-Logger-2023)
 
 13. You may like to try the newer and software compatible sensor type TMP119.
 **TMP119 has a higher accuracy(±0.03&nbsp;°C (typical) from 0&nbsp;°C to 45&nbsp;°C**
