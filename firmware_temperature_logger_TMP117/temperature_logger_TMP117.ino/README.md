@@ -6,14 +6,14 @@ Notes
 ***You need to install the Arduino IDE and the required libraries to compile this***, see the ../libraries folder here.
 You find more information here: https://learn.adafruit.com/adafruit-feather-32u4-adalogger/using-with-arduino-ide
 
-2. The file `temperature_logger_TMP117.ino.ino.feather32u4.hex` is a pre-compiled binary for
+2. The file `temperature_logger_TMP117.feather32u4.hex` is a pre-compiled binary for
 the 'Adafruit Feather 32u4 Adalogger #2795'. It should be possible to flash the controller with the command
 
 &emsp;&emsp;avrdude -p m32u4 -P <YOUR_PORT> -c avr109 -U flash:w:<HEX_FILE>:i
 
 &emsp;&emsp;with replacing your <YOUR_PORT> with something like COM1 ... COM99 (the name of your virtual serial port of the device) 
 and replacing\
-&emsp;&emsp; <HEX_FILE> with temperature_logger_TMP117.ino.ino.feather32u4.hex
+&emsp;&emsp; <HEX_FILE> with temperature_logger_TMP117.feather32u4.hex
 You may have to **double-tap** the RST button\
 &emsp;&emsp;to get into the bootloader. 
 ***You need to install avrdude for this.***
