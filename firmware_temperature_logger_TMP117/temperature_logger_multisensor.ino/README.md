@@ -25,13 +25,13 @@ in one firmware due to memory limitations of the 'Adafruit Feather 32u4 Adalogge
 compiler will tell you, if the combination of the sensors you selected fits into the memory.
 
 
-1. The file 'temperature_logger_multisensor.ino.ino' is the source code for the Arduino IDE 1.8.19.
+1. The file `temperature_logger_multisensor.ino.ino` is the source code for the Arduino IDE 1.8.19.
 ***You need to install the Arduino IDE and the required libraries to compile this***, see the ../libraries folder here.
 You find more information here: https://learn.adafruit.com/adafruit-feather-32u4-adalogger/using-with-arduino-ide.
 If you require differnt sensor combinations than TMP117+1Wire you need to edit the user 
 settings in the code. Due to memory limitations of Atmega 32U4 it is not possible to select all sensors at the same time.
 
-2. The file 'temperature_logger_TMP117+ADT7420+1Wire_multisensor.with_bootloader.feather32u4.hex' is a 
+2. The file `temperature_logger_TMP117+ADT7420+1Wire_multisensor.feather32u4.hex` is a 
 pre-compiled example binary for
 the 'Adafruit Feather 32u4 Adalogger #2795'. It should be possible to flash the controller with the command
     
