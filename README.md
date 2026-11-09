@@ -112,7 +112,9 @@ for which the 2.1&nbsp;mm x 2.1&nbsp;mm sized WSON package size is too large. A 
 Adafruit #6482, or, as https://www.pcbway.com/project/shareproject/[FPCB_version]_Precision_thermometer_humidity_sensor_with_digital_I2C_interfac_736a557b.html.
 
 
-
+User manual
+-------------
+Read `Intructions_for_temperature_logger_usage.pdf`
 
 Contributions
 -------------
