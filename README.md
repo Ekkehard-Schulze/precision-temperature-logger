@@ -84,8 +84,8 @@ a breakout board for TMP119 (see below).
    * Integrate a DS3231 RTC and TMP117 sensors 
 
 5. To meet **alternative research requirements**, we offer a specialized firmware version that supports a wider range of sensor types:
-    * TMP117 and TMP119 (accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C)
-    * ADT7420 (±0.20 °C accuracy from −10°C to +85 °C)		
+    * TMP117 and TMP119 (accuracy not worse than ±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C, NIST-traceable)
+    * ADT7420 (±0.20 °C accuracy from −10°C to +85 °C, NIST-traceable)		
     * 1-Wire temperature, this allows for a larger number of sensors on a several meters long two-conductor cable
       * DS18B20 (±0.5 °C accuracy from -10°C to +85 °C)
       * DS18S20 (±0.5 °C accuracy from -10°C to +85 °C, obsolete)
