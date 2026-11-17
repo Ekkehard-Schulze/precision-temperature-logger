@@ -21,8 +21,6 @@
   ATbio, Juergen Schmidt, ConFoBi, Projekts 2016-0008 and 2020-0007
   code for TMP117 sensor and logging interval setting by file "settings.txt" by Ekkehard Schulze
 
-  20251201 code for date time format changed by Ekkehard Schulze to ISO8601 standard
-
   compiled using Arduino IDE 1.8.19
   ---------------------------------
   
@@ -144,9 +142,14 @@
   
 Revisions
 ----------
+
+20251201 code for date time format changed by Ekkehard Schulze to ISO8601 standard
+
 20260820 vs. 21.2
          failed ADT7420 sleep mode fixed, keep 8 x averaging, fixed code from GoogleAI, now in low µA range
-  
+20261117 vs. 21.2.1
+         1-Wire include #ifdef in board definitions  
+
 */
 
 #define VERSION "21"
@@ -205,8 +208,9 @@ String Separator = "\t";                              // .tsv .csv table separat
 
 //--E-n-d----o-f-----U-s-e-r---S-e-t-t-i-n-g-s----------
 
+#ifdef include_1wire
 #include <OneWire.h>  // required before board definitions
-
+#endif
 
 //----Start of --o-f---Board Definitions------------------------------------------------------------
 
@@ -224,7 +228,9 @@ String LoggerName = "Feather_1";
 #define wakePin 0         //use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
 #define ledRedPin 13         //red LED
 #define ledGreenPin 8         //green LED
+#ifdef include_1wire
 OneWire  ds(5);   //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+#endif
 const int chipSelect = 4; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);
@@ -259,7 +265,9 @@ String LoggerName = "Openlog_1";
 #define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW. rem: A3 did NOT work
 #define ledRedPin  9        //rote LED, blue in original design, rewire PCB!, originally pin 13, which is SPI clk, not good for low power
 #define ledGreenPin 5         //green LED
+#ifdef include_1wire
 OneWire  ds(4);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+#endif
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);
@@ -298,7 +306,9 @@ String LoggerName = "Heldt_Log";
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH); digitalWrite(ledRedPin, LOW);
 #define LEDredOff      digitalWrite(ledGreenPin, LOW); digitalWrite(ledRedPin, LOW);
 #define LEDgreenOff      digitalWrite(ledGreenPin, LOW); digitalWrite(ledRedPin, LOW);
+#ifdef include_1wire
 OneWire  ds(3);  // B3  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+#endif
 const int chipSelect = 4; // B4 CS SD Karte
 int BatteriePin = 24;      // PA0 = Pin24 = ADC0
 #define GOTO_SLEEP LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF);           //arduino enters sleep mode here
@@ -321,7 +331,9 @@ String LoggerName = "ArduNano";
 #define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW, rem: A3 did NOT work
 #define ledRedPin  9        //rote LED, rewire PCB!, originally pin 13, which is SPI clk, not good for low power
 #define ledGreenPin 5         //green LED
+#ifdef include_1wire
 OneWire  ds(4);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+#endif
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);
@@ -350,7 +362,9 @@ String LoggerName = "Arduino_5_Volt_Testbed";
 #define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW, rem: A3 did NOT work
 #define ledRedPin  16        //rote LED logger shield
 #define ledGreenPin 3         //grüne LED logger shield
+#ifdef include_1wire
 OneWire  ds(17);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+#endif
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);
@@ -387,7 +401,9 @@ String LoggerName = "Arduino_Log";
 #define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW. rem: A3 did NOT work
 #define ledRedPin  16        //rote LED logger shield
 #define ledGreenPin 3         //grüne LED logger shield
+#ifdef include_1wire
 OneWire  ds(17);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+#endif
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);
@@ -425,7 +441,9 @@ String LoggerName = "Greif_board_m328p_test_bed";
 #define wakePin 2         //use interrupt 0 (INT0, port PD2) and run function wakeUp when pin gets LOW. esrem: A3 did NOT work
 #define ledRedPin  6         //rote LED
 #define ledGreenPin 7         //grüne LED
+#ifdef include_1wire
 OneWire  ds(5);  //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+#endif
 const int chipSelect = 10; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, LOW);
 #define LEDgreenOn  digitalWrite(ledGreenPin, LOW);
@@ -460,7 +478,9 @@ String LoggerName = "Greif_board_m1284_test_bed";
 #define wakePin 10         // D2 use interrupt 0 INT0 (DIL pin 16) and run function wakeUp when pin gets LOW
 #define ledRedPin  2         //rote LED     B2
 #define ledGreenPin 3         //grüne LED   B3
+#ifdef include_1wire
 OneWire  ds(1);  // B1  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
+#endif
 const int chipSelect = 4; // B4 CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, LOW);
 #define LEDgreenOn  digitalWrite(ledGreenPin, LOW);
