@@ -1,6 +1,6 @@
 Highly accurate temperature logger for laboratory use
 ========================================================
-**Logs data and timestamps directly to an SD card.** The package includes hardware design files, firmware, and a data analysis script. Our loggers have been reliably used in diverse laboratory applications for years. 
+**Logs data and timestamps reliably to an SD card.** Our loggers have been reliably used in diverse laboratory applications for years. 
 
 Features
 --------
@@ -25,6 +25,8 @@ and plotly packages as well as with spreadsheet processing.
 
 
 ## What's Included
+
+This repository contains the complete hardware, enclosure, and software files for a precision laboratory data logger:
 
 * **Precision Temperature Firmware:** Arduino-compatible firmware designed for high-accuracy temperature logging using TMP117A sensors.
 * **Extended Multi-Sensor Firmware:** An alternative firmware build that adds support for an extended temperature range, relative humidity, atmospheric pressure, non-contact infrared temperature, and illuminance (see *Supported Sensors* below).
