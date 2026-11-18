@@ -38,7 +38,7 @@ for example, for usage in agar plates or liquid samples.
 
 Notes
 -----
-- On startup, the first three LED blinks **report the battery status**. Greed means 'good to go for at least a few days', red means that you have to charge before the next usage.
+1. On startup, the first three LED blinks **report the battery status**. Greed means 'good to go for at least a few days', red means that you have to charge before the next usage.
 
 1. On startup, the number of LED blinks following the firt three blinks **reports the
    number of sensors detected.**
