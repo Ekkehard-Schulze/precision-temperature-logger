@@ -5,7 +5,7 @@ Highly accurate temperature logger for laboratory use
 Features
 --------
 
-- **Logging data instantly on startup**
+- **Logging data instantly on startup**, zero setup time
 
 - **Automatically detecting connected sensors**
 
