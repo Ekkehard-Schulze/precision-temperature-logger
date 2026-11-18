@@ -27,7 +27,7 @@ and plotly packages as well as with spreadsheet processing.
 Comprises
 -----------
 
-- Firmware
+- **Firmware**
 
 - A custom **printed circuit board** integrates an 18650 lithium-ion 
  battery, an accurate DS3231SN clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
