@@ -5,11 +5,11 @@ Highly accurate temperature logger for laboratory use
 Features
 --------
 
-- **Logging data instantly on startup**, zero setup time
+- **Logging data instantly** on startup, zero setup time
 
-- **Automatically detecting connected sensors**
+- **Automatically detecting** connected sensors
 
-- **Supports multiple sensors simultaneously**
+- Supports **multiple sensors** simultaneously
 
 - Runs for **months** on a single 18650 Li-ion cell without recharging
 
