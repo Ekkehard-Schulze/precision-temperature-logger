@@ -9,6 +9,8 @@ Features
 
 - **Automatically detecting connected sensors**
 
+- **Supports multiple sensors simultaneously**
+
 - Runs for **months** on a single 18650 Li-ion cell without recharging
 
 - Up to four TMP117A sensors provide NIST-traceable 
