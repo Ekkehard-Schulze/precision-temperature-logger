@@ -5,18 +5,14 @@ Logs data and timestamps directly to an SD card. The package includes hardware d
 Features
 --------
 
-- **Automatically detecting** connected sensors
-
 - **Logging data instantly on startup**
+
+- **Automatically detecting** connected sensors
 
 - Runs for **months** on a single 18650 Li-ion cell without recharging
 
 - Up to four TMP117A sensors provide NIST-traceable 
 **accuracy** not worse than **±0.1&nbsp;°C from –20&nbsp;°C to +50&nbsp;°C**.
-
-
-- **Battery Status Report:** During the startup sequence, the firmware evaluates the battery health and reports whether it is "good" or "no good" via distinct LED blinks.
-
 
 - Writes a tab separated value formatted text file with 
 **ISO 8601 date and time** to a micro-SD card. 
@@ -42,8 +38,10 @@ for example, for usage in agar plates or liquid samples.
 
 Notes
 -----
+- On startup, the first three LED blinks **report the battery status**. Greed means 'good to go for at least a few days', red means that you have to charge before the next usage.
 
-1. **Automatic Sensor Detection:** The firmware automatically discovers and supports all combinations of the four dedicated I2C bus addresses. Upon startup, the number of connected sensors is indicated via LED blinks.
+1. On startup, the number of LED blinks following the firt three blinks **reports the
+   number of sensors detected.**
 
 1. For measurements in **wet, salty or corrosive environments** you
 must cover all exposed sensor board conductive surfaces with a high 
