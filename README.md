@@ -1,6 +1,6 @@
 Highly accurate temperature logger for laboratory use
 ========================================================
-**Logs data and timestamps reliably to an SD card.** Our loggers have been reliably used in diverse laboratory applications for years. 
+**Logs data and timestamps reliably to an SD card.** Our loggers have been used in diverse laboratory applications for years. 
 
 Features
 --------
