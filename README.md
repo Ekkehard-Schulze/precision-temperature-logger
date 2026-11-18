@@ -26,8 +26,6 @@ and plotly packages as well as with spreadsheet processing.
 
 ## What's Included
 
-This repository contains the complete hardware, enclosure, and software files for a precision laboratory data logger:
-
 * **Precision Temperature Firmware:** Arduino-compatible firmware designed for high-accuracy temperature logging using TMP117A sensors.
 * **Extended Multi-Sensor Firmware:** An alternative firmware build that adds support for an extended temperature range, relative humidity, atmospheric pressure, non-contact infrared temperature, and illuminance (see *Supported Sensors* below).
 * **Main Data Logger PCB:** Custom printed circuit board files integrating:
@@ -39,25 +37,6 @@ This repository contains the complete hardware, enclosure, and software files fo
 * **Enclosure CAD Files:** Production-ready `.step` (`.stp`) files defining the laser-cut acrylic/plastic panels required to assemble a protective housing for the electronics.
 
 
-Comprises
------------
-
-- **Firmware** for precision temperature logging using TMP117A sensors
-
-- A custom **printed circuit board** integrates an 18650 lithium-ion 
- battery, an accurate DS3231SN clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
- and up to two on-board TMP117A sensors for environmental 
-temperature monitoring in incubators or lab rooms.
-
-- A production-ready STEP (.stp) file specifies the **laser-cut plastic components needed to assemble a protective casing** for the electronic hardware.
-
-
-- Four **7 x 5 mm sized custom printed breakout circuit boards for wire-attached 
-TMP117A sensors**. These act as probes in laboratory applications, 
-for example, for usage in agar plates or liquid samples.
-
-- An **alternative firmware supports sensor types for an extended temperature range, for logging
- humidity, atmospheric pressure, infrared non-contact temperature and illuminance**, see below. 
 
 Notes
 -----
