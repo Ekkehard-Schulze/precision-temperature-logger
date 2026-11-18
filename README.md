@@ -1,13 +1,13 @@
 Highly accurate temperature logger for laboratory use
 ========================================================
-Logs data and timestamps directly to an SD card. The package includes hardware design files, firmware, and a data analysis script. Our loggers have been reliably used in diverse laboratory applications for years. 
+**Logs data and timestamps directly to an SD card.** The package includes hardware design files, firmware, and a data analysis script. Our loggers have been reliably used in diverse laboratory applications for years. 
 
 Features
 --------
 
 - **Logging data instantly on startup**
 
-- **Automatically detecting** connected sensors
+- **Automatically detecting connected sensors**
 
 - Runs for **months** on a single 18650 Li-ion cell without recharging
 
@@ -40,7 +40,7 @@ Notes
 -----
 1. On startup, the first three LED blinks **report the battery status**. Greed means 'good to go for at least a few days', red means that you have to charge before the next usage.
 
-1. On startup, the number of LED blinks following the firt three blinks **reports the
+1. The number of LED blinks following the firt three blinks **reports the
    number of sensors detected.**
 
 1. For measurements in **wet, salty or corrosive environments** you
