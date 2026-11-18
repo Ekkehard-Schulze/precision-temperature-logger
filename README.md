@@ -23,6 +23,12 @@ and plotly packages as well as with spreadsheet processing.
 
 - The user can **specify the logging interval in settings.txt** on the SD card. 
 
+
+Comprises
+-----------
+
+- Firmware
+
 - A custom **printed circuit board** integrates an 18650 lithium-ion 
  battery, an accurate DS3231SN clock, the 'Adafruit Feather 32u4 Adalogger #2795' 
  and up to two on-board TMP117A sensors for environmental 
