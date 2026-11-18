@@ -69,16 +69,8 @@ up to 158 seconds per year**.
 2. SD card types vary widely in their standby current. For a longer battery life, 
 **select an SD card with a low standby current**.
 
-3. For a **quick start** instead of using our project's printed circuit 
-board and case you can combine the 'Adafruit Feather 32u4 Adalogger #2795' 
-with an 'Adafruit DS3231 Precision RTC FeatherWing #3028' and power it 
-with a pluggable battery. You only have to solder male and female socket connectors (headers) to
-connect both boards.
-Some TMP117 breakout boards are commercially 
-available (e. g. Adafruit #4821 or SparkFun #15805), but these have a much 
-larger size than our sensor boards and are more difficult to seal for use
-in wet and corrosive environments. You may also consider Adafruit #6482, which is 
-a breakout board for TMP119 (see below).
+3. For a **quick-start** alternative to custom printed circuit boards and cases, you can build a logger by stacking an **Adafruit Feather 32u4 Adalogger (#2795)** with an **Adafruit DS3231 Precision RTC FeatherWing (#3028)** using male and female headers and a pluggable battery. This setup requires only basic header soldering to connect the two commercial components before uploading our firmware. While pluggable TMP117 breakout boards are commercially available (e.g., **Adafruit #4821** or **SparkFun #15805**), they are significantly larger than our custom sensor boards and harder to seal against wet and corrosive environments. You can also consider **Adafruit #6482**, which is a breakout board for the TMP119 (see below).
+
 
 4. **SparkFun OpenLog (DEV-13712) compatibility**.
    Our firmware supports this board with advanced hardware modifications. The following steps require precise trace cutting and microscopic soldering, ideally performed by an electronics technician:
