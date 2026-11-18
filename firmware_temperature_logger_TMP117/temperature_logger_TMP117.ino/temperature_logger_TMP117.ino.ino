@@ -180,7 +180,7 @@ String LoggerName = "TMP117_logger_1";
 #define OFF_mV_threshold 3500  // this is for LiION
 #define wakePin 0         //use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
 #define ledRedPin 13         //red LED
-#define ledGreenPin 8         //green LED
+#define ledGreenPin 8         //green LED, manually re-wired for power saving, originally 7 = SPI Clk
 const int chipSelect = 4; // CS SD Karte
 #define LEDredOn    digitalWrite(ledRedPin, HIGH);
 #define LEDgreenOn  digitalWrite(ledGreenPin, HIGH);

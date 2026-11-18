@@ -227,7 +227,7 @@ String LoggerName = "Feather_1";
 #define OFF_mV_threshold 3500 // this is for LiION
 #define wakePin 0         //use interrupt 2 (pin 0) and run function wakeUp when pin 0 gets LOW
 #define ledRedPin 13         //red LED
-#define ledGreenPin 8         //green LED
+#define ledGreenPin 8         //green LED, manually re-wired for power saving, originally 7 = SPI Clk
 #ifdef include_1wire
 OneWire  ds(5);   //  PortPin für 1Wire BUS 1Wire-BUS, a 4.7K resistor to Vcc is necessary
 #endif
