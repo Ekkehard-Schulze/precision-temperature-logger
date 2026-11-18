@@ -26,7 +26,7 @@ and plotly packages as well as with spreadsheet processing.
 
 ## What's Included
 
-This repository contains the complete hardware, enclosure, and software files for a precision laboratory data logger:
+This repository contains the complete hardware, enclosure, and software files for our precision laboratory data logger:
 
 * **Precision Temperature Firmware:** Arduino-compatible firmware designed for high-accuracy temperature logging using TMP117A sensors.
 * **Extended Multi-Sensor Firmware:** An alternative firmware build that adds support for an extended temperature range, relative humidity, atmospheric pressure, non-contact infrared temperature, and illuminance (see *Supported Sensors* below).
