@@ -74,7 +74,7 @@ up to 158 seconds per year**.
 3. For a **quick-start** alternative to custom printed circuit boards and cases, you can build a logger by stacking an **Adafruit Feather 32u4 Adalogger (#2795)** with an **Adafruit DS3231 Precision RTC FeatherWing (#3028)** using male and female headers and a pluggable battery. This setup requires only basic header soldering to connect the two commercial components before uploading our firmware. While pluggable TMP117 breakout boards are commercially available (e.g., **Adafruit #4821** or **SparkFun #15805**), they are significantly larger than our custom sensor boards and harder to seal against wet and corrosive environments. You can also consider **Adafruit #6482**, which is a breakout board for the TMP119 (see below).
 
 
-4. **SparkFun OpenLog (DEV-13712 DEV-15164) compatibility**.
+4. **SparkFun OpenLog (DEV-15164 DEV-13712) compatibility**.
    Our firmware supports this board with advanced hardware modifications. The following steps require precise trace cutting and microscopic soldering, ideally performed by an electronics technician:
    * Flash the firmware via an ISP programmer
    * Break out the I2C-bus and INT0
