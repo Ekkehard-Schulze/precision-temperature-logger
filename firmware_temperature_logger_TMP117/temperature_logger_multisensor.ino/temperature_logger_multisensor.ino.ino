@@ -296,6 +296,9 @@ int BatteriePin = 15;
 // Variant 1284P
 // BOD 2.7V
 #warning "Heldt m1284p Logger selected"     //  mightycore bootloader could be tested using reset button. Select UART2?
+#if !defined(F_CPU) || (F_CPU != 8000000L)
+  #error "HELDT logger requires to select 8 MHz system clock in Mightycore."
+#endif
 #define mv_Batt_thresh_RedFlash_on_Startup 3750      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Heldt_Log";
 #define OFF_mV_threshold 3550  // this is for LiION or LiPO
@@ -395,6 +398,9 @@ int BatteriePin = 15;
 // Bootloader: Yes (Uart  0)
 // Baud rate: standard
 #warning "Arduino Uno 3.3 Volt mod  m328p selected"
+#if !defined(F_CPU) || (F_CPU != 8000000L)
+  #error "3.3 Volt Arduino requires selecting an 8 MHz system clock in Minicore."
+#endif
 #define mv_Batt_thresh_RedFlash_on_Startup 3591      // optische Warnung beim Einschalten : 3 x rot blinken
 String LoggerName = "Arduino_Log";
 #define OFF_mV_threshold 3500 // this is for LiION or LiPO
